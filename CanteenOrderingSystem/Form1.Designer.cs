@@ -15,6 +15,10 @@
         {
             if (disposing && (components != null))
             {
+                System.Console.WriteLine("LOooollll");
+                System.Console.WriteLine("asdasd");
+                System.Console.WriteLine("ạiiojwao");
+                System.Console.WriteLine("THangnek1231231");
                 components.Dispose();
             }
             base.Dispose(disposing);
