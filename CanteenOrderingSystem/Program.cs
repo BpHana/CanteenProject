@@ -14,6 +14,7 @@ namespace CanteenOrderingSystem
         [STAThread]
         static void Main()
         {
+            Console.WriteLine("thuan");
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
