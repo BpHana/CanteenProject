@@ -158,6 +158,7 @@
     <Compile Include="sugar_level.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="Dashboard1.resx">
       <DependentUpon>Dashboard1.cs</DependentUpon>
     </EmbeddedResource>
