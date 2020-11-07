@@ -78,28 +78,28 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(562, 114, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(451, 211);
+            this.layoutControl1.Size = new System.Drawing.Size(454, 227);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(127, 79);
+            this.txtEmail.Location = new System.Drawing.Point(127, 89);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Size = new System.Drawing.Size(294, 24);
+            this.txtEmail.Size = new System.Drawing.Size(294, 28);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 4;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(127, 117);
+            this.txtPassword.Location = new System.Drawing.Point(127, 127);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.UseSystemPasswordChar = true;
-            this.txtPassword.Size = new System.Drawing.Size(294, 26);
+            this.txtPassword.Size = new System.Drawing.Size(294, 30);
             this.txtPassword.StyleController = this.layoutControl1;
             this.txtPassword.TabIndex = 5;
             // 
@@ -107,7 +107,7 @@
             // 
             this.btnLogin.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.Location = new System.Drawing.Point(180, 156);
+            this.btnLogin.Location = new System.Drawing.Point(180, 166);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(83, 31);
             this.btnLogin.StyleController = this.layoutControl1;
@@ -134,15 +134,15 @@
             this.emptySpaceItem5,
             this.emptySpaceItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(451, 211);
+            this.Root.Size = new System.Drawing.Size(454, 227);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 179);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 189);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(431, 12);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(434, 18);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lblLogin
@@ -155,13 +155,13 @@
             this.lblLogin.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblLogin.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
             this.lblLogin.Location = new System.Drawing.Point(10, 10);
-            this.lblLogin.MaxSize = new System.Drawing.Size(403, 47);
-            this.lblLogin.MinSize = new System.Drawing.Size(403, 47);
+            this.lblLogin.MaxSize = new System.Drawing.Size(403, 57);
+            this.lblLogin.MinSize = new System.Drawing.Size(403, 57);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(403, 47);
+            this.lblLogin.Size = new System.Drawing.Size(403, 57);
             this.lblLogin.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblLogin.Text = "Login";
-            this.lblLogin.TextSize = new System.Drawing.Size(106, 43);
+            this.lblLogin.TextSize = new System.Drawing.Size(131, 53);
             // 
             // emptySpaceItem2
             // 
@@ -177,7 +177,7 @@
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(10, 57);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(10, 67);
             this.emptySpaceItem3.MaxSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem3.MinSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
@@ -192,7 +192,7 @@
             this.lciPassword.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lciPassword.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.lciPassword.Control = this.txtPassword;
-            this.lciPassword.Location = new System.Drawing.Point(10, 105);
+            this.lciPassword.Location = new System.Drawing.Point(10, 115);
             this.lciPassword.MaxSize = new System.Drawing.Size(403, 28);
             this.lciPassword.MinSize = new System.Drawing.Size(403, 28);
             this.lciPassword.Name = "lciPassword";
@@ -206,7 +206,7 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(10, 95);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(10, 105);
             this.emptySpaceItem4.MaxSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem4.MinSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
@@ -221,7 +221,7 @@
             this.lciEmail.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lciEmail.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.lciEmail.Control = this.txtEmail;
-            this.lciEmail.Location = new System.Drawing.Point(10, 67);
+            this.lciEmail.Location = new System.Drawing.Point(10, 77);
             this.lciEmail.MaxSize = new System.Drawing.Size(403, 28);
             this.lciEmail.MinSize = new System.Drawing.Size(403, 28);
             this.lciEmail.Name = "lciEmail";
@@ -235,7 +235,7 @@
             // lciBtnLogin
             // 
             this.lciBtnLogin.Control = this.btnLogin;
-            this.lciBtnLogin.Location = new System.Drawing.Point(168, 144);
+            this.lciBtnLogin.Location = new System.Drawing.Point(168, 154);
             this.lciBtnLogin.MaxSize = new System.Drawing.Size(87, 35);
             this.lciBtnLogin.MinSize = new System.Drawing.Size(87, 35);
             this.lciBtnLogin.Name = "lciBtnLogin";
@@ -250,8 +250,9 @@
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(10, 144);
-            this.emptySpaceItem8.MinSize = new System.Drawing.Size(104, 24);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(10, 154);
+            this.emptySpaceItem8.MaxSize = new System.Drawing.Size(158, 35);
+            this.emptySpaceItem8.MinSize = new System.Drawing.Size(158, 35);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
             this.emptySpaceItem8.Size = new System.Drawing.Size(158, 35);
             this.emptySpaceItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -260,8 +261,9 @@
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(255, 144);
-            this.emptySpaceItem7.MinSize = new System.Drawing.Size(10, 24);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(255, 154);
+            this.emptySpaceItem7.MaxSize = new System.Drawing.Size(158, 35);
+            this.emptySpaceItem7.MinSize = new System.Drawing.Size(158, 35);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
             this.emptySpaceItem7.Size = new System.Drawing.Size(158, 35);
             this.emptySpaceItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
@@ -270,7 +272,7 @@
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(10, 133);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(10, 143);
             this.emptySpaceItem9.MaxSize = new System.Drawing.Size(403, 11);
             this.emptySpaceItem9.MinSize = new System.Drawing.Size(403, 11);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
@@ -285,7 +287,7 @@
             this.emptySpaceItem5.MaxSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem5.MinSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 189);
             this.emptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
@@ -296,18 +298,18 @@
             this.emptySpaceItem6.MaxSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem6.MinSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(18, 179);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(21, 189);
             this.emptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // LoginForm
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
-            this.ClientSize = new System.Drawing.Size(451, 211);
+            this.ClientSize = new System.Drawing.Size(454, 227);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
