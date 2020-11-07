@@ -63,9 +63,9 @@ namespace COS_DesktopApp.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Screenshot_2020_11_07_143737 {
+        internal static System.Drawing.Bitmap chef128 {
             get {
-                object obj = ResourceManager.GetObject("Screenshot 2020-11-07 143737", resourceCulture);
+                object obj = ResourceManager.GetObject("chef128", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
