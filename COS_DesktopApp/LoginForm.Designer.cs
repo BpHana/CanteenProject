@@ -78,7 +78,7 @@
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(562, 114, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(454, 227);
+            this.layoutControl1.Size = new System.Drawing.Size(444, 227);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
@@ -88,7 +88,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
-            this.txtEmail.Size = new System.Drawing.Size(294, 28);
+            this.txtEmail.Size = new System.Drawing.Size(294, 24);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 4;
             // 
@@ -99,7 +99,7 @@
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Arial Narrow", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.UseSystemPasswordChar = true;
-            this.txtPassword.Size = new System.Drawing.Size(294, 30);
+            this.txtPassword.Size = new System.Drawing.Size(294, 26);
             this.txtPassword.StyleController = this.layoutControl1;
             this.txtPassword.TabIndex = 5;
             // 
@@ -134,7 +134,7 @@
             this.emptySpaceItem5,
             this.emptySpaceItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(454, 227);
+            this.Root.Size = new System.Drawing.Size(444, 227);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
@@ -142,7 +142,7 @@
             this.emptySpaceItem1.AllowHotTrack = false;
             this.emptySpaceItem1.Location = new System.Drawing.Point(0, 189);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(434, 18);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(424, 18);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lblLogin
@@ -161,7 +161,7 @@
             this.lblLogin.Size = new System.Drawing.Size(403, 57);
             this.lblLogin.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblLogin.Text = "Login";
-            this.lblLogin.TextSize = new System.Drawing.Size(131, 53);
+            this.lblLogin.TextSize = new System.Drawing.Size(106, 43);
             // 
             // emptySpaceItem2
             // 
@@ -298,18 +298,18 @@
             this.emptySpaceItem6.MaxSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem6.MinSize = new System.Drawing.Size(10, 179);
             this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(21, 189);
+            this.emptySpaceItem6.Size = new System.Drawing.Size(11, 189);
             this.emptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // LoginForm
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 22F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
-            this.ClientSize = new System.Drawing.Size(454, 227);
+            this.ClientSize = new System.Drawing.Size(444, 227);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
