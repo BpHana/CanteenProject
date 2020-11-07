@@ -25,5 +25,10 @@ namespace COS_DesktopApp
     originsBindingSource.DataSource = dbContext.origins.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
