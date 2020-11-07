@@ -15,7 +15,5 @@ namespace COS_DesktopApp
         {
             InitializeComponent();
         }
-
-  
     }
 }
