@@ -28,76 +28,92 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.txtUsername = new DevExpress.XtraEditors.TextEdit();
+            this.txtEmail = new DevExpress.XtraEditors.TextEdit();
+            this.txtPassword = new DevExpress.XtraEditors.TextEdit();
+            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lblLogin = new DevExpress.XtraLayout.SimpleLabelItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.txtUsername1 = new DevExpress.XtraEditors.TextEdit();
-            this.lciUsername1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.lciPassword = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lciUsername = new DevExpress.XtraLayout.LayoutControlItem();
-            this.btnLogin = new DevExpress.XtraEditors.SimpleButton();
+            this.lciEmail = new DevExpress.XtraLayout.LayoutControlItem();
             this.lciBtnLogin = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem8 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem9 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.lblRegister = new DevExpress.XtraLayout.SimpleLabelItem();
-            this.emptySpaceItem10 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem6 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciUsername1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPassword)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciUsername)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEmail)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBtnLogin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblRegister)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
             this.layoutControl1.BackColor = System.Drawing.Color.Transparent;
-            this.layoutControl1.Controls.Add(this.txtUsername);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.txtEmail);
+            this.layoutControl1.Controls.Add(this.txtPassword);
             this.layoutControl1.Controls.Add(this.btnLogin);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(562, 114, 650, 400);
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(335, 231);
+            this.layoutControl1.Size = new System.Drawing.Size(443, 213);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // txtUsername
+            // txtEmail
             // 
-            this.txtUsername.Location = new System.Drawing.Point(129, 79);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtUsername.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername.Size = new System.Drawing.Size(182, 24);
-            this.txtUsername.StyleController = this.layoutControl1;
-            this.txtUsername.TabIndex = 4;
+            this.txtEmail.Location = new System.Drawing.Point(127, 79);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtEmail.Properties.Appearance.Options.UseFont = true;
+            this.txtEmail.Size = new System.Drawing.Size(294, 24);
+            this.txtEmail.StyleController = this.layoutControl1;
+            this.txtEmail.TabIndex = 4;
+            // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(127, 117);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtPassword.Properties.Appearance.Options.UseFont = true;
+            this.txtPassword.Properties.UseSystemPasswordChar = true;
+            this.txtPassword.Size = new System.Drawing.Size(294, 24);
+            this.txtPassword.StyleController = this.layoutControl1;
+            this.txtPassword.TabIndex = 5;
+            // 
+            // btnLogin
+            // 
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnLogin.Appearance.Options.UseFont = true;
+            this.btnLogin.Location = new System.Drawing.Point(180, 156);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(83, 31);
+            this.btnLogin.StyleController = this.layoutControl1;
+            this.btnLogin.TabIndex = 6;
+            this.btnLogin.Text = "Login";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
             // Root
             // 
@@ -110,25 +126,23 @@
             this.emptySpaceItem3,
             this.lciPassword,
             this.emptySpaceItem4,
-            this.lciUsername,
+            this.lciEmail,
             this.lciBtnLogin,
             this.emptySpaceItem8,
             this.emptySpaceItem7,
             this.emptySpaceItem9,
             this.emptySpaceItem5,
-            this.emptySpaceItem6,
-            this.lblRegister,
-            this.emptySpaceItem10});
+            this.emptySpaceItem6});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(335, 231);
+            this.Root.Size = new System.Drawing.Size(443, 213);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(12, 201);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 179);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(291, 10);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(423, 14);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lblLogin
@@ -140,90 +154,50 @@
             this.lblLogin.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblLogin.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.lblLogin.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
-            this.lblLogin.Location = new System.Drawing.Point(12, 10);
-            this.lblLogin.MinSize = new System.Drawing.Size(110, 47);
+            this.lblLogin.Location = new System.Drawing.Point(10, 10);
+            this.lblLogin.MaxSize = new System.Drawing.Size(403, 47);
+            this.lblLogin.MinSize = new System.Drawing.Size(403, 47);
             this.lblLogin.Name = "lblLogin";
-            this.lblLogin.Size = new System.Drawing.Size(291, 47);
+            this.lblLogin.Size = new System.Drawing.Size(403, 47);
             this.lblLogin.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblLogin.Text = "Login";
-            this.lblLogin.TextSize = new System.Drawing.Size(175, 43);
+            this.lblLogin.TextSize = new System.Drawing.Size(106, 43);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(12, 0);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(10, 0);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(291, 10);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(12, 57);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(10, 57);
+            this.emptySpaceItem3.MaxSize = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem3.MinSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(291, 10);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem3.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // txtUsername1
-            // 
-            this.txtUsername1.Location = new System.Drawing.Point(117, 126);
-            this.txtUsername1.Name = "txtUsername1";
-            this.txtUsername1.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.txtUsername1.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername1.Size = new System.Drawing.Size(206, 24);
-            this.txtUsername1.TabIndex = 4;
-            // 
-            // lciUsername1
-            // 
-            this.lciUsername1.Control = this.txtUsername1;
-            this.lciUsername1.ControlAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lciUsername1.CustomizationFormText = "Username";
-            this.lciUsername1.Location = new System.Drawing.Point(0, 356);
-            this.lciUsername1.Name = "lciUsername1";
-            this.lciUsername1.Size = new System.Drawing.Size(315, 28);
-            this.lciUsername1.Text = "Username";
-            this.lciUsername1.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.lciUsername1.TextSize = new System.Drawing.Size(100, 20);
-            this.lciUsername1.TextToControlDistance = 5;
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Location = new System.Drawing.Point(129, 117);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.textEdit1.Properties.Appearance.Options.UseFont = true;
-            this.textEdit1.Size = new System.Drawing.Size(182, 24);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
-            // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 0);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(12, 211);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // emptySpaceItem6
-            // 
-            this.emptySpaceItem6.AllowHotTrack = false;
-            this.emptySpaceItem6.Location = new System.Drawing.Point(303, 0);
-            this.emptySpaceItem6.MinSize = new System.Drawing.Size(12, 24);
-            this.emptySpaceItem6.Name = "emptySpaceItem6";
-            this.emptySpaceItem6.Size = new System.Drawing.Size(12, 211);
-            this.emptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // lciPassword
             // 
             this.lciPassword.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lciPassword.AppearanceItemCaption.Options.UseFont = true;
             this.lciPassword.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.lciPassword.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lciPassword.Control = this.textEdit1;
-            this.lciPassword.Location = new System.Drawing.Point(12, 105);
+            this.lciPassword.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lciPassword.Control = this.txtPassword;
+            this.lciPassword.Location = new System.Drawing.Point(10, 105);
+            this.lciPassword.MaxSize = new System.Drawing.Size(403, 28);
+            this.lciPassword.MinSize = new System.Drawing.Size(403, 28);
             this.lciPassword.Name = "lciPassword";
-            this.lciPassword.Size = new System.Drawing.Size(291, 28);
+            this.lciPassword.Size = new System.Drawing.Size(403, 28);
+            this.lciPassword.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciPassword.Text = "Password";
             this.lciPassword.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
             this.lciPassword.TextSize = new System.Drawing.Size(100, 20);
@@ -232,44 +206,40 @@
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(12, 95);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(10, 95);
+            this.emptySpaceItem4.MaxSize = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem4.MinSize = new System.Drawing.Size(403, 10);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(291, 10);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(403, 10);
+            this.emptySpaceItem4.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lciUsername
+            // lciEmail
             // 
-            this.lciUsername.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lciUsername.AppearanceItemCaption.Options.UseFont = true;
-            this.lciUsername.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.lciUsername.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lciUsername.Control = this.txtUsername;
-            this.lciUsername.Location = new System.Drawing.Point(12, 67);
-            this.lciUsername.Name = "lciUsername";
-            this.lciUsername.Size = new System.Drawing.Size(291, 28);
-            this.lciUsername.Text = "Username";
-            this.lciUsername.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
-            this.lciUsername.TextSize = new System.Drawing.Size(100, 20);
-            this.lciUsername.TextToControlDistance = 5;
-            // 
-            // btnLogin
-            // 
-            this.btnLogin.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.btnLogin.Appearance.Options.UseFont = true;
-            this.btnLogin.Location = new System.Drawing.Point(130, 155);
-            this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(74, 22);
-            this.btnLogin.StyleController = this.layoutControl1;
-            this.btnLogin.TabIndex = 6;
-            this.btnLogin.Text = "Login";
+            this.lciEmail.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lciEmail.AppearanceItemCaption.Options.UseFont = true;
+            this.lciEmail.AppearanceItemCaption.Options.UseTextOptions = true;
+            this.lciEmail.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
+            this.lciEmail.Control = this.txtEmail;
+            this.lciEmail.Location = new System.Drawing.Point(10, 67);
+            this.lciEmail.MaxSize = new System.Drawing.Size(403, 28);
+            this.lciEmail.MinSize = new System.Drawing.Size(403, 28);
+            this.lciEmail.Name = "lciEmail";
+            this.lciEmail.Size = new System.Drawing.Size(403, 28);
+            this.lciEmail.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.lciEmail.Text = "Email";
+            this.lciEmail.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.CustomSize;
+            this.lciEmail.TextSize = new System.Drawing.Size(100, 20);
+            this.lciEmail.TextToControlDistance = 5;
             // 
             // lciBtnLogin
             // 
             this.lciBtnLogin.Control = this.btnLogin;
-            this.lciBtnLogin.Location = new System.Drawing.Point(118, 143);
-            this.lciBtnLogin.MinSize = new System.Drawing.Size(78, 26);
+            this.lciBtnLogin.Location = new System.Drawing.Point(168, 144);
+            this.lciBtnLogin.MaxSize = new System.Drawing.Size(87, 35);
+            this.lciBtnLogin.MinSize = new System.Drawing.Size(87, 35);
             this.lciBtnLogin.Name = "lciBtnLogin";
-            this.lciBtnLogin.Size = new System.Drawing.Size(78, 26);
+            this.lciBtnLogin.Size = new System.Drawing.Size(87, 35);
             this.lciBtnLogin.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lciBtnLogin.Text = "Login";
             this.lciBtnLogin.TextAlignMode = DevExpress.XtraLayout.TextAlignModeItem.AutoSize;
@@ -277,52 +247,58 @@
             this.lciBtnLogin.TextToControlDistance = 0;
             this.lciBtnLogin.TextVisible = false;
             // 
-            // emptySpaceItem7
-            // 
-            this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(196, 143);
-            this.emptySpaceItem7.Name = "emptySpaceItem7";
-            this.emptySpaceItem7.Size = new System.Drawing.Size(107, 26);
-            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // emptySpaceItem8
             // 
             this.emptySpaceItem8.AllowHotTrack = false;
-            this.emptySpaceItem8.Location = new System.Drawing.Point(12, 143);
+            this.emptySpaceItem8.Location = new System.Drawing.Point(10, 144);
+            this.emptySpaceItem8.MinSize = new System.Drawing.Size(104, 24);
             this.emptySpaceItem8.Name = "emptySpaceItem8";
-            this.emptySpaceItem8.Size = new System.Drawing.Size(106, 26);
+            this.emptySpaceItem8.Size = new System.Drawing.Size(158, 35);
+            this.emptySpaceItem8.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem8.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(255, 144);
+            this.emptySpaceItem7.MinSize = new System.Drawing.Size(10, 24);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(158, 35);
+            this.emptySpaceItem7.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem9
             // 
             this.emptySpaceItem9.AllowHotTrack = false;
-            this.emptySpaceItem9.Location = new System.Drawing.Point(12, 133);
+            this.emptySpaceItem9.Location = new System.Drawing.Point(10, 133);
+            this.emptySpaceItem9.MaxSize = new System.Drawing.Size(403, 11);
+            this.emptySpaceItem9.MinSize = new System.Drawing.Size(403, 11);
             this.emptySpaceItem9.Name = "emptySpaceItem9";
-            this.emptySpaceItem9.Size = new System.Drawing.Size(291, 10);
+            this.emptySpaceItem9.Size = new System.Drawing.Size(403, 11);
+            this.emptySpaceItem9.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem9.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // lblRegister
+            // emptySpaceItem5
             // 
-            this.lblRegister.AllowHotTrack = false;
-            this.lblRegister.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.lblRegister.AppearanceItemCaption.Options.UseFont = true;
-            this.lblRegister.AppearanceItemCaption.Options.UseTextOptions = true;
-            this.lblRegister.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
-            this.lblRegister.Location = new System.Drawing.Point(12, 179);
-            this.lblRegister.MinSize = new System.Drawing.Size(194, 22);
-            this.lblRegister.Name = "lblRegister";
-            this.lblRegister.Size = new System.Drawing.Size(291, 22);
-            this.lblRegister.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
-            this.lblRegister.Text = "Register new account !!!";
-            this.lblRegister.TextSize = new System.Drawing.Size(175, 17);
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(0, 0);
+            this.emptySpaceItem5.MaxSize = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem5.MinSize = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem5.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem10
+            // emptySpaceItem6
             // 
-            this.emptySpaceItem10.AllowHotTrack = false;
-            this.emptySpaceItem10.Location = new System.Drawing.Point(12, 169);
-            this.emptySpaceItem10.Name = "emptySpaceItem10";
-            this.emptySpaceItem10.Size = new System.Drawing.Size(291, 10);
-            this.emptySpaceItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.emptySpaceItem6.AllowHotTrack = false;
+            this.emptySpaceItem6.Location = new System.Drawing.Point(413, 0);
+            this.emptySpaceItem6.MaxSize = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem6.MinSize = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem6.Name = "emptySpaceItem6";
+            this.emptySpaceItem6.Size = new System.Drawing.Size(10, 179);
+            this.emptySpaceItem6.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
+            this.emptySpaceItem6.TextSize = new System.Drawing.Size(0, 0);
             // 
             // LoginForm
             // 
@@ -331,38 +307,35 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
-            this.ClientSize = new System.Drawing.Size(335, 231);
+            this.ClientSize = new System.Drawing.Size(443, 213);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.IconOptions.Image = global::COS_DesktopApp.Properties.Resources.chef512;
+            this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("LoginForm.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtEmail.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lblLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtUsername1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciUsername1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciPassword)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lciUsername)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lciEmail)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lciBtnLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lblRegister)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem6)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,25 +345,21 @@
         private DevExpress.XtraLayout.LayoutControl layoutControl1;
         private DevExpress.XtraLayout.LayoutControlGroup Root;
         private DevExpress.XtraLayout.SimpleLabelItem lblLogin;
-        private DevExpress.XtraEditors.TextEdit txtUsername;
+        private DevExpress.XtraEditors.TextEdit txtEmail;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txtPassword;
         private DevExpress.XtraLayout.LayoutControlItem lciPassword;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
-        private DevExpress.XtraLayout.LayoutControlItem lciUsername;
+        private DevExpress.XtraLayout.LayoutControlItem lciEmail;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem6;
-        private DevExpress.XtraEditors.TextEdit txtUsername1;
-        private DevExpress.XtraLayout.LayoutControlItem lciUsername1;
         private DevExpress.XtraEditors.SimpleButton btnLogin;
         private DevExpress.XtraLayout.LayoutControlItem lciBtnLogin;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem8;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem9;
-        private DevExpress.XtraLayout.SimpleLabelItem lblRegister;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem10;
     }
 }
 
