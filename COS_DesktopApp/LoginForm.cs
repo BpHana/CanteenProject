@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace COS_DesktopApp
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class LoginForm : DevExpress.XtraEditors.XtraForm
     {
-        public Form1()
+        public LoginForm()
         {
             InitializeComponent();
         }
