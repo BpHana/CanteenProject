@@ -99,6 +99,11 @@
     <Compile Include="account_role.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="CanteenOrderingSystemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -164,6 +169,12 @@
     <Compile Include="sugar_level.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ucAccountDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccountDetails.Designer.cs">
+      <DependentUpon>ucAccountDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="Dashboard1.resx">
       <DependentUpon>Dashboard1.cs</DependentUpon>
@@ -188,11 +199,25 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucAccountDetails.resx">
+      <DependentUpon>ucAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <EntityDeploy Include="Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="CanteenOrderingSystemDataSet.xsc">
+      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CanteenOrderingSystemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CanteenOrderingSystemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CanteenOrderingSystemDataSet.xss">
+      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>

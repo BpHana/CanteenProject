@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.fdfContainer = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
             this.eDashboard = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.eGroupAccountManagement = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -52,13 +52,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // fluentDesignFormContainer1
+            // fdfContainer
             // 
-            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(213, 30);
-            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(994, 663);
-            this.fluentDesignFormContainer1.TabIndex = 0;
+            this.fdfContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.fdfContainer.Location = new System.Drawing.Point(213, 30);
+            this.fdfContainer.Name = "fdfContainer";
+            this.fdfContainer.Size = new System.Drawing.Size(994, 663);
+            this.fdfContainer.TabIndex = 0;
             // 
             // accordionControl1
             // 
@@ -81,7 +81,6 @@
             this.accordionControl1.Appearance.Item.Pressed.Options.UseFont = true;
             this.accordionControl1.Appearance.ItemWithContainer.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.ItemWithContainer.Hovered.Options.UseFont = true;
-            this.accordionControl1.BackgroundImage = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
             this.accordionControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
@@ -115,6 +114,7 @@
             this.eGroupAccountManagement.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.eAccountDetails,
             this.eRoles});
+            this.eGroupAccountManagement.Expanded = true;
             this.eGroupAccountManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.user;
             this.eGroupAccountManagement.Name = "eGroupAccountManagement";
             this.eGroupAccountManagement.Text = "Account Management";
@@ -129,6 +129,7 @@
             this.eAccountDetails.Name = "eAccountDetails";
             this.eAccountDetails.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eAccountDetails.Text = "Account Details";
+            this.eAccountDetails.Click += new System.EventHandler(this.eAccountDetails_Click);
             // 
             // eRoles
             // 
@@ -149,6 +150,7 @@
             this.eOrigins,
             this.eCompanies,
             this.eSugarLevel});
+            this.eProductManagement.Expanded = true;
             this.eProductManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.archive_filled_box;
             this.eProductManagement.Name = "eProductManagement";
             this.eProductManagement.Text = "Products Management";
@@ -262,8 +264,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1207, 693);
-            this.ControlContainer = this.fluentDesignFormContainer1;
-            this.Controls.Add(this.fluentDesignFormContainer1);
+            this.ControlContainer = this.fdfContainer;
+            this.Controls.Add(this.fdfContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
@@ -280,7 +282,7 @@
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fdfContainer;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentFormDefaultManager fluentFormDefaultManager1;
         private DevExpress.XtraBars.SkinDropDownButtonItem skinDropDownButtonItem1;
