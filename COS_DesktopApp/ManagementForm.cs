@@ -17,9 +17,9 @@ namespace COS_DesktopApp
             InitializeComponent();
         }
 
-        private void eDashboard_Click(object sender, EventArgs e)
+        private void eOrderManagement_Click(object sender, EventArgs e)
         {
-        }
 
+        }
     }
 }
