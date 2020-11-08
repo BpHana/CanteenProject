@@ -115,11 +115,7 @@
             this.eGroupAccountManagement.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.eAccountDetails,
             this.eRoles});
-            this.eGroupAccountManagement.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.eGroupAccountManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.user;
             this.eGroupAccountManagement.Name = "eGroupAccountManagement";
             this.eGroupAccountManagement.Text = "Account Management";
             // 
@@ -153,11 +149,7 @@
             this.eOrigins,
             this.eCompanies,
             this.eSugarLevel});
-            this.eProductManagement.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.HeaderControl),
-            new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.ContextButtons)});
+            this.eProductManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.archive_filled_box;
             this.eProductManagement.Name = "eProductManagement";
             this.eProductManagement.Text = "Products Management";
             // 
@@ -221,6 +213,7 @@
             this.eOrderManagement.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eOrderManagement.Appearance.Normal.Options.UseFont = true;
             this.eOrderManagement.Expanded = true;
+            this.eOrderManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.list;
             this.eOrderManagement.Name = "eOrderManagement";
             this.eOrderManagement.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eOrderManagement.Text = "Order";
