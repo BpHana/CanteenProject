@@ -110,18 +110,6 @@
     <Compile Include="company.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard1.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Dashboard1.Designer.cs">
-      <DependentUpon>Dashboard1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="DashBroadForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DashBroadForm.Designer.cs">
-      <DependentUpon>DashBroadForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +149,12 @@
     <Compile Include="product.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ucProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProduct.Designer.cs">
+      <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="products_type.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -176,17 +170,14 @@
       <DependentUpon>ucAccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utils.cs" />
-    <EmbeddedResource Include="Dashboard1.resx">
-      <DependentUpon>Dashboard1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="DashBroadForm.resx">
-      <DependentUpon>DashBroadForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ManagementForm.resx">
       <DependentUpon>ManagementForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProduct.resx">
+      <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -239,6 +230,8 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\chef16.png" />
+    <None Include="Resources\dashboard16.png" />
     <Content Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>
@@ -249,10 +242,9 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
-    <None Include="Resources\chef16.png" />
-    <None Include="Resources\dashboard16.png" />
     <Content Include="Resources\Screenshot 2020-11-07 143737.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

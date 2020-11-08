@@ -89,6 +89,7 @@
           <Property Name="id_sugarLevel" Type="int" />
           <Property Name="id_company" Type="int" />
           <Property Name="deletedAt" Type="datetime" />
+          <Property Name="image" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="products_type">
           <Key>
@@ -379,6 +380,7 @@
           <Property Name="id_sugarLevel" Type="Int32" />
           <Property Name="id_company" Type="Int32" />
           <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="image" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="carts" Relationship="Self.FK__cart__id_product__36B12243" FromRole="products" ToRole="cart" />
           <NavigationProperty Name="company" Relationship="Self.FK__products__id_com__3B75D760" FromRole="products" ToRole="company" />
           <NavigationProperty Name="order_details" Relationship="Self.FK__order_det__id_pr__3A81B327" FromRole="products" ToRole="order_details" />
@@ -670,6 +672,7 @@
                 <ScalarProperty Name="id_sugarLevel" ColumnName="id_sugarLevel" />
                 <ScalarProperty Name="id_company" ColumnName="id_company" />
                 <ScalarProperty Name="deletedAt" ColumnName="deletedAt" />
+                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -18,7 +18,7 @@ namespace COS_DesktopApp
         {
 
 
-            Dashboard1 obj = new Dashboard1();
+    
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new ManagementForm());
