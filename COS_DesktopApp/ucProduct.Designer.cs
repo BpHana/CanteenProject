@@ -32,8 +32,7 @@
             this.canteenOrderingSystemDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.canteenOrderingSystemDataSet = new COS_DesktopApp.CanteenOrderingSystemDataSet();
-            this.productsTableAdapter = new COS_DesktopApp.CanteenOrderingSystemDataSetTableAdapters.productsTableAdapter();
+        
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -49,7 +48,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.canteenOrderingSystemDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.canteenOrderingSystemDataSet)).BeginInit();
+          
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -70,16 +69,9 @@
             // productsBindingSource
             // 
             this.productsBindingSource.DataMember = "products";
-            this.productsBindingSource.DataSource = this.canteenOrderingSystemDataSet;
-            // 
-            // canteenOrderingSystemDataSet
-            // 
-            this.canteenOrderingSystemDataSet.DataSetName = "CanteenOrderingSystemDataSet";
-            this.canteenOrderingSystemDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // productsTableAdapter
-            // 
-            this.productsTableAdapter.ClearBeforeFill = true;
+
+        
+    
             // 
             // gridView1
             // 
@@ -201,7 +193,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.canteenOrderingSystemDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.canteenOrderingSystemDataSet)).EndInit();
+   
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -212,8 +204,7 @@
         private System.Windows.Forms.BindingSource canteenOrderingSystemDataSetBindingSource;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource productsBindingSource;
-        private CanteenOrderingSystemDataSet canteenOrderingSystemDataSet;
-        private CanteenOrderingSystemDataSetTableAdapters.productsTableAdapter productsTableAdapter;
+     
         private DevExpress.Utils.Behaviors.BehaviorManager behaviorManager1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colid;

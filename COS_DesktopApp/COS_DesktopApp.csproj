@@ -99,11 +99,6 @@
     <Compile Include="account_role.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="CanteenOrderingSystemDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -189,17 +184,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="CanteenOrderingSystemDataSet.xsc">
-      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="CanteenOrderingSystemDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>CanteenOrderingSystemDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="CanteenOrderingSystemDataSet.xss">
-      <DependentUpon>CanteenOrderingSystemDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Model.edmx.diagram">
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
