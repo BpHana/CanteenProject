@@ -21,5 +21,21 @@ namespace COS_DesktopApp
         {
 
         }
+
+        private void fluentDesignFormContainer1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void eProducts_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucProduct.Instance))
+            {
+                fdfContainer.Controls.Add(ucProduct.Instance);
+                ucProduct.Instance.Dock = DockStyle.Fill;
+                ucProduct.Instance.BringToFront();
+            }
+           
+        }
     }
 }
