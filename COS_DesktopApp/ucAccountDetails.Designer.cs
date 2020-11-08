@@ -41,7 +41,6 @@
             this.colphonenumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colImage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accountTableAdapter = new COS_DesktopApp.CanteenOrderingSystemDataSetTableAdapters.accountTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.gcAccountDetails)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).BeginInit();
@@ -52,11 +51,11 @@
             // gcAccountDetails
             // 
             this.gcAccountDetails.DataSource = this.accountBindingSource;
-            this.gcAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcAccountDetails.Location = new System.Drawing.Point(0, 0);
+            this.gcAccountDetails.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gcAccountDetails.Location = new System.Drawing.Point(0, 150);
             this.gcAccountDetails.MainView = this.gridView1;
             this.gcAccountDetails.Name = "gcAccountDetails";
-            this.gcAccountDetails.Size = new System.Drawing.Size(608, 574);
+            this.gcAccountDetails.Size = new System.Drawing.Size(973, 498);
             this.gcAccountDetails.TabIndex = 0;
             this.gcAccountDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -82,8 +81,7 @@
             this.colbirthday,
             this.colphonenumber,
             this.colid_role,
-            this.coldeletedAt,
-            this.colImage});
+            this.coldeletedAt});
             this.gridView1.GridControl = this.gcAccountDetails;
             this.gridView1.Name = "gridView1";
             // 
@@ -144,15 +142,6 @@
             this.coldeletedAt.FieldName = "deletedAt";
             this.coldeletedAt.Name = "coldeletedAt";
             // 
-            // colImage
-            // 
-            this.colImage.Caption = "Image";
-            this.colImage.FieldName = "colImage";
-            this.colImage.Name = "colImage";
-            this.colImage.UnboundType = DevExpress.Data.UnboundColumnType.Object;
-            this.colImage.Visible = true;
-            this.colImage.VisibleIndex = 6;
-            // 
             // accountTableAdapter
             // 
             this.accountTableAdapter.ClearBeforeFill = true;
@@ -163,7 +152,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gcAccountDetails);
             this.Name = "ucAccountDetails";
-            this.Size = new System.Drawing.Size(608, 574);
+            this.Size = new System.Drawing.Size(973, 648);
             ((System.ComponentModel.ISupportInitialize)(this.gcAccountDetails)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.canteenOrderingSystemDataSet)).EndInit();
@@ -187,6 +176,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colid_role;
         private DevExpress.XtraGrid.Columns.GridColumn coldeletedAt;
         private CanteenOrderingSystemDataSetTableAdapters.accountTableAdapter accountTableAdapter;
-        private DevExpress.XtraGrid.Columns.GridColumn colImage;
     }
 }
