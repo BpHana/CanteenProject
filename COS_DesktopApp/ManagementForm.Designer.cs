@@ -134,7 +134,7 @@
             this.eAccountDetails.Name = "eAccountDetails";
             this.eAccountDetails.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eAccountDetails.Text = "Account Details";
-            this.eAccountDetails.Click += new System.EventHandler(this.eAccountDetails_Click);
+           
             // 
             // eRoles
             // 
