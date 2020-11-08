@@ -86,7 +86,7 @@
             // 
             this.txtEmail.Location = new System.Drawing.Point(127, 89);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.txtEmail.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.txtEmail.Properties.Appearance.Options.UseFont = true;
             this.txtEmail.Size = new System.Drawing.Size(294, 24);
             this.txtEmail.StyleController = this.layoutControl1;
@@ -105,7 +105,7 @@
             // 
             // btnLogin
             // 
-            this.btnLogin.Appearance.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnLogin.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnLogin.Appearance.Options.UseFont = true;
             this.btnLogin.Location = new System.Drawing.Point(180, 166);
             this.btnLogin.Name = "btnLogin";
@@ -148,7 +148,7 @@
             // lblLogin
             // 
             this.lblLogin.AllowHotTrack = false;
-            this.lblLogin.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NP-B", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lblLogin.AppearanceItemCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lblLogin.AppearanceItemCaption.Options.UseFont = true;
             this.lblLogin.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lblLogin.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center;
@@ -161,7 +161,7 @@
             this.lblLogin.Size = new System.Drawing.Size(403, 57);
             this.lblLogin.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.lblLogin.Text = "Login";
-            this.lblLogin.TextSize = new System.Drawing.Size(106, 43);
+            this.lblLogin.TextSize = new System.Drawing.Size(97, 42);
             // 
             // emptySpaceItem2
             // 
@@ -187,7 +187,7 @@
             // 
             // lciPassword
             // 
-            this.lciPassword.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lciPassword.AppearanceItemCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lciPassword.AppearanceItemCaption.Options.UseFont = true;
             this.lciPassword.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lciPassword.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -216,7 +216,7 @@
             // 
             // lciEmail
             // 
-            this.lciEmail.AppearanceItemCaption.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.lciEmail.AppearanceItemCaption.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.lciEmail.AppearanceItemCaption.Options.UseFont = true;
             this.lciEmail.AppearanceItemCaption.Options.UseTextOptions = true;
             this.lciEmail.AppearanceItemCaption.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
@@ -305,14 +305,14 @@
             // LoginForm
             // 
             this.Appearance.Options.UseFont = true;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayoutStore = System.Windows.Forms.ImageLayout.Tile;
             this.BackgroundImageStore = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
             this.ClientSize = new System.Drawing.Size(444, 227);
             this.Controls.Add(this.layoutControl1);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Font = new System.Drawing.Font("UD Digi Kyokasho NK-R", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IconOptions.Image = ((System.Drawing.Image)(resources.GetObject("LoginForm.IconOptions.Image")));
             this.Margin = new System.Windows.Forms.Padding(4);

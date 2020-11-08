@@ -18,11 +18,10 @@ namespace COS_DesktopApp
         {
 
 
-           
-          Application.EnableVisualStyles();
+            Dashboard1 obj = new Dashboard1();
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new DashbroadForm());
-          
+            Application.Run(new ManagementForm());
         }
     }
 }
