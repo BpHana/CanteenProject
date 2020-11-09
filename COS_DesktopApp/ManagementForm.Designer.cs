@@ -55,10 +55,12 @@
             // fdfContainer
             // 
             this.fdfContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fdfContainer.Location = new System.Drawing.Point(213, 30);
+            this.fdfContainer.Location = new System.Drawing.Point(267, 37);
+            this.fdfContainer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fdfContainer.Name = "fdfContainer";
-            this.fdfContainer.Size = new System.Drawing.Size(994, 663);
+            this.fdfContainer.Size = new System.Drawing.Size(480, 484);
             this.fdfContainer.TabIndex = 0;
+            this.fdfContainer.Click += new System.EventHandler(this.fluentDesignFormContainer1_Click);
             // 
             // accordionControl1
             // 
@@ -72,7 +74,9 @@
             this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
             this.accordionControl1.Appearance.Group.Normal.Options.UseForeColor = true;
             this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Pressed.ForeColor = System.Drawing.Color.Black;
             this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseForeColor = true;
             this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
             this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -88,13 +92,14 @@
             this.eGroupAccountManagement,
             this.eProductManagement,
             this.eOrderManagement});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 30);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 37);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
-            this.accordionControl1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
+            this.accordionControl1.Padding = new System.Windows.Forms.Padding(6, 12, 6, 6);
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(213, 663);
+            this.accordionControl1.Size = new System.Drawing.Size(267, 484);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -129,7 +134,7 @@
             this.eAccountDetails.Name = "eAccountDetails";
             this.eAccountDetails.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eAccountDetails.Text = "Account Details";
-            this.eAccountDetails.Click += new System.EventHandler(this.eAccountDetails_Click);
+           
             // 
             // eRoles
             // 
@@ -165,6 +170,7 @@
             this.eProducts.Name = "eProducts";
             this.eProducts.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eProducts.Text = "Products";
+            this.eProducts.Click += new System.EventHandler(this.eProducts_Click);
             // 
             // eProductTypes
             // 
@@ -254,22 +260,24 @@
             // 
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1207, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(747, 37);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
             // ManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1207, 693);
+            this.ClientSize = new System.Drawing.Size(747, 521);
             this.ControlContainer = this.fdfContainer;
             this.Controls.Add(this.fdfContainer);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
             this.IconOptions.Image = global::COS_DesktopApp.Properties.Resources.chef512;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ManagementForm";
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
