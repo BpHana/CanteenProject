@@ -144,6 +144,7 @@
             this.eRoles.Name = "eRoles";
             this.eRoles.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eRoles.Text = "Roles";
+            this.eRoles.Click += new System.EventHandler(this.eRoles_Click);
             // 
             // eProductManagement
             // 
