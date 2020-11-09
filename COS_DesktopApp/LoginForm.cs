@@ -27,7 +27,7 @@ namespace COS_DesktopApp
                                 where account.email == txtEmail.Text && account.password == pass
                                 select account;
 
-                    if(query.SingleOrDefault() != null)
+                    if (query.SingleOrDefault() != null)
                     {
                         MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         var ManagementForm = new ManagementForm();
@@ -62,5 +62,5 @@ namespace COS_DesktopApp
                 txtPassword.Select(txtPassword.Text.Length, 0);
             }
         }
-    }   
+    }
 }

@@ -158,6 +158,12 @@
     <Compile Include="sugar_level.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ucAccountRole.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccountRole.Designer.cs">
+      <DependentUpon>ucAccountRole.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -185,6 +191,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucAccountRole.resx">
+      <DependentUpon>ucAccountRole.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
     </EmbeddedResource>
