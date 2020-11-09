@@ -40,14 +40,29 @@ namespace COS_DesktopApp
 
         private void eAccountDetails_Click(object sender, EventArgs e)
         {
-            if (!fdfContainer.Controls.Contains(ucAccountDetails.Instance))
+            ucAccountDetails ucAccountDetails = ucAccountDetails.Instance;
+            if (!fdfContainer.Controls.Contains(ucAccountDetails))
             {
 
-                fdfContainer.Controls.Add(ucAccountDetails.Instance);
-                ucAccountDetails.Instance.Dock = DockStyle.Fill;
-                ucAccountDetails.Instance.BringToFront();
+                fdfContainer.Controls.Add(ucAccountDetails);
+                ucAccountDetails.Dock = DockStyle.Fill;
+                ucAccountDetails.BringToFront();
             }
-            ucAccountDetails.Instance.BringToFront();
+            ucAccountDetails.ucAccountRefresh();
+            ucAccountDetails.BringToFront();
+
+
+        }
+
+        private void eRoles_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucAccountRole.Instance))
+            {
+                fdfContainer.Controls.Add(ucAccountRole.Instance);
+                ucAccountRole.Instance.Dock = DockStyle.Fill;
+                ucAccountRole.Instance.BringToFront();
+            }
+            ucAccountRole.Instance.BringToFront();
         }
     }
 }

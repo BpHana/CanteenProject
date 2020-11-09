@@ -37,8 +37,8 @@ namespace COS_DesktopApp
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.products.LoadAsync().ContinueWith(loadTask =>
             {
-    // Bind data to control when loading complete
-    productsBindingSource.DataSource = dbContext.products.Local.ToBindingList();
+                // Bind data to control when loading complete
+                productsBindingSource.DataSource = dbContext.products.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
     }
