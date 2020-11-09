@@ -43,6 +43,7 @@
             this.colaccount_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -51,11 +52,11 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.accountsBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.gridControl1.Location = new System.Drawing.Point(0, 148);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(824, 560);
+            this.gridControl1.Size = new System.Drawing.Size(824, 412);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -156,10 +157,20 @@
             this.colorders.FieldName = "orders";
             this.colorders.Name = "colorders";
             // 
+            // simpleButton1
+            // 
+            this.simpleButton1.Location = new System.Drawing.Point(351, 71);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.TabIndex = 1;
+            this.simpleButton1.Text = "simpleButton1";
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            // 
             // ucAccountDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
             this.Name = "ucAccountDetails";
             this.Size = new System.Drawing.Size(824, 560);
@@ -186,5 +197,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colaccount_role;
         private DevExpress.XtraGrid.Columns.GridColumn colcarts;
         private DevExpress.XtraGrid.Columns.GridColumn colorders;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
