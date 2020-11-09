@@ -55,5 +55,6 @@ namespace COS_DesktopApp
         {
             this.ucAccountRefresh();
         }
+
     }
 }

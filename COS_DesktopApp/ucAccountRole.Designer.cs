@@ -28,91 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.account_roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.GridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colname = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colaccounts = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
+            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.account_roleBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl1.Location = new System.Drawing.Point(0, 0);
-            this.gridControl1.MainView = this.GridView1;
+            this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(464, 388);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.UseEmbeddedNavigator = true;
+            this.gridControl1.Size = new System.Drawing.Size(672, 402);
+            this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.GridView1});
+            this.gridView1});
             // 
-            // account_roleBindingSource
+            // gridView1
             // 
-            this.account_roleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
-            // GridView1
+            // windowsUIButtonPanel1
             // 
-            this.GridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid,
-            this.colname,
-            this.coldeletedAt,
-            this.colaccounts});
-            this.GridView1.GridControl = this.gridControl1;
-            this.GridView1.Name = "GridView1";
-            this.GridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Bottom;
-            this.GridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
-            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colid, DevExpress.Data.ColumnSortOrder.Ascending)});
-            this.GridView1.InitNewRow += new DevExpress.XtraGrid.Views.Grid.InitNewRowEventHandler(this.gridView1_InitNewRow);
-            this.GridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
-            this.GridView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GridView1_KeyDown);
+            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton(),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton()});
+            this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 447);
+            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(672, 75);
+            this.windowsUIButtonPanel1.TabIndex = 0;
             // 
-            // colid
+            // gridControl2
             // 
-            this.colid.Caption = "ID";
-            this.colid.FieldName = "id";
-            this.colid.Name = "colid";
-            this.colid.OptionsColumn.AllowEdit = false;
-            this.colid.Visible = true;
-            this.colid.VisibleIndex = 0;
+            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl2.Location = new System.Drawing.Point(0, 0);
+            this.gridControl2.MainView = this.gridView2;
+            this.gridControl2.Name = "gridControl2";
+            this.gridControl2.Size = new System.Drawing.Size(672, 447);
+            this.gridControl2.TabIndex = 1;
+            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // colname
+            // gridView2
             // 
-            this.colname.Caption = "Role Name";
-            this.colname.FieldName = "name";
-            this.colname.Name = "colname";
-            this.colname.Visible = true;
-            this.colname.VisibleIndex = 1;
-            // 
-            // coldeletedAt
-            // 
-            this.coldeletedAt.FieldName = "deletedAt";
-            this.coldeletedAt.Name = "coldeletedAt";
-            this.coldeletedAt.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
-            // 
-            // colaccounts
-            // 
-            this.colaccounts.FieldName = "accounts";
-            this.colaccounts.Name = "colaccounts";
-            this.colaccounts.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
+            this.gridView2.GridControl = this.gridControl2;
+            this.gridView2.Name = "gridView2";
             // 
             // ucAccountRole
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.gridControl2);
+            this.Controls.Add(this.windowsUIButtonPanel1);
             this.Name = "ucAccountRole";
-            this.Size = new System.Drawing.Size(464, 388);
+            this.Size = new System.Drawing.Size(672, 522);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -120,11 +102,9 @@
         #endregion
 
         private DevExpress.XtraGrid.GridControl gridControl1;
-        private DevExpress.XtraGrid.Views.Grid.GridView GridView1;
-        private System.Windows.Forms.BindingSource account_roleBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colid;
-        private DevExpress.XtraGrid.Columns.GridColumn colname;
-        private DevExpress.XtraGrid.Columns.GridColumn coldeletedAt;
-        private DevExpress.XtraGrid.Columns.GridColumn colaccounts;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
+        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
     }
 }
