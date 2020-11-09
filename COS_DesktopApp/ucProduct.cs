@@ -38,19 +38,28 @@ namespace COS_DesktopApp
             return (Image)(new Bitmap(imgToResize, size));
         }
 
-      
+      public RepositoryItemTextEdit getImage(string image)
+        {
+             RepositoryItemTextEdit textEdit = new RepositoryItemTextEdit();
+            Image obj = Image.FromFile(@"..\..\..\img\"+image);
+           obj= resizeImage(obj, new Size(50, 50));
+             textEdit.ContextImageOptions.Image = obj;
+
+            return textEdit;
+        }
         private void ProductControl_Load(object sender, EventArgs e)
         {
 
-            RepositoryItemTextEdit textEdit = new RepositoryItemTextEdit();
-            Image obj = Image.FromFile(@"..\..\..\img\goodmood.jpg");
-           obj= resizeImage(obj, new Size(50, 50));
-            textEdit.ContextImageOptions.Image = obj;
+           // RepositoryItemTextEdit textEdit = new RepositoryItemTextEdit();
+           // Image obj = Image.FromFile(@"..\..\..\img\goodmood.jpg");
+           //obj= resizeImage(obj, new Size(50, 50));
+           // textEdit.ContextImageOptions.Image = obj;
         
-            gridView1.Columns["gridColumn1"].ColumnEdit = textEdit;
-            gridControl1.RepositoryItems.Add(textEdit);
+           // gridView1.Columns["gridColumn1"].ColumnEdit = textEdit;
+           // gridControl1.RepositoryItems.Add(textEdit);
             CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
-            var result = from c in db.products select new { id = c.id, name = c.name, price = c.price, volume = c.volume, ingredient = c.ingredient, type = c.products_type.name, origin = c.origin.name, sugar = c.sugar_level.name, company = c.company.name };
+           
+            var result = from c in db.products select new { id = c.id, name = c.name, price = c.price, volume = c.volume, ingredient = c.ingredient, type = c.products_type.name, origin = c.origin.name, sugar = c.sugar_level.name, company = c.company.name,image=c.image };
             gridControl1.DataSource = result.ToList();
 
         }

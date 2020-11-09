@@ -119,7 +119,6 @@
             this.eGroupAccountManagement.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.eAccountDetails,
             this.eRoles});
-            this.eGroupAccountManagement.Expanded = true;
             this.eGroupAccountManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.user;
             this.eGroupAccountManagement.Name = "eGroupAccountManagement";
             this.eGroupAccountManagement.Text = "Account Management";
@@ -154,7 +153,6 @@
             this.eOrigins,
             this.eCompanies,
             this.eSugarLevel});
-            this.eProductManagement.Expanded = true;
             this.eProductManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.archive_filled_box;
             this.eProductManagement.Name = "eProductManagement";
             this.eProductManagement.Text = "Products Management";
