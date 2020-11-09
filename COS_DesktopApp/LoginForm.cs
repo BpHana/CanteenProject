@@ -30,6 +30,10 @@ namespace COS_DesktopApp
                     if(query.SingleOrDefault() != null)
                     {
                         MessageBox.Show("Login Successful", "Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        var ManagementForm = new ManagementForm();
+                        ManagementForm.Closed += (s, args) => this.Close();
+                        ManagementForm.Show();
+                        this.Hide();
                     }
                     else
                     {
@@ -42,5 +46,21 @@ namespace COS_DesktopApp
                 MessageBox.Show(ex.Message, "Login", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(this, new EventArgs());
+            }
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                txtPassword.Select(txtPassword.Text.Length, 0);
+            }
+        }
+    }   
 }

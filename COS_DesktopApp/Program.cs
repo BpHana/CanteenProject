@@ -21,7 +21,7 @@ namespace COS_DesktopApp
     
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new ManagementForm());
+            Application.Run(new LoginForm());
         }
     }
 }
