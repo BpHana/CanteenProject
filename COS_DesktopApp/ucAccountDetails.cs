@@ -41,14 +41,12 @@ namespace COS_DesktopApp
             dbContext.accounts.LoadAsync().ContinueWith(loadTask =>
             {
                 // Bind data to control when loading complete
-                accountsBindingSource.DataSource = dbContext.accounts.Local.ToBindingList();
+                accountsBindingSource1.DataSource = dbContext.accounts.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
         public void ucAccountRefresh()
-        { 
-            gridControl1.RefreshDataSource();
-            gridView1.RefreshData();
+        {
         }
 
         private void simpleButton1_Click(object sender, EventArgs e)
@@ -56,5 +54,14 @@ namespace COS_DesktopApp
             this.ucAccountRefresh();
         }
 
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
