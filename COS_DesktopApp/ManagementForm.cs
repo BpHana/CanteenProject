@@ -35,7 +35,18 @@ namespace COS_DesktopApp
                 ucProduct.Instance.Dock = DockStyle.Fill;
                 ucProduct.Instance.BringToFront();
             }
-           
+
+        }
+
+        private void eAccountDetails_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucAccountDetails.Instance))
+            {
+
+                fdfContainer.Controls.Add(ucAccountDetails.Instance);
+                ucAccountDetails.Instance.Dock = DockStyle.Fill;
+                ucAccountDetails.Instance.BringToFront();
+            }
         }
     }
 }
