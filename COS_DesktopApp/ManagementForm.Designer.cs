@@ -55,9 +55,9 @@
             // fdfContainer
             // 
             this.fdfContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fdfContainer.Location = new System.Drawing.Point(229, 30);
+            this.fdfContainer.Location = new System.Drawing.Point(232, 30);
             this.fdfContainer.Name = "fdfContainer";
-            this.fdfContainer.Size = new System.Drawing.Size(411, 393);
+            this.fdfContainer.Size = new System.Drawing.Size(916, 614);
             this.fdfContainer.TabIndex = 0;
             this.fdfContainer.Click += new System.EventHandler(this.fluentDesignFormContainer1_Click);
             // 
@@ -97,7 +97,7 @@
             this.accordionControl1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(229, 393);
+            this.accordionControl1.Size = new System.Drawing.Size(232, 614);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -259,7 +259,7 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(640, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1148, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
@@ -267,7 +267,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 423);
+            this.ClientSize = new System.Drawing.Size(1148, 644);
             this.ControlContainer = this.fdfContainer;
             this.Controls.Add(this.fdfContainer);
             this.Controls.Add(this.accordionControl1);
@@ -278,6 +278,7 @@
             this.NavigationControl = this.accordionControl1;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Management";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentFormDefaultManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();

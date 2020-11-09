@@ -39,21 +39,9 @@ namespace COS_DesktopApp
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.accounts.LoadAsync().ContinueWith(loadTask =>
             {
-                // Bind data to control when loading complete
-                accountsBindingSource.DataSource = dbContext.accounts.Local.ToBindingList();
+    // Bind data to control when loading complete
+    accountsBindingSource.DataSource = dbContext.accounts.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
-
-        private void ucAccountDetails_Load(object sender, EventArgs e)
-        {
-            CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
-            var result = from c in db.accounts select new { Id = c.id, Email = c.email, Fullname = c.fullname, Birthday = c.birthday, Phonenumber = c.phonenumber, Role = c.account_role.name };
-            gcAccountDetails.DataSource = result.ToList();
-
-
-
-        }
     }
-
-
 }

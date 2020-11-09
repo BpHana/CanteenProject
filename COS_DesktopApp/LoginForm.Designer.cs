@@ -91,6 +91,7 @@
             this.txtEmail.Size = new System.Drawing.Size(294, 24);
             this.txtEmail.StyleController = this.layoutControl1;
             this.txtEmail.TabIndex = 4;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
             // 
             // txtPassword
             // 
@@ -102,6 +103,7 @@
             this.txtPassword.Size = new System.Drawing.Size(294, 22);
             this.txtPassword.StyleController = this.layoutControl1;
             this.txtPassword.TabIndex = 5;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 

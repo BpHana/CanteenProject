@@ -35,7 +35,7 @@ namespace COS_DesktopApp
                 ucProduct.Instance.Dock = DockStyle.Fill;
                 ucProduct.Instance.BringToFront();
             }
-
+            ucProduct.Instance.BringToFront();
         }
 
         private void eAccountDetails_Click(object sender, EventArgs e)
@@ -47,6 +47,7 @@ namespace COS_DesktopApp
                 ucAccountDetails.Instance.Dock = DockStyle.Fill;
                 ucAccountDetails.Instance.BringToFront();
             }
+            ucAccountDetails.Instance.BringToFront();
         }
     }
 }

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.gcAccountDetails = new DevExpress.XtraGrid.GridControl();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,21 +43,21 @@
             this.colaccount_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.gcAccountDetails)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // gcAccountDetails
+            // gridControl1
             // 
-            this.gcAccountDetails.DataSource = this.accountsBindingSource;
-            this.gcAccountDetails.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gcAccountDetails.Location = new System.Drawing.Point(0, 0);
-            this.gcAccountDetails.MainView = this.gridView1;
-            this.gcAccountDetails.Name = "gcAccountDetails";
-            this.gcAccountDetails.Size = new System.Drawing.Size(663, 459);
-            this.gcAccountDetails.TabIndex = 0;
-            this.gcAccountDetails.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridControl1.DataSource = this.accountsBindingSource;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 0);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(824, 560);
+            this.gridControl1.TabIndex = 0;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
@@ -74,7 +74,7 @@
             this.colaccount_role,
             this.colcarts,
             this.colorders});
-            this.gridView1.GridControl = this.gcAccountDetails;
+            this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
             // accountsBindingSource
@@ -162,10 +162,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.gcAccountDetails);
+            this.Controls.Add(this.gridControl1);
             this.Name = "ucAccountDetails";
-            this.Size = new System.Drawing.Size(663, 459);
-            ((System.ComponentModel.ISupportInitialize)(this.gcAccountDetails)).EndInit();
+            this.Size = new System.Drawing.Size(824, 560);
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -174,9 +174,9 @@
 
         #endregion
 
-        private DevExpress.XtraGrid.GridControl gcAccountDetails;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource accountsBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colemail;
         private DevExpress.XtraGrid.Columns.GridColumn colpassword;
