@@ -49,15 +49,6 @@ namespace COS_DesktopApp
         {
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
-        {
-            this.ucAccountRefresh();
-        }
-
-        private void gridControl1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
         {
