@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
-            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions4 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.accountsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colemail = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -43,14 +43,18 @@
             this.colbirthday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphonenumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_role = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.accountroleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colaccount_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // accountsBindingSource
@@ -61,11 +65,11 @@
             // 
             this.windowsUIButtonPanel1.BackgroundImage = global::COS_DesktopApp.Properties.Resources.Screenshot_2020_11_07_143737;
             this.windowsUIButtonPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            windowsUIButtonImageOptions3.Image = global::COS_DesktopApp.Properties.Resources.add;
-            windowsUIButtonImageOptions4.Image = global::COS_DesktopApp.Properties.Resources.trash;
+            windowsUIButtonImageOptions1.Image = global::COS_DesktopApp.Properties.Resources.add;
+            windowsUIButtonImageOptions2.Image = global::COS_DesktopApp.Properties.Resources.trash;
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions4, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 0);
@@ -82,10 +86,16 @@
             this.gridControl2.Location = new System.Drawing.Point(0, 63);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
+            this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemLookUpEdit1});
             this.gridControl2.Size = new System.Drawing.Size(824, 497);
             this.gridControl2.TabIndex = 2;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
+            // 
+            // accountsBindingSource1
+            // 
+            this.accountsBindingSource1.DataSource = typeof(COS_DesktopApp.account);
             // 
             // gridView2
             // 
@@ -103,10 +113,6 @@
             this.colorders});
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
-            // 
-            // accountsBindingSource1
-            // 
-            this.accountsBindingSource1.DataSource = typeof(COS_DesktopApp.account);
             // 
             // colid
             // 
@@ -156,10 +162,28 @@
             // colid_role
             // 
             this.colid_role.Caption = "Role";
-            this.colid_role.FieldName = "account_role.name";
+            this.colid_role.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.colid_role.FieldName = "id_role";
             this.colid_role.Name = "colid_role";
             this.colid_role.Visible = true;
             this.colid_role.VisibleIndex = 5;
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.AutoSearchColumnIndex = 1;
+            this.repositoryItemLookUpEdit1.BestFitMode = DevExpress.XtraEditors.Controls.BestFitMode.BestFit;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.DataSource = this.accountroleBindingSource;
+            this.repositoryItemLookUpEdit1.DisplayMember = "name";
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.repositoryItemLookUpEdit1.SearchMode = DevExpress.XtraEditors.Controls.SearchMode.AutoComplete;
+            this.repositoryItemLookUpEdit1.ValueMember = "id";
+            // 
+            // accountroleBindingSource
+            // 
+            this.accountroleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
             // 
             // coldeletedAt
             // 
@@ -191,8 +215,10 @@
             this.Size = new System.Drawing.Size(824, 560);
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -214,5 +240,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn colaccount_role;
         private DevExpress.XtraGrid.Columns.GridColumn colcarts;
         private DevExpress.XtraGrid.Columns.GridColumn colorders;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit1;
+        private System.Windows.Forms.BindingSource accountroleBindingSource;
     }
 }
