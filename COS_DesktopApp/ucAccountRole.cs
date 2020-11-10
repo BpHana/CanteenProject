@@ -10,12 +10,14 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraBars.Docking2010;
 
 namespace COS_DesktopApp
 {
     public partial class ucAccountRole : DevExpress.XtraEditors.XtraUserControl
     {
         COS_DesktopApp.CanteenOrderingSystemEntities dbContext;
+
         private static ucAccountRole _instance;
 
         public static ucAccountRole Instance
@@ -45,10 +47,8 @@ namespace COS_DesktopApp
                 // Bind data to control when loading complete
                 account_roleBindingSource.DataSource = dbContext.account_role.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
-
             string filterString = "[deletedAt] Is null";
-            gridView2.Columns["deletedAt"].FilterInfo = new ColumnFilterInfo(filterString);
-
+            gridView1.Columns["deletedAt"].FilterInfo = new ColumnFilterInfo(filterString);
         }
 
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -56,21 +56,26 @@ namespace COS_DesktopApp
             dbContext.SaveChanges();
         }
 
-        private void gridView1_RowDeleted(object sender, DevExpress.Data.RowDeletedEventArgs e)
+        private void windowsUIButtonPanel1_ButtonClick(object sender, ButtonEventArgs e)
         {
-            dbContext.SaveChanges();
-        }
+            if (e.Button == windowsUIButtonPanel1.Buttons[0])
+            {
+                gridView1.AddNewRow();
+            }
+            else if (e.Button == windowsUIButtonPanel1.Buttons[1])
+            {
+                gridView1.SetFocusedRowCellValue(gridView1.Columns[coldeletedAt.FieldName], DateTime.Now);
 
-        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
-        {
-            gridView2.AddNewRow();
-        }
+                if (gridView1.FocusedRowHandle != 0)
+                {
+                    gridView1.FocusedRowHandle = 0;
+                }
+                else
+                {
+                    gridView1.FocusedRowHandle = 1;
+                }
 
-        private void gridView2_InitNewRow(object sender, DevExpress.XtraGrid.Views.Grid.InitNewRowEventArgs e)
-        {
-            int id = Convert.ToInt32(gridView2.GetRowCellValue(gridView2.DataRowCount - 1, gridView2.Columns[colid.FieldName]));
-
-            gridView2.SetRowCellValue(e.RowHandle, gridView2.Columns[colid.FieldName], id + 1);
+            }
         }
     }
 }
