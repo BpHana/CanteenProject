@@ -33,8 +33,10 @@
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.behaviorManager1 = new DevExpress.Utils.Behaviors.BehaviorManager(this.components);
             this.btn = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.lookUpEdit1 = new DevExpress.XtraEditors.LookUpEdit();
+            this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colname = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -42,21 +44,25 @@
             this.colvolume = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colingredient = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcompany = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.companiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.colorigin = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colproducts_type = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colsugar_level = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colimage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid_company = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            this.btn.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
             this.SuspendLayout();
             // 
             // btn
@@ -68,6 +74,7 @@
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.btn.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn.Controls.Add(this.lookUpEdit1);
             this.btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn.Location = new System.Drawing.Point(0, 0);
             this.btn.Name = "btn";
@@ -75,6 +82,27 @@
             this.btn.Size = new System.Drawing.Size(700, 87);
             this.btn.TabIndex = 0;
             this.btn.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btn_ButtonClick);
+            // 
+            // lookUpEdit1
+            // 
+            this.lookUpEdit1.Location = new System.Drawing.Point(464, 42);
+            this.lookUpEdit1.Name = "lookUpEdit1";
+            this.lookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.lookUpEdit1.Properties.CascadingMember = "id";
+            this.lookUpEdit1.Properties.DataSource = this.companiesBindingSource;
+            this.lookUpEdit1.Properties.DisplayMember = "name";
+            this.lookUpEdit1.Properties.ValueMember = "id";
+            this.lookUpEdit1.Size = new System.Drawing.Size(125, 22);
+            this.lookUpEdit1.TabIndex = 2;
+            // 
+            // companiesBindingSource
+            // 
+            this.companiesBindingSource.DataSource = typeof(COS_DesktopApp.company);
+            // 
+            // productsBindingSource
+            // 
+            this.productsBindingSource.DataSource = typeof(COS_DesktopApp.product);
             // 
             // gridControl1
             // 
@@ -85,15 +113,13 @@
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemComboBox1,
-            this.repositoryItemLookUpEdit1});
+            this.repositoryItemLookUpEdit1,
+            this.repositoryItemLookUpEdit2});
             this.gridControl1.Size = new System.Drawing.Size(700, 535);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataSource = typeof(COS_DesktopApp.product);
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // gridView1
             // 
@@ -108,7 +134,8 @@
             this.colproducts_type,
             this.colsugar_level,
             this.colimage,
-            this.coldeletedAt});
+            this.coldeletedAt,
+            this.colid_company});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFilter.AllowAutoFilterConditionChange = DevExpress.Utils.DefaultBoolean.True;
@@ -143,6 +170,7 @@
             this.colprice.FieldName = "price";
             this.colprice.MinWidth = 25;
             this.colprice.Name = "colprice";
+            this.colprice.OptionsFilter.AllowFilterModeChanging = DevExpress.Utils.DefaultBoolean.True;
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 2;
             this.colprice.Width = 94;
@@ -170,27 +198,15 @@
             // colcompany
             // 
             this.colcompany.Caption = "Company";
-            this.colcompany.ColumnEdit = this.repositoryItemLookUpEdit1;
-            this.colcompany.FieldName = "company";
+            this.colcompany.FieldName = "id_company";
             this.colcompany.MinWidth = 25;
             this.colcompany.Name = "colcompany";
             this.colcompany.OptionsColumn.AllowGroup = DevExpress.Utils.DefaultBoolean.True;
+            this.colcompany.OptionsColumn.ImmediateUpdateRowPosition = DevExpress.Utils.DefaultBoolean.False;
+            this.colcompany.OptionsFilter.ImmediateUpdatePopupDateFilterOnCheck = DevExpress.Utils.DefaultBoolean.False;
             this.colcompany.Visible = true;
             this.colcompany.VisibleIndex = 6;
             this.colcompany.Width = 94;
-            // 
-            // repositoryItemLookUpEdit1
-            // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.DataSource = this.productsBindingSource;
-            this.repositoryItemLookUpEdit1.DisplayMember = "company";
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
-            // 
-            // companiesBindingSource
-            // 
-            this.companiesBindingSource.DataSource = typeof(COS_DesktopApp.company);
             // 
             // colorigin
             // 
@@ -240,12 +256,48 @@
             this.coldeletedAt.Name = "coldeletedAt";
             this.coldeletedAt.Width = 94;
             // 
+            // colid_company
+            // 
+            this.colid_company.Caption = "IDcompany";
+            this.colid_company.FieldName = "id_company";
+            this.colid_company.MinWidth = 25;
+            this.colid_company.Name = "colid_company";
+            this.colid_company.Visible = true;
+            this.colid_company.VisibleIndex = 10;
+            this.colid_company.Width = 94;
+            // 
             // repositoryItemComboBox1
             // 
             this.repositoryItemComboBox1.AutoHeight = false;
             this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.CascadingMember = "name";
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "name")});
+            this.repositoryItemLookUpEdit1.DataSource = this.companiesBindingSource;
+            this.repositoryItemLookUpEdit1.DisplayMember = "name";
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.repositoryItemLookUpEdit1.ValueMember = "id";
+            // 
+            // repositoryItemLookUpEdit2
+            // 
+            this.repositoryItemLookUpEdit2.AutoHeight = false;
+            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit2.CascadingMember = "id";
+            this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "Name")});
+            this.repositoryItemLookUpEdit2.DataSource = this.companiesBindingSource;
+            this.repositoryItemLookUpEdit2.DisplayMember = "name";
+            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
+            this.repositoryItemLookUpEdit2.ValueMember = "id";
             // 
             // ucProduct
             // 
@@ -257,12 +309,15 @@
             this.Name = "ucProduct";
             this.Size = new System.Drawing.Size(700, 622);
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            this.btn.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.lookUpEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -272,7 +327,6 @@
         private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btn;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn colname;
         private DevExpress.XtraGrid.Columns.GridColumn colprice;
         private DevExpress.XtraGrid.Columns.GridColumn colvolume;
@@ -287,5 +341,9 @@
         private System.Windows.Forms.BindingSource productsBindingSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemComboBox repositoryItemComboBox1;
         private System.Windows.Forms.BindingSource companiesBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colid_company;
+        public DevExpress.XtraGrid.Columns.GridColumn colid;
+        private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit2;
+        private DevExpress.XtraEditors.LookUpEdit lookUpEdit1;
     }
 }
