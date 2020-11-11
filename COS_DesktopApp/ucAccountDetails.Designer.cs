@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            this.windowsUIButtonPanel1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -43,21 +46,37 @@
             this.colaccount_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // windowsUIButtonPanel1
+            // 
+            this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            windowsUIButtonImageOptions1.Image = global::COS_DesktopApp.Properties.Resources.add;
+            windowsUIButtonImageOptions2.Image = global::COS_DesktopApp.Properties.Resources.trash;
+            this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            this.windowsUIButtonPanel1.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.windowsUIButtonPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.Black;
+            this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 0);
+            this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
+            this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(588, 63);
+            this.windowsUIButtonPanel1.TabIndex = 0;
+            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.accountsBindingSource;
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.gridControl1.Location = new System.Drawing.Point(0, 148);
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 63);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(824, 412);
-            this.gridControl1.TabIndex = 0;
+            this.gridControl1.Size = new System.Drawing.Size(588, 406);
+            this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -87,9 +106,9 @@
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
-            this.colid.OptionsColumn.AllowEdit = false;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
+            this.colid.Width = 62;
             // 
             // colemail
             // 
@@ -98,12 +117,14 @@
             this.colemail.Name = "colemail";
             this.colemail.Visible = true;
             this.colemail.VisibleIndex = 1;
+            this.colemail.Width = 62;
             // 
             // colpassword
             // 
             this.colpassword.Caption = "Password";
             this.colpassword.FieldName = "password";
             this.colpassword.Name = "colpassword";
+            this.colpassword.Width = 62;
             // 
             // colfullname
             // 
@@ -112,14 +133,16 @@
             this.colfullname.Name = "colfullname";
             this.colfullname.Visible = true;
             this.colfullname.VisibleIndex = 2;
+            this.colfullname.Width = 62;
             // 
             // colbirthday
             // 
-            this.colbirthday.Caption = "Birthdate";
+            this.colbirthday.Caption = "Birthday";
             this.colbirthday.FieldName = "birthday";
             this.colbirthday.Name = "colbirthday";
             this.colbirthday.Visible = true;
             this.colbirthday.VisibleIndex = 3;
+            this.colbirthday.Width = 62;
             // 
             // colphonenumber
             // 
@@ -128,14 +151,15 @@
             this.colphonenumber.Name = "colphonenumber";
             this.colphonenumber.Visible = true;
             this.colphonenumber.VisibleIndex = 4;
+            this.colphonenumber.Width = 62;
             // 
             // colid_role
             // 
-            this.colid_role.Caption = "Role";
-            this.colid_role.FieldName = "account_role.name";
+            this.colid_role.FieldName = "id_role";
             this.colid_role.Name = "colid_role";
             this.colid_role.Visible = true;
             this.colid_role.VisibleIndex = 5;
+            this.colid_role.Width = 63;
             // 
             // coldeletedAt
             // 
@@ -151,29 +175,22 @@
             // 
             this.colcarts.FieldName = "carts";
             this.colcarts.Name = "colcarts";
+            this.colcarts.Width = 61;
             // 
             // colorders
             // 
             this.colorders.FieldName = "orders";
             this.colorders.Name = "colorders";
-            // 
-            // simpleButton1
-            // 
-            this.simpleButton1.Location = new System.Drawing.Point(351, 71);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "simpleButton1";
-            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
+            this.colorders.Width = 65;
             // 
             // ucAccountDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.windowsUIButtonPanel1);
             this.Name = "ucAccountDetails";
-            this.Size = new System.Drawing.Size(824, 560);
+            this.Size = new System.Drawing.Size(588, 469);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -183,6 +200,7 @@
 
         #endregion
 
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel windowsUIButtonPanel1;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private System.Windows.Forms.BindingSource accountsBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
@@ -197,6 +215,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colaccount_role;
         private DevExpress.XtraGrid.Columns.GridColumn colcarts;
         private DevExpress.XtraGrid.Columns.GridColumn colorders;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }
