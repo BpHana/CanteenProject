@@ -90,11 +90,7 @@
             this.colsugar_level});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
-            // 
-            // productsBindingSource
-            // 
-            this.productsBindingSource.DataSource = typeof(COS_DesktopApp.product);
-            // 
+           //
             // colid
             // 
             this.colid.FieldName = "id";

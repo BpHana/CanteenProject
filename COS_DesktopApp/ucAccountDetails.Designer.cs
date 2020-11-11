@@ -72,14 +72,6 @@
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(710, 63);
             this.windowsUIButtonPanel1.TabIndex = 0;
             // 
-            // account_roleBindingSource
-            // 
-            this.account_roleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
-            // 
-            // accountsBindingSource
-            // 
-            this.accountsBindingSource.DataSource = typeof(COS_DesktopApp.account);
-            // 
             // gridControl1
             // 
             this.gridControl1.DataSource = this.accountsBindingSource1;
@@ -91,11 +83,6 @@
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
-            // 
-            // accountsBindingSource1
-            // 
-            this.accountsBindingSource1.DataSource = typeof(COS_DesktopApp.account);
-            // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {

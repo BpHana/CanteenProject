@@ -92,11 +92,7 @@
             this.gridControl2.TabIndex = 1;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
-            // 
-            // account_roleBindingSource
-            // 
-            this.account_roleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
-            // 
+            //
             // gridView2
             // 
             this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
