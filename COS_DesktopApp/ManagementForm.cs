@@ -48,7 +48,6 @@ namespace COS_DesktopApp
                 ucAccountDetails.Dock = DockStyle.Fill;
                 ucAccountDetails.BringToFront();
             }
-            ucAccountDetails.ucAccountRefresh();
             ucAccountDetails.BringToFront();
 
 
