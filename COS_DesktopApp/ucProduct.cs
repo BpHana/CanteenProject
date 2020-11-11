@@ -50,41 +50,70 @@ namespace COS_DesktopApp
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
             string filterString = "[deletedAt] Is null";
             gridView1.Columns["deletedAt"].FilterInfo = new ColumnFilterInfo(filterString);
+
+
+            
         }
         public static Image resizeImage(Image imgToResize, Size size)
         {
             return (Image)(new Bitmap(imgToResize, size));
         }
 
-        private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
-        {
-            //DialogResult dialogResult = MessageBox.Show("Are you sure to update?", "Update", MessageBoxButtons.YesNo);
-            //if (dialogResult == DialogResult.Yes)
-            //{
-            dbContext.SaveChanges();
-            //}
-            //else if (dialogResult == DialogResult.No)
-            //{
-            //    var changed = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-            //    foreach (var obj in changed)
-            //    {
-            //        obj.CurrentValues.SetValues(obj.OriginalValues);
-            //        obj.State = EntityState.Unchanged;
-            //    }
+      
 
-            //}
+        private void btn_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
+        {
+            if (e.Button == btn.Buttons[0])
+            {
+                gridView1.AddNewRow();
+            }
+            else if (e.Button == btn.Buttons[1])
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure to Delete?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    gridView1.SetFocusedRowCellValue(gridView1.Columns[coldeletedAt.FieldName], DateTime.Now);
+                    dbContext.SaveChanges();
+                    if (gridView1.FocusedRowHandle != 0)
+                    {
+                        gridView1.FocusedRowHandle = 0;
+                    }
+                    else
+                    {
+                        gridView1.FocusedRowHandle = 1;
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                }
+            }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-          
-           
-            foreach(int i in gridView1.GetSelectedRows())
+            DialogResult dialogResult = MessageBox.Show("Are you sure to update?", "Update", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                gridView1.SetRowCellValue(i, gridView1.Columns["deletedAt"], null);
+                dbContext.SaveChanges();
             }
-            dbContext.SaveChanges();
-      
+            else if (dialogResult == DialogResult.No)
+            {
+                var changed = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
+                foreach (var obj in changed)
+                {
+                    try
+                    {
+                        obj.CurrentValues.SetValues(obj.OriginalValues);
+                    }
+                    catch
+                    {
+
+                    }
+                  
+                    obj.State = EntityState.Unchanged;
+                }
+
+            }
         }
     }
 }
