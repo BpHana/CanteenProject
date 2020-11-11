@@ -144,12 +144,6 @@
     <Compile Include="product.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="ucAccountDetails.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="ucAccountDetails.Designer.cs">
-      <DependentUpon>ucAccountDetails.cs</DependentUpon>
-    </Compile>
     <Compile Include="products_type.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -157,6 +151,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="sugar_level.cs">
       <DependentUpon>Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ucAccountDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucAccountDetails.Designer.cs">
+      <DependentUpon>ucAccountDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="ucAccountRole.cs">
       <SubType>UserControl</SubType>
@@ -177,9 +177,6 @@
     <EmbeddedResource Include="ManagementForm.resx">
       <DependentUpon>ManagementForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ucAccountDetails.resx">
-      <DependentUpon>ucAccountDetails.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,6 +188,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="ucAccountDetails.resx">
+      <DependentUpon>ucAccountDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucAccountRole.resx">
       <DependentUpon>ucAccountRole.cs</DependentUpon>
     </EmbeddedResource>
