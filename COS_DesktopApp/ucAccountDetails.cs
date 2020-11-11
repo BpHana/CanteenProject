@@ -48,14 +48,12 @@ namespace COS_DesktopApp
 
         public void ucAccountRefresh()
         {
-            gridControl1.RefreshDataSource();
-            gridView1.RefreshData();
         }
 
-        private void simpleButton1_Click(object sender, EventArgs e)
+
+        private void windowsUIButtonPanel1_Click(object sender, EventArgs e)
         {
-            this.ucAccountRefresh();
-        }
 
+        }
     }
 }
