@@ -61,6 +61,7 @@
             this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(558, 63);
             this.windowsUIButtonPanel1.TabIndex = 0;
+            this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
             // 
             // gridControl1
             // 
