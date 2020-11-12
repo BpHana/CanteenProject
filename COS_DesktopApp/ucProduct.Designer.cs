@@ -43,36 +43,61 @@
             this.colvolume = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colingredient = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcompany = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.glueCompany = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gluevCompany = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colcompamy = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deleteat = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorigin = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.originsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colproducts_type = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
-            this.products_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.colsugar_level = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemLookUpEdit4 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
             this.sugar_levelBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.colproducts_type = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.glueType = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.products_typeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gluevType = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.name = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.deletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colsugar_level = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.glueLevel = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gluevLevel = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colNameLevel = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDeleteAtLevel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colimage = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldeletedAtType = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemComboBox1 = new DevExpress.XtraEditors.Repository.RepositoryItemComboBox();
+            this.repositoryItemLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemLookUpEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.repositoryItemLookUpEdit3 = new DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit();
+            this.originsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.glueOrigin = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.gluevOrigin = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.origin = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.origindeleteAt = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.companiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.originsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.products_typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueCompany)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevCompany)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sugar_levelBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.products_typeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueLevel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevLevel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueOrigin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevOrigin)).BeginInit();
             this.SuspendLayout();
             // 
             // btn
@@ -115,7 +140,11 @@
             this.repositoryItemLookUpEdit3,
             this.repositoryItemLookUpEdit4,
             this.repositoryItemImageEdit1,
-            this.repositoryItemPictureEdit1});
+            this.repositoryItemPictureEdit1,
+            this.glueType,
+            this.glueCompany,
+            this.glueOrigin,
+            this.glueLevel});
             this.gridControl1.Size = new System.Drawing.Size(700, 529);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -123,7 +152,7 @@
             // 
             // gridView1
             // 
-            this.gridView1.ActiveFilterString = "[deletedAt] Is Null";
+            this.gridView1.ActiveFilterString = "[deletedAt] Is Null And [products_type.deletedAt] Is Null";
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colid,
             this.colname,
@@ -135,7 +164,8 @@
             this.colproducts_type,
             this.colsugar_level,
             this.colimage,
-            this.coldeletedAt});
+            this.coldeletedAt,
+            this.coldeletedAtType});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsFilter.AllowAutoFilterConditionChange = DevExpress.Utils.DefaultBoolean.True;
@@ -198,7 +228,7 @@
             // colcompany
             // 
             this.colcompany.Caption = "Company";
-            this.colcompany.ColumnEdit = this.repositoryItemLookUpEdit1;
+            this.colcompany.ColumnEdit = this.glueCompany;
             this.colcompany.FieldName = "id_company";
             this.colcompany.MinWidth = 25;
             this.colcompany.Name = "colcompany";
@@ -209,83 +239,53 @@
             this.colcompany.VisibleIndex = 6;
             this.colcompany.Width = 94;
             // 
-            // repositoryItemLookUpEdit1
+            // glueCompany
             // 
-            this.repositoryItemLookUpEdit1.AutoHeight = false;
-            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.glueCompany.AutoHeight = false;
+            this.glueCompany.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "name")});
-            this.repositoryItemLookUpEdit1.DataSource = this.companiesBindingSource;
-            this.repositoryItemLookUpEdit1.DisplayMember = "name";
-            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
-            this.repositoryItemLookUpEdit1.ValueMember = "id";
+            this.glueCompany.DataSource = this.companiesBindingSource;
+            this.glueCompany.DisplayMember = "name";
+            this.glueCompany.Name = "glueCompany";
+            this.glueCompany.PopupView = this.gluevCompany;
+            this.glueCompany.ValueMember = "id";
+            // 
+            // gluevCompany
+            // 
+            this.gluevCompany.ActiveFilterString = "[deletedAt] Is Null";
+            this.gluevCompany.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colcompamy,
+            this.deleteat});
+            this.gluevCompany.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gluevCompany.Name = "gluevCompany";
+            this.gluevCompany.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gluevCompany.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gluevCompany.OptionsView.ShowGroupPanel = false;
+            // 
+            // colcompamy
+            // 
+            this.colcompamy.Caption = "Name";
+            this.colcompamy.FieldName = "name";
+            this.colcompamy.Name = "colcompamy";
+            this.colcompamy.Visible = true;
+            this.colcompamy.VisibleIndex = 0;
+            // 
+            // deleteat
+            // 
+            this.deleteat.Caption = "deletedAt";
+            this.deleteat.FieldName = "deletedAt";
+            this.deleteat.Name = "deleteat";
             // 
             // colorigin
             // 
             this.colorigin.Caption = "Origin";
-            this.colorigin.ColumnEdit = this.repositoryItemLookUpEdit3;
+            this.colorigin.ColumnEdit = this.glueOrigin;
             this.colorigin.FieldName = "id_origin";
             this.colorigin.MinWidth = 25;
             this.colorigin.Name = "colorigin";
             this.colorigin.Visible = true;
             this.colorigin.VisibleIndex = 7;
             this.colorigin.Width = 94;
-            // 
-            // repositoryItemLookUpEdit3
-            // 
-            this.repositoryItemLookUpEdit3.AutoHeight = false;
-            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit3.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "name", 47, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
-            this.repositoryItemLookUpEdit3.DataSource = this.originsBindingSource;
-            this.repositoryItemLookUpEdit3.DisplayMember = "name";
-            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
-            this.repositoryItemLookUpEdit3.ValueMember = "id";
-            // 
-            // originsBindingSource
-            // 
-            this.originsBindingSource.DataSource = typeof(COS_DesktopApp.origin);
-            // 
-            // colproducts_type
-            // 
-            this.colproducts_type.Caption = "Type";
-            this.colproducts_type.ColumnEdit = this.repositoryItemLookUpEdit2;
-            this.colproducts_type.FieldName = "id_productsType";
-            this.colproducts_type.MinWidth = 25;
-            this.colproducts_type.Name = "colproducts_type";
-            this.colproducts_type.Visible = true;
-            this.colproducts_type.VisibleIndex = 3;
-            this.colproducts_type.Width = 94;
-            // 
-            // repositoryItemLookUpEdit2
-            // 
-            this.repositoryItemLookUpEdit2.AutoHeight = false;
-            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.repositoryItemLookUpEdit2.CascadingMember = "id";
-            this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
-            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "Name")});
-            this.repositoryItemLookUpEdit2.DataSource = this.products_typeBindingSource;
-            this.repositoryItemLookUpEdit2.DisplayMember = "name";
-            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
-            this.repositoryItemLookUpEdit2.ValueMember = "id";
-            // 
-            // products_typeBindingSource
-            // 
-            this.products_typeBindingSource.DataSource = typeof(COS_DesktopApp.products_type);
-            // 
-            // colsugar_level
-            // 
-            this.colsugar_level.Caption = "Sugar";
-            this.colsugar_level.ColumnEdit = this.repositoryItemLookUpEdit4;
-            this.colsugar_level.FieldName = "id_sugarLevel";
-            this.colsugar_level.MinWidth = 25;
-            this.colsugar_level.Name = "colsugar_level";
-            this.colsugar_level.Visible = true;
-            this.colsugar_level.VisibleIndex = 8;
-            this.colsugar_level.Width = 94;
             // 
             // repositoryItemLookUpEdit4
             // 
@@ -302,6 +302,106 @@
             // sugar_levelBindingSource
             // 
             this.sugar_levelBindingSource.DataSource = typeof(COS_DesktopApp.sugar_level);
+            // 
+            // colproducts_type
+            // 
+            this.colproducts_type.Caption = "Type";
+            this.colproducts_type.ColumnEdit = this.glueType;
+            this.colproducts_type.FieldName = "id_productsType";
+            this.colproducts_type.MinWidth = 25;
+            this.colproducts_type.Name = "colproducts_type";
+            this.colproducts_type.Visible = true;
+            this.colproducts_type.VisibleIndex = 3;
+            this.colproducts_type.Width = 94;
+            // 
+            // glueType
+            // 
+            this.glueType.AutoHeight = false;
+            this.glueType.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueType.DataSource = this.products_typeBindingSource;
+            this.glueType.DisplayMember = "name";
+            this.glueType.Name = "glueType";
+            this.glueType.PopupView = this.gluevType;
+            this.glueType.ValueMember = "id";
+            // 
+            // products_typeBindingSource
+            // 
+            this.products_typeBindingSource.DataSource = typeof(COS_DesktopApp.products_type);
+            // 
+            // gluevType
+            // 
+            this.gluevType.ActiveFilterString = "[deletedAt] Is Null";
+            this.gluevType.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.name,
+            this.deletedAt});
+            this.gluevType.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gluevType.Name = "gluevType";
+            this.gluevType.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gluevType.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gluevType.OptionsView.ShowGroupPanel = false;
+            // 
+            // name
+            // 
+            this.name.Caption = "name";
+            this.name.FieldName = "name";
+            this.name.Name = "name";
+            this.name.Visible = true;
+            this.name.VisibleIndex = 0;
+            // 
+            // deletedAt
+            // 
+            this.deletedAt.Caption = "deletedAt";
+            this.deletedAt.FieldName = "deletedAt";
+            this.deletedAt.Name = "deletedAt";
+            // 
+            // colsugar_level
+            // 
+            this.colsugar_level.Caption = "Sugar";
+            this.colsugar_level.ColumnEdit = this.glueLevel;
+            this.colsugar_level.FieldName = "id_sugarLevel";
+            this.colsugar_level.MinWidth = 25;
+            this.colsugar_level.Name = "colsugar_level";
+            this.colsugar_level.Visible = true;
+            this.colsugar_level.VisibleIndex = 8;
+            this.colsugar_level.Width = 94;
+            // 
+            // glueLevel
+            // 
+            this.glueLevel.AutoHeight = false;
+            this.glueLevel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueLevel.DataSource = this.sugar_levelBindingSource;
+            this.glueLevel.DisplayMember = "name";
+            this.glueLevel.Name = "glueLevel";
+            this.glueLevel.PopupView = this.gluevLevel;
+            this.glueLevel.ValueMember = "id";
+            // 
+            // gluevLevel
+            // 
+            this.gluevLevel.ActiveFilterString = "[deletedAt] Is Null";
+            this.gluevLevel.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colNameLevel,
+            this.colDeleteAtLevel});
+            this.gluevLevel.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gluevLevel.Name = "gluevLevel";
+            this.gluevLevel.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gluevLevel.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gluevLevel.OptionsView.ShowGroupPanel = false;
+            // 
+            // colNameLevel
+            // 
+            this.colNameLevel.Caption = "name";
+            this.colNameLevel.FieldName = "name";
+            this.colNameLevel.Name = "colNameLevel";
+            this.colNameLevel.Visible = true;
+            this.colNameLevel.VisibleIndex = 0;
+            // 
+            // colDeleteAtLevel
+            // 
+            this.colDeleteAtLevel.Caption = "deletedAt";
+            this.colDeleteAtLevel.FieldName = "deletedAt";
+            this.colDeleteAtLevel.Name = "colDeleteAtLevel";
             // 
             // colimage
             // 
@@ -326,12 +426,58 @@
             this.coldeletedAt.Name = "coldeletedAt";
             this.coldeletedAt.Width = 94;
             // 
+            // coldeletedAtType
+            // 
+            this.coldeletedAtType.Caption = "deletedAtType";
+            this.coldeletedAtType.FieldName = "products_type.deletedAt";
+            this.coldeletedAtType.MinWidth = 25;
+            this.coldeletedAtType.Name = "coldeletedAtType";
+            this.coldeletedAtType.Width = 94;
+            // 
             // repositoryItemComboBox1
             // 
-            this.repositoryItemComboBox1.AutoHeight = false;
-            this.repositoryItemComboBox1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemComboBox1.Name = "repositoryItemComboBox1";
+            // 
+            // repositoryItemLookUpEdit1
+            // 
+            this.repositoryItemLookUpEdit1.AutoHeight = false;
+            this.repositoryItemLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit1.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "name")});
+            this.repositoryItemLookUpEdit1.DataSource = this.companiesBindingSource;
+            this.repositoryItemLookUpEdit1.DisplayMember = "name";
+            this.repositoryItemLookUpEdit1.Name = "repositoryItemLookUpEdit1";
+            this.repositoryItemLookUpEdit1.ValueMember = "id";
+            // 
+            // repositoryItemLookUpEdit2
+            // 
+            this.repositoryItemLookUpEdit2.AutoHeight = false;
+            this.repositoryItemLookUpEdit2.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit2.CascadingMember = "id";
+            this.repositoryItemLookUpEdit2.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "Name")});
+            this.repositoryItemLookUpEdit2.DataSource = this.products_typeBindingSource;
+            this.repositoryItemLookUpEdit2.DisplayMember = "name";
+            this.repositoryItemLookUpEdit2.Name = "repositoryItemLookUpEdit2";
+            this.repositoryItemLookUpEdit2.ValueMember = "id";
+            // 
+            // repositoryItemLookUpEdit3
+            // 
+            this.repositoryItemLookUpEdit3.AutoHeight = false;
+            this.repositoryItemLookUpEdit3.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemLookUpEdit3.Columns.AddRange(new DevExpress.XtraEditors.Controls.LookUpColumnInfo[] {
+            new DevExpress.XtraEditors.Controls.LookUpColumnInfo("name", "name", 47, DevExpress.Utils.FormatType.None, "", true, DevExpress.Utils.HorzAlignment.Near, DevExpress.Data.ColumnSortOrder.None, DevExpress.Utils.DefaultBoolean.Default)});
+            this.repositoryItemLookUpEdit3.DataSource = this.originsBindingSource;
+            this.repositoryItemLookUpEdit3.DisplayMember = "name";
+            this.repositoryItemLookUpEdit3.Name = "repositoryItemLookUpEdit3";
+            this.repositoryItemLookUpEdit3.ValueMember = "id";
+            // 
+            // originsBindingSource
+            // 
+            this.originsBindingSource.DataSource = typeof(COS_DesktopApp.origin);
             // 
             // repositoryItemImageEdit1
             // 
@@ -339,6 +485,43 @@
             this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // glueOrigin
+            // 
+            this.glueOrigin.AutoHeight = false;
+            this.glueOrigin.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.glueOrigin.DataSource = this.originsBindingSource;
+            this.glueOrigin.DisplayMember = "name";
+            this.glueOrigin.Name = "glueOrigin";
+            this.glueOrigin.PopupView = this.gluevOrigin;
+            this.glueOrigin.ValueMember = "id";
+            // 
+            // gluevOrigin
+            // 
+            this.gluevOrigin.ActiveFilterString = "[deletedAt] Is Null";
+            this.gluevOrigin.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.origin,
+            this.origindeleteAt});
+            this.gluevOrigin.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gluevOrigin.Name = "gluevOrigin";
+            this.gluevOrigin.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gluevOrigin.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gluevOrigin.OptionsView.ShowGroupPanel = false;
+            // 
+            // origin
+            // 
+            this.origin.Caption = "Name";
+            this.origin.FieldName = "name";
+            this.origin.Name = "origin";
+            this.origin.Visible = true;
+            this.origin.VisibleIndex = 0;
+            // 
+            // origindeleteAt
+            // 
+            this.origindeleteAt.Caption = "deleteAt";
+            this.origindeleteAt.FieldName = "deletedAt";
+            this.origindeleteAt.Name = "origindeleteAt";
             // 
             // ucProduct
             // 
@@ -354,16 +537,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.originsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.products_typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueCompany)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevCompany)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sugar_levelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.products_typeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueLevel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevLevel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemComboBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemLookUpEdit3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.originsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.glueOrigin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gluevOrigin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -396,5 +587,22 @@
         private DevExpress.XtraEditors.Repository.RepositoryItemLookUpEdit repositoryItemLookUpEdit4;
         private DevExpress.XtraEditors.Repository.RepositoryItemImageEdit repositoryItemImageEdit1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraGrid.Columns.GridColumn coldeletedAtType;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit glueType;
+        private DevExpress.XtraGrid.Views.Grid.GridView gluevType;
+        private DevExpress.XtraGrid.Columns.GridColumn name;
+        private DevExpress.XtraGrid.Columns.GridColumn deletedAt;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit glueCompany;
+        private DevExpress.XtraGrid.Views.Grid.GridView gluevCompany;
+        private DevExpress.XtraGrid.Columns.GridColumn colcompamy;
+        private DevExpress.XtraGrid.Columns.GridColumn deleteat;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit glueOrigin;
+        private DevExpress.XtraGrid.Views.Grid.GridView gluevOrigin;
+        private DevExpress.XtraGrid.Columns.GridColumn origin;
+        private DevExpress.XtraGrid.Columns.GridColumn origindeleteAt;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit glueLevel;
+        private DevExpress.XtraGrid.Views.Grid.GridView gluevLevel;
+        private DevExpress.XtraGrid.Columns.GridColumn colNameLevel;
+        private DevExpress.XtraGrid.Columns.GridColumn colDeleteAtLevel;
     }
 }

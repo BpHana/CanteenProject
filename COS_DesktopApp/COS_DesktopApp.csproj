@@ -166,11 +166,35 @@
     <Compile Include="ucAccountRole.Designer.cs">
       <DependentUpon>ucAccountRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCompany.Designer.cs">
+      <DependentUpon>ucCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOrigin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrigin.Designer.cs">
+      <DependentUpon>ucOrigin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucProduct.Designer.cs">
       <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductType.Designer.cs">
+      <DependentUpon>ucProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSugarLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSugarLevel.Designer.cs">
+      <DependentUpon>ucSugarLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -196,8 +220,20 @@
     <EmbeddedResource Include="ucAccountRole.resx">
       <DependentUpon>ucAccountRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucCompany.resx">
+      <DependentUpon>ucCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOrigin.resx">
+      <DependentUpon>ucOrigin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductType.resx">
+      <DependentUpon>ucProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSugarLevel.resx">
+      <DependentUpon>ucSugarLevel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EntityDeploy Include="Model.edmx">
