@@ -11,7 +11,8 @@ using System.Windows.Forms;
 namespace COS_DesktopApp
 {
     public partial class ManagementForm : DevExpress.XtraBars.FluentDesignSystem.FluentDesignForm
-    {
+    {   
+
         public ManagementForm()
         {
             InitializeComponent();

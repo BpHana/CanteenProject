@@ -42,13 +42,24 @@
             this.colbirthday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphonenumber = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colid_role = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
+            this.account_roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.repositoryItemGridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colRoleId = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRoleName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRoleDeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldeletedAt = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colaccount_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.accountroleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // windowsUIButtonPanel1
@@ -75,6 +86,8 @@
             this.gridControl1.Location = new System.Drawing.Point(0, 63);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
+            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemGridLookUpEdit1});
             this.gridControl1.Size = new System.Drawing.Size(588, 406);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -100,6 +113,9 @@
             this.colorders});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
+            new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colid, DevExpress.Data.ColumnSortOrder.Ascending)});
+            this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             // 
             // colid
             // 
@@ -155,11 +171,63 @@
             // 
             // colid_role
             // 
+            this.colid_role.ColumnEdit = this.repositoryItemGridLookUpEdit1;
             this.colid_role.FieldName = "id_role";
             this.colid_role.Name = "colid_role";
             this.colid_role.Visible = true;
             this.colid_role.VisibleIndex = 5;
             this.colid_role.Width = 63;
+            // 
+            // repositoryItemGridLookUpEdit1
+            // 
+            this.repositoryItemGridLookUpEdit1.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
+            this.repositoryItemGridLookUpEdit1.AutoHeight = false;
+            this.repositoryItemGridLookUpEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.repositoryItemGridLookUpEdit1.DataSource = this.account_roleBindingSource;
+            this.repositoryItemGridLookUpEdit1.DisplayMember = "name";
+            this.repositoryItemGridLookUpEdit1.Name = "repositoryItemGridLookUpEdit1";
+            this.repositoryItemGridLookUpEdit1.PopupView = this.repositoryItemGridLookUpEdit1View;
+            this.repositoryItemGridLookUpEdit1.ValueMember = "id";
+            // 
+            // account_roleBindingSource
+            // 
+            this.account_roleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
+            // 
+            // repositoryItemGridLookUpEdit1View
+            // 
+            this.repositoryItemGridLookUpEdit1View.ActiveFilterString = "[deletedAt] Is Null";
+            this.repositoryItemGridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colRoleId,
+            this.colRoleName,
+            this.colRoleDeletedAt});
+            this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
+            this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.repositoryItemGridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // colRoleId
+            // 
+            this.colRoleId.Caption = "Role ID";
+            this.colRoleId.FieldName = "id";
+            this.colRoleId.Name = "colRoleId";
+            this.colRoleId.Visible = true;
+            this.colRoleId.VisibleIndex = 0;
+            // 
+            // colRoleName
+            // 
+            this.colRoleName.Caption = "Role Name";
+            this.colRoleName.FieldName = "name";
+            this.colRoleName.Name = "colRoleName";
+            this.colRoleName.Visible = true;
+            this.colRoleName.VisibleIndex = 1;
+            // 
+            // colRoleDeletedAt
+            // 
+            this.colRoleDeletedAt.Caption = "Deleted At";
+            this.colRoleDeletedAt.FieldName = "deletedAt";
+            this.colRoleDeletedAt.Name = "colRoleDeletedAt";
             // 
             // coldeletedAt
             // 
@@ -183,6 +251,10 @@
             this.colorders.Name = "colorders";
             this.colorders.Width = 65;
             // 
+            // accountroleBindingSource
+            // 
+            this.accountroleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
+            // 
             // ucAccountDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +266,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -215,5 +291,12 @@
         private DevExpress.XtraGrid.Columns.GridColumn colaccount_role;
         private DevExpress.XtraGrid.Columns.GridColumn colcarts;
         private DevExpress.XtraGrid.Columns.GridColumn colorders;
+        private DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit repositoryItemGridLookUpEdit1;
+        private System.Windows.Forms.BindingSource accountroleBindingSource;
+        private DevExpress.XtraGrid.Views.Grid.GridView repositoryItemGridLookUpEdit1View;
+        private DevExpress.XtraGrid.Columns.GridColumn colRoleId;
+        private DevExpress.XtraGrid.Columns.GridColumn colRoleName;
+        private DevExpress.XtraGrid.Columns.GridColumn colRoleDeletedAt;
+        private System.Windows.Forms.BindingSource account_roleBindingSource;
     }
 }
