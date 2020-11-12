@@ -29,13 +29,14 @@ namespace COS_DesktopApp
 
         private void eProducts_Click(object sender, EventArgs e)
         {
-            if (!fdfContainer.Controls.Contains(ucProduct.Instance))
-            {
-                fdfContainer.Controls.Add(ucProduct.Instance);
-                ucProduct.Instance.Dock = DockStyle.Fill;
-                ucProduct.Instance.BringToFront();
-            }
-            ucProduct.Instance.BringToFront();
+            fdfContainer.Controls.Clear();
+            ucProduct obj = new ucProduct();
+           
+               fdfContainer.Controls.Add(obj.Instance);
+                obj.Instance.Dock = DockStyle.Fill;
+              obj.Instance.BringToFront();
+           
+           obj.Instance.BringToFront();
         }
 
         private void eAccountDetails_Click(object sender, EventArgs e)
@@ -48,7 +49,6 @@ namespace COS_DesktopApp
                 ucAccountDetails.Dock = DockStyle.Fill;
                 ucAccountDetails.BringToFront();
             }
-            ucAccountDetails.ucAccountRefresh();
             ucAccountDetails.BringToFront();
 
 
@@ -63,6 +63,52 @@ namespace COS_DesktopApp
                 ucAccountRole.Instance.BringToFront();
             }
             ucAccountRole.Instance.BringToFront();
+        }
+
+        private void eProductTypes_Click(object sender, EventArgs e)
+        {
+            
+         
+            if (!fdfContainer.Controls.Contains(ucProductType.Instance))
+            {
+                fdfContainer.Controls.Add(ucProductType.Instance);
+                ucProductType.Instance.Dock = DockStyle.Fill;
+                ucProductType.Instance.BringToFront();
+            }
+            ucProductType.Instance.BringToFront();
+        }
+
+        private void eOrigins_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucOrigin.Instance))
+            {
+                fdfContainer.Controls.Add(ucOrigin.Instance);
+                ucOrigin.Instance.Dock = DockStyle.Fill;
+                ucOrigin.Instance.BringToFront();
+            }
+            ucOrigin.Instance.BringToFront();
+        }
+
+        private void eCompanies_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucCompany.Instance))
+            {
+                fdfContainer.Controls.Add(ucCompany.Instance);
+                ucCompany.Instance.Dock = DockStyle.Fill;
+                ucCompany.Instance.BringToFront();
+            }
+            ucCompany.Instance.BringToFront();
+        }
+
+        private void eSugarLevel_Click(object sender, EventArgs e)
+        {
+            if (!fdfContainer.Controls.Contains(ucSugarLevel.Instance))
+            {
+                fdfContainer.Controls.Add(ucSugarLevel.Instance);
+                ucSugarLevel.Instance.Dock = DockStyle.Fill;
+                ucSugarLevel.Instance.BringToFront();
+            }
+            ucSugarLevel.Instance.BringToFront();
         }
     }
 }
