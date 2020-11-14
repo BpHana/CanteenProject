@@ -62,7 +62,7 @@
             this.btn.Location = new System.Drawing.Point(0, 0);
             this.btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn.Name = "btn";
-            this.btn.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.btn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btn.Size = new System.Drawing.Size(808, 63);
             this.btn.TabIndex = 0;
             this.btn.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btn_ButtonClick);
