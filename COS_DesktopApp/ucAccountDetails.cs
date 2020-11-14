@@ -69,6 +69,8 @@ namespace COS_DesktopApp
                 if (dialogResult == DialogResult.Yes)
                 {
                     dbContext.SaveChanges();
+                    gridView1.ClearSorting();
+                    gridView1.Columns["id"].SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
                 }
                 else if (dialogResult == DialogResult.No)
                 {
