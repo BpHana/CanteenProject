@@ -60,9 +60,10 @@
             this.btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn.ForeColor = System.Drawing.Color.Black;
             this.btn.Location = new System.Drawing.Point(0, 0);
+            this.btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn.Name = "btn";
-            this.btn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btn.Size = new System.Drawing.Size(513, 108);
+            this.btn.Padding = new System.Windows.Forms.Padding(21, 0, 0, 0);
+            this.btn.Size = new System.Drawing.Size(808, 63);
             this.btn.TabIndex = 0;
             this.btn.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btn_ButtonClick);
             // 
@@ -70,10 +71,12 @@
             // 
             this.gridControl1.DataSource = this.products_typeBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 108);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gridControl1.Location = new System.Drawing.Point(0, 63);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(513, 326);
+            this.gridControl1.Size = new System.Drawing.Size(808, 424);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -86,6 +89,7 @@
             this.colname,
             this.coldeletedAt,
             this.colproducts});
+            this.gridView1.DetailHeight = 284;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
@@ -93,44 +97,48 @@
             // 
             // colid
             // 
+            this.colid.Caption = "ID";
             this.colid.FieldName = "id";
-            this.colid.MinWidth = 25;
+            this.colid.MinWidth = 21;
             this.colid.Name = "colid";
+            this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 94;
+            this.colid.Width = 81;
             // 
             // colname
             // 
+            this.colname.Caption = "Name";
             this.colname.FieldName = "name";
-            this.colname.MinWidth = 25;
+            this.colname.MinWidth = 21;
             this.colname.Name = "colname";
             this.colname.Visible = true;
             this.colname.VisibleIndex = 1;
-            this.colname.Width = 94;
+            this.colname.Width = 81;
             // 
             // coldeletedAt
             // 
             this.coldeletedAt.FieldName = "deletedAt";
-            this.coldeletedAt.MinWidth = 25;
+            this.coldeletedAt.MinWidth = 21;
             this.coldeletedAt.Name = "coldeletedAt";
-            this.coldeletedAt.Width = 94;
+            this.coldeletedAt.Width = 81;
             // 
             // colproducts
             // 
             this.colproducts.FieldName = "products";
-            this.colproducts.MinWidth = 25;
+            this.colproducts.MinWidth = 21;
             this.colproducts.Name = "colproducts";
-            this.colproducts.Width = 94;
+            this.colproducts.Width = 81;
             // 
             // ucProductType
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btn);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ucProductType";
-            this.Size = new System.Drawing.Size(513, 434);
+            this.Size = new System.Drawing.Size(808, 487);
             ((System.ComponentModel.ISupportInitialize)(this.products_typeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

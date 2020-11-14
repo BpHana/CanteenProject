@@ -37,10 +37,12 @@
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colemail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ritEmail = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colpassword = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colfullname = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colbirthday = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colphonenumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.ritPhone = new DevExpress.XtraEditors.Repository.RepositoryItemTextEdit();
             this.colid_role = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemGridLookUpEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemGridLookUpEdit();
             this.account_roleBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -53,9 +55,12 @@
             this.colcarts = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colorders = new DevExpress.XtraGrid.Columns.GridColumn();
             this.accountroleBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.entityCommand1 = new System.Data.Entity.Core.EntityClient.EntityCommand();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ritEmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ritPhone)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).BeginInit();
@@ -78,6 +83,7 @@
             this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.windowsUIButtonPanel1.Size = new System.Drawing.Size(588, 63);
             this.windowsUIButtonPanel1.TabIndex = 0;
+            this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
             // 
             // gridControl1
             // 
@@ -87,7 +93,9 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemGridLookUpEdit1});
+            this.repositoryItemGridLookUpEdit1,
+            this.ritEmail,
+            this.ritPhone});
             this.gridControl1.Size = new System.Drawing.Size(588, 406);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -113,6 +121,7 @@
             this.colorders});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridColumnSortInfo(this.colid, DevExpress.Data.ColumnSortOrder.Ascending)});
             this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
@@ -122,6 +131,8 @@
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
+            this.colid.OptionsColumn.AllowEdit = false;
+            this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
             this.colid.Width = 62;
@@ -129,17 +140,27 @@
             // colemail
             // 
             this.colemail.Caption = "Email";
+            this.colemail.ColumnEdit = this.ritEmail;
             this.colemail.FieldName = "email";
             this.colemail.Name = "colemail";
             this.colemail.Visible = true;
             this.colemail.VisibleIndex = 1;
             this.colemail.Width = 62;
             // 
+            // ritEmail
+            // 
+            this.ritEmail.AutoHeight = false;
+            this.ritEmail.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.ritEmail.Mask.EditMask = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            this.ritEmail.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.ritEmail.Name = "ritEmail";
+            // 
             // colpassword
             // 
             this.colpassword.Caption = "Password";
             this.colpassword.FieldName = "password";
             this.colpassword.Name = "colpassword";
+            this.colpassword.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
             this.colpassword.Width = 62;
             // 
             // colfullname
@@ -163,14 +184,24 @@
             // colphonenumber
             // 
             this.colphonenumber.Caption = "Phonenumber";
+            this.colphonenumber.ColumnEdit = this.ritPhone;
             this.colphonenumber.FieldName = "phonenumber";
             this.colphonenumber.Name = "colphonenumber";
             this.colphonenumber.Visible = true;
             this.colphonenumber.VisibleIndex = 4;
             this.colphonenumber.Width = 62;
             // 
+            // ritPhone
+            // 
+            this.ritPhone.AutoHeight = false;
+            this.ritPhone.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
+            this.ritPhone.Mask.EditMask = "((\\+84)|(0))[1-9][0-9]{8}";
+            this.ritPhone.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
+            this.ritPhone.Name = "ritPhone";
+            // 
             // colid_role
             // 
+            this.colid_role.Caption = "Role";
             this.colid_role.ColumnEdit = this.repositoryItemGridLookUpEdit1;
             this.colid_role.FieldName = "id_role";
             this.colid_role.Name = "colid_role";
@@ -255,6 +286,14 @@
             // 
             this.accountroleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
             // 
+            // entityCommand1
+            // 
+            this.entityCommand1.CommandTimeout = 0;
+            this.entityCommand1.CommandTree = null;
+            this.entityCommand1.Connection = null;
+            this.entityCommand1.EnablePlanCaching = true;
+            this.entityCommand1.Transaction = null;
+            // 
             // ucAccountDetails
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -266,6 +305,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ritEmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ritPhone)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemGridLookUpEdit1View)).EndInit();
@@ -298,5 +339,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colRoleName;
         private DevExpress.XtraGrid.Columns.GridColumn colRoleDeletedAt;
         private System.Windows.Forms.BindingSource account_roleBindingSource;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit ritEmail;
+        private DevExpress.XtraEditors.Repository.RepositoryItemTextEdit ritPhone;
+        private System.Data.Entity.Core.EntityClient.EntityCommand entityCommand1;
     }
 }

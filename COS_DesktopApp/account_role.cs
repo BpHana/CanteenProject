@@ -11,8 +11,7 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class account_role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,12 +19,11 @@ namespace COS_DesktopApp
         {
             this.accounts = new HashSet<account>();
         }
-
+    
         public int id { get; set; }
-        [Required]
         public string name { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
-
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<account> accounts { get; set; }
     }

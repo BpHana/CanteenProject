@@ -17,8 +17,8 @@ namespace COS_DesktopApp
     {
         COS_DesktopApp.CanteenOrderingSystemEntities dbContext;
 
-        private static ucAccountRole _instance;
-        public static ucAccountRole Instance
+        private ucAccountRole _instance;
+        public ucAccountRole Instance
         {
             get
             {
@@ -55,23 +55,52 @@ namespace COS_DesktopApp
             }
             else if (e.Button == windowsUIButtonPanel1.Buttons[1])
             {
-                gridView1.SetFocusedRowCellValue(gridView1.Columns[coldeletedAt.FieldName], DateTime.Now);
-
-                if (gridView1.FocusedRowHandle != 0)
+                DialogResult dialogResult = MessageBox.Show("Are you sure to Delete?", "Delete", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    gridView1.FocusedRowHandle = 0;
-                }
-                else
-                {
-                    gridView1.FocusedRowHandle = 1;
-                }
+                    gridView1.SetFocusedRowCellValue(gridView1.Columns[coldeletedAt.FieldName], DateTime.Now);
 
+                    if (gridView1.FocusedRowHandle != 0)
+                    {
+                        gridView1.FocusedRowHandle = 0;
+                    }
+                    else
+                    {
+                        gridView1.FocusedRowHandle = 1;
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                }
             }
         }
 
-        private void gridView2_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            dbContext.SaveChanges();
+            try
+            {
+                DialogResult dialogResult = MessageBox.Show("Are you sure to update?", "Update", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    dbContext.SaveChanges();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                    var changed = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
+                    foreach (var obj in changed)
+                    {
+
+                        obj.CurrentValues.SetValues(obj.OriginalValues);
+
+                        obj.State = EntityState.Unchanged;
+                    }
+
+                }
+            }
+            catch
+            {
+
+            }
         }
     }
 }

@@ -15,8 +15,8 @@ namespace COS_DesktopApp
     public partial class ucCompany : DevExpress.XtraEditors.XtraUserControl
     {
         COS_DesktopApp.CanteenOrderingSystemEntities dbContext;
-        private static ucCompany _instance;
-        public static ucCompany Instance
+        private ucCompany _instance;
+        public ucCompany Instance
         {
             get
             {

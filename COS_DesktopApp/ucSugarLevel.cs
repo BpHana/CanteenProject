@@ -15,8 +15,8 @@ namespace COS_DesktopApp
     public partial class ucSugarLevel : DevExpress.XtraEditors.XtraUserControl
     {
 
-        private static ucSugarLevel _instance;
-        public static ucSugarLevel Instance
+        private ucSugarLevel _instance;
+        public ucSugarLevel Instance
         {
             get
             {

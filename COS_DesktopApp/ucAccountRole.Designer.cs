@@ -89,17 +89,22 @@
             this.colaccounts});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
+            this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             // 
             // colid
             // 
+            this.colid.Caption = "Role ID";
             this.colid.FieldName = "id";
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
+            this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
             // 
             // colname
             // 
+            this.colname.Caption = "Name";
             this.colname.FieldName = "name";
             this.colname.Name = "colname";
             this.colname.Visible = true;

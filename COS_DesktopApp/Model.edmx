@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
   <!-- EF Runtime content -->
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="CanteenOrderingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="CanteenOrderingSystemModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="account">
           <Key>
             <PropertyRef Name="id" />
@@ -107,19 +107,7 @@
           <Property Name="name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="deletedAt" Type="datetime" />
         </EntityType>
-        <Association Name="FK__account__id_role__35BCFE0A">
-          <End Role="account_role" Type="Self.account_role" Multiplicity="1" />
-          <End Role="account" Type="Self.account" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="account_role">
-              <PropertyRef Name="id" />
-            </Principal>
-            <Dependent Role="account">
-              <PropertyRef Name="id_role" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK__cart__id_product__36B12243">
+        <Association Name="FK__cart__id_product__10566F31">
           <End Role="products" Type="Self.products" Multiplicity="1" />
           <End Role="cart" Type="Self.cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -131,7 +119,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__cart__id_user__37A5467C">
+        <Association Name="FK__cart__id_user__0F624AF8">
           <End Role="account" Type="Self.account" Multiplicity="1" />
           <End Role="cart" Type="Self.cart" Multiplicity="*" />
           <ReferentialConstraint>
@@ -143,7 +131,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__order__id_user__38996AB5">
+        <Association Name="FK__order__id_user__0C85DE4D">
           <End Role="account" Type="Self.account" Multiplicity="1" />
           <End Role="order" Type="Self.order" Multiplicity="*" />
           <ReferentialConstraint>
@@ -155,7 +143,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__order_det__id_or__398D8EEE">
+        <Association Name="FK__order_det__id_or__0D7A0286">
           <End Role="order" Type="Self.order" Multiplicity="1" />
           <End Role="order_details" Type="Self.order_details" Multiplicity="*" />
           <ReferentialConstraint>
@@ -167,7 +155,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__order_det__id_pr__3A81B327">
+        <Association Name="FK__order_det__id_pr__0E6E26BF">
           <End Role="products" Type="Self.products" Multiplicity="1" />
           <End Role="order_details" Type="Self.order_details" Multiplicity="*" />
           <ReferentialConstraint>
@@ -179,7 +167,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__products__id_com__3B75D760">
+        <Association Name="FK__products__id_com__7D439ABD">
           <End Role="company" Type="Self.company" Multiplicity="0..1" />
           <End Role="products" Type="Self.products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -191,7 +179,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__products__id_ori__3C69FB99">
+        <Association Name="FK__products__id_ori__7C4F7684">
           <End Role="origin" Type="Self.origin" Multiplicity="0..1" />
           <End Role="products" Type="Self.products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -203,7 +191,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK__products__id_pro__3D5E1FD2">
+        <Association Name="FK__products__id_pro__7E37BEF6">
           <End Role="products_type" Type="Self.products_type" Multiplicity="1" />
           <End Role="products" Type="Self.products" Multiplicity="*" />
           <ReferentialConstraint>
@@ -227,6 +215,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK__user__id_role__0B91BA14">
+          <End Role="account_role" Type="Self.account_role" Multiplicity="1" />
+          <End Role="account" Type="Self.account" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="account_role">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="account">
+              <PropertyRef Name="id_role" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityContainer Name="CanteenOrderingSystemModelStoreContainer">
           <EntitySet Name="account" EntityType="Self.account" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="account_role" EntityType="Self.account_role" Schema="dbo" store:Type="Tables" />
@@ -238,39 +238,35 @@
           <EntitySet Name="products" EntityType="Self.products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="products_type" EntityType="Self.products_type" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="sugar_level" EntityType="Self.sugar_level" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK__account__id_role__35BCFE0A" Association="Self.FK__account__id_role__35BCFE0A">
-            <End Role="account_role" EntitySet="account_role" />
-            <End Role="account" EntitySet="account" />
-          </AssociationSet>
-          <AssociationSet Name="FK__cart__id_product__36B12243" Association="Self.FK__cart__id_product__36B12243">
+          <AssociationSet Name="FK__cart__id_product__10566F31" Association="Self.FK__cart__id_product__10566F31">
             <End Role="products" EntitySet="products" />
             <End Role="cart" EntitySet="cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__cart__id_user__37A5467C" Association="Self.FK__cart__id_user__37A5467C">
+          <AssociationSet Name="FK__cart__id_user__0F624AF8" Association="Self.FK__cart__id_user__0F624AF8">
             <End Role="account" EntitySet="account" />
             <End Role="cart" EntitySet="cart" />
           </AssociationSet>
-          <AssociationSet Name="FK__order__id_user__38996AB5" Association="Self.FK__order__id_user__38996AB5">
+          <AssociationSet Name="FK__order__id_user__0C85DE4D" Association="Self.FK__order__id_user__0C85DE4D">
             <End Role="account" EntitySet="account" />
             <End Role="order" EntitySet="order" />
           </AssociationSet>
-          <AssociationSet Name="FK__order_det__id_or__398D8EEE" Association="Self.FK__order_det__id_or__398D8EEE">
+          <AssociationSet Name="FK__order_det__id_or__0D7A0286" Association="Self.FK__order_det__id_or__0D7A0286">
             <End Role="order" EntitySet="order" />
             <End Role="order_details" EntitySet="order_details" />
           </AssociationSet>
-          <AssociationSet Name="FK__order_det__id_pr__3A81B327" Association="Self.FK__order_det__id_pr__3A81B327">
+          <AssociationSet Name="FK__order_det__id_pr__0E6E26BF" Association="Self.FK__order_det__id_pr__0E6E26BF">
             <End Role="products" EntitySet="products" />
             <End Role="order_details" EntitySet="order_details" />
           </AssociationSet>
-          <AssociationSet Name="FK__products__id_com__3B75D760" Association="Self.FK__products__id_com__3B75D760">
+          <AssociationSet Name="FK__products__id_com__7D439ABD" Association="Self.FK__products__id_com__7D439ABD">
             <End Role="company" EntitySet="company" />
             <End Role="products" EntitySet="products" />
           </AssociationSet>
-          <AssociationSet Name="FK__products__id_ori__3C69FB99" Association="Self.FK__products__id_ori__3C69FB99">
+          <AssociationSet Name="FK__products__id_ori__7C4F7684" Association="Self.FK__products__id_ori__7C4F7684">
             <End Role="origin" EntitySet="origin" />
             <End Role="products" EntitySet="products" />
           </AssociationSet>
-          <AssociationSet Name="FK__products__id_pro__3D5E1FD2" Association="Self.FK__products__id_pro__3D5E1FD2">
+          <AssociationSet Name="FK__products__id_pro__7E37BEF6" Association="Self.FK__products__id_pro__7E37BEF6">
             <End Role="products_type" EntitySet="products_type" />
             <End Role="products" EntitySet="products" />
           </AssociationSet>
@@ -278,9 +274,12 @@
             <End Role="sugar_level" EntitySet="sugar_level" />
             <End Role="products" EntitySet="products" />
           </AssociationSet>
+          <AssociationSet Name="FK__user__id_role__0B91BA14" Association="Self.FK__user__id_role__0B91BA14">
+            <End Role="account_role" EntitySet="account_role" />
+            <End Role="account" EntitySet="account" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="CanteenOrderingSystemModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">

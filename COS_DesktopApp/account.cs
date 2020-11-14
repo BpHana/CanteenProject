@@ -20,7 +20,6 @@ namespace COS_DesktopApp
             this.carts = new HashSet<cart>();
             this.orders = new HashSet<order>();
         }
-    
         public int id { get; set; }
         public string email { get; set; }
         public string password { get; set; }
