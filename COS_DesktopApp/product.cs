@@ -9,7 +9,7 @@
 
 namespace COS_DesktopApp
 {
-
+    using DevExpress.XtraEditors.Repository;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
@@ -36,22 +36,9 @@ namespace COS_DesktopApp
         public Nullable<int> id_company { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
         public string image { get; set; }
-        [NotMapped]
-        public Image Picture
-        {
-            get
-            {
-                if (!string.IsNullOrEmpty(image))
-                {
-                    if (File.Exists(@"../../../img/" + image))
-                    {
-                        return Image.FromFile(@"../../../img/" + image);
-                    }
-                }
-                return null;
-            }
+       
 
-        }
+        
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cart> carts { get; set; }
         public virtual company company { get; set; }

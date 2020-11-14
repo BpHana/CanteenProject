@@ -45,6 +45,7 @@
     <Reference Include="DevExpress.Data.v20.1" />
     <Reference Include="DevExpress.DataAccess.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.DataAccess.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Map.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.PivotGrid.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -58,6 +59,7 @@
     <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v20.1.Wizard, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraDialogs.v20.1, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v20.1" />
     <Reference Include="DevExpress.Printing.v20.1.Core" />
     <Reference Include="DevExpress.XtraGauges.v20.1.Core, Version=20.1.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -164,11 +166,35 @@
     <Compile Include="ucAccountRole.Designer.cs">
       <DependentUpon>ucAccountRole.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucCompany.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucCompany.Designer.cs">
+      <DependentUpon>ucCompany.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucOrigin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrigin.Designer.cs">
+      <DependentUpon>ucOrigin.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucProduct.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ucProduct.Designer.cs">
       <DependentUpon>ucProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucProductType.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProductType.Designer.cs">
+      <DependentUpon>ucProductType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucSugarLevel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucSugarLevel.Designer.cs">
+      <DependentUpon>ucSugarLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utils.cs" />
     <EmbeddedResource Include="LoginForm.resx">
@@ -194,8 +220,20 @@
     <EmbeddedResource Include="ucAccountRole.resx">
       <DependentUpon>ucAccountRole.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucCompany.resx">
+      <DependentUpon>ucCompany.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucOrigin.resx">
+      <DependentUpon>ucOrigin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucProduct.resx">
       <DependentUpon>ucProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucProductType.resx">
+      <DependentUpon>ucProductType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucSugarLevel.resx">
+      <DependentUpon>ucSugarLevel.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="App.config" />
     <EntityDeploy Include="Model.edmx">
@@ -207,6 +245,7 @@
     </None>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\account_role.datasource" />
+    <None Include="Properties\DataSources\company.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
