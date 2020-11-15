@@ -105,6 +105,9 @@ namespace COS_DesktopApp
                     if (dbContext.accounts.Any(a => a.email.Equals(email)))
                     {
                         XtraMessageBox.Show("Email existed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    } else if(dbContext.accounts.Any(a => a.phonenumber.Equals(phone)))
+                    {
+                        XtraMessageBox.Show("Phone existed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     else
                     {
