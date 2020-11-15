@@ -17,8 +17,8 @@ namespace COS_DesktopApp
 
         COS_DesktopApp.CanteenOrderingSystemEntities dbContext;
 
-        private static ucProductType _instance;
-        public static ucProductType Instance
+        private ucProductType _instance;
+        public ucProductType Instance
         {
             get
             {

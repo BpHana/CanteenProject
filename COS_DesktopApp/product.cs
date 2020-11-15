@@ -9,13 +9,9 @@
 
 namespace COS_DesktopApp
 {
-    using DevExpress.XtraEditors.Repository;
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations.Schema;
-    using System.Drawing;
-    using System.IO;
-
+    
     public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -24,7 +20,7 @@ namespace COS_DesktopApp
             this.carts = new HashSet<cart>();
             this.order_details = new HashSet<order_details>();
         }
-
+    
         public int id { get; set; }
         public string name { get; set; }
         public decimal price { get; set; }
@@ -36,9 +32,7 @@ namespace COS_DesktopApp
         public Nullable<int> id_company { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
         public string image { get; set; }
-       
-
-        
+    
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cart> carts { get; set; }
         public virtual company company { get; set; }

@@ -9,7 +9,6 @@
 
 namespace COS_DesktopApp
 {
-    using DevExpress.Utils.Filtering;
     using System;
     using System.Collections.Generic;
     
@@ -23,7 +22,6 @@ namespace COS_DesktopApp
     
         public int id { get; set; }
         public string name { get; set; }
-      
         public Nullable<System.DateTime> deletedAt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

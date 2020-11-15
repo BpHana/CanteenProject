@@ -101,6 +101,12 @@
     <Compile Include="account_role.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="AddUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddUserForm.Designer.cs">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="cart.cs">
       <DependentUpon>Model.tt</DependentUpon>
     </Compile>
@@ -172,6 +178,12 @@
     <Compile Include="ucCompany.Designer.cs">
       <DependentUpon>ucCompany.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucOrder.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucOrder.Designer.cs">
+      <DependentUpon>ucOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucOrigin.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -197,6 +209,9 @@
       <DependentUpon>ucSugarLevel.cs</DependentUpon>
     </Compile>
     <Compile Include="Utils\Utils.cs" />
+    <EmbeddedResource Include="AddUserForm.resx">
+      <DependentUpon>AddUserForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -223,6 +238,9 @@
     <EmbeddedResource Include="ucCompany.resx">
       <DependentUpon>ucCompany.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucOrder.resx">
+      <DependentUpon>ucOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucOrigin.resx">
       <DependentUpon>ucOrigin.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,6 +262,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\account_role.datasource" />
     <None Include="Properties\DataSources\company.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

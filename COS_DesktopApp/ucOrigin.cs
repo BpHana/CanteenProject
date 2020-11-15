@@ -16,8 +16,8 @@ namespace COS_DesktopApp
     {
         COS_DesktopApp.CanteenOrderingSystemEntities dbContext;
 
-        private static ucOrigin _instance;
-        public static ucOrigin Instance
+        private ucOrigin _instance;
+        public ucOrigin Instance
         {
             get
             {
