@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="1b0dea46159d441f8db6043907e2cc44" Name="Diagram1">
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.account" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.account_role" Width="1.5" PointX="0.75" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.cart" Width="1.5" PointX="5.25" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.company" Width="1.5" PointX="0.75" PointY="3" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.order" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.order_details" Width="1.5" PointX="8.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.origin" Width="1.5" PointX="0.75" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.product" Width="1.5" PointX="3" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.products_type" Width="1.5" PointX="0.75" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="CanteenOrderingSystemModel.sugar_level" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__account__id_role__35BCFE0A" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__cart__id_user__37A5467C" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__order__id_user__38996AB5" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__cart__id_product__36B12243" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__products__id_com__3B75D760" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__order_det__id_or__398D8EEE" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__order_det__id_pr__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__products__id_ori__3C69FB99" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__products__id_pro__3D5E1FD2" ManuallyRouted="false" />
+        <AssociationConnector Association="CanteenOrderingSystemModel.FK__products__id_sug__7A672E12" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
