@@ -13,6 +13,8 @@ namespace COS_DesktopApp
 
         private ucAccountDetails _instance;
 
+        int addNewStatus = 0;
+
         public ucAccountDetails Instance
         {
             get
@@ -74,15 +76,21 @@ namespace COS_DesktopApp
                 }
                 else if (dialogResult == DialogResult.No)
                 {
-                    var changed = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
-                    foreach (var obj in changed)
+                    if (addNewStatus != 1)
                     {
+                        var changed = dbContext.ChangeTracker.Entries().Where(x => x.State != EntityState.Unchanged).ToList();
+                        foreach (var obj in changed)
+                        {
 
-                        obj.CurrentValues.SetValues(obj.OriginalValues);
+                            obj.CurrentValues.SetValues(obj.OriginalValues);
 
-                        obj.State = EntityState.Unchanged;
+                            obj.State = EntityState.Unchanged;
+                        }
                     }
-
+                    else
+                    {
+                        gridView1.DeleteSelectedRows();
+                    }
                 }
             }
             catch
@@ -95,7 +103,7 @@ namespace COS_DesktopApp
         {
             if (e.Button == windowsUIButtonPanel1.Buttons[0])
             {
-                AddUserForm addUserForm = new AddUserForm(this, gridView1, gridControl1);
+                AddUserForm addUserForm = new AddUserForm(gridView1, addNewStatus);
                 addUserForm.Show();
             }
             else if (e.Button == windowsUIButtonPanel1.Buttons[1])

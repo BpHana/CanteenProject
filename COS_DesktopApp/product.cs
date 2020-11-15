@@ -11,7 +11,8 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Drawing;
+
     public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
