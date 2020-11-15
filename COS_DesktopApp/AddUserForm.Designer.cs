@@ -49,6 +49,7 @@
             this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colRole = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDeleteAt = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repassTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.ItemFordeletedAt = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForaccount_role = new DevExpress.XtraLayout.LayoutControlItem();
             this.ItemForcarts = new DevExpress.XtraLayout.LayoutControlItem();
@@ -64,9 +65,8 @@
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.accountroleBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.repassTextEdit = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.accountroleBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataLayoutControl1)).BeginInit();
             this.dataLayoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.emailTextEdit.Properties)).BeginInit();
@@ -86,6 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.id_roleTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repassTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordeletedAt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForaccount_role)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForcarts)).BeginInit();
@@ -101,9 +102,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repassTextEdit.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLayoutControl1
@@ -315,6 +315,15 @@
             this.colDeleteAt.FieldName = "deletedAt";
             this.colDeleteAt.Name = "colDeleteAt";
             // 
+            // repassTextEdit
+            // 
+            this.repassTextEdit.Location = new System.Drawing.Point(98, 125);
+            this.repassTextEdit.Name = "repassTextEdit";
+            this.repassTextEdit.Properties.UseSystemPasswordChar = true;
+            this.repassTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.repassTextEdit.StyleController = this.dataLayoutControl1;
+            this.repassTextEdit.TabIndex = 16;
+            // 
             // ItemFordeletedAt
             // 
             this.ItemFordeletedAt.Control = this.deletedAtDateEdit;
@@ -480,19 +489,6 @@
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // accountroleBindingSource
-            // 
-            this.accountroleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
-            // 
-            // repassTextEdit
-            // 
-            this.repassTextEdit.Location = new System.Drawing.Point(98, 125);
-            this.repassTextEdit.Name = "repassTextEdit";
-            this.repassTextEdit.Properties.UseSystemPasswordChar = true;
-            this.repassTextEdit.Size = new System.Drawing.Size(232, 20);
-            this.repassTextEdit.StyleController = this.dataLayoutControl1;
-            this.repassTextEdit.TabIndex = 16;
-            // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.repassTextEdit;
@@ -502,6 +498,10 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(335, 50);
             this.layoutControlItem2.Text = "Re-Password";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 13);
+            // 
+            // accountroleBindingSource
+            // 
+            this.accountroleBindingSource.DataSource = typeof(COS_DesktopApp.account_role);
             // 
             // AddUserForm
             // 
@@ -532,6 +532,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.id_roleTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repassTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemFordeletedAt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForaccount_role)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ItemForcarts)).EndInit();
@@ -547,9 +548,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repassTextEdit.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.accountroleBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
