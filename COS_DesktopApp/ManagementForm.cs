@@ -20,7 +20,11 @@ namespace COS_DesktopApp
 
         private void eOrderManagement_Click(object sender, EventArgs e)
         {
-
+            fdfContainer.Controls.Clear();
+            ucOrder obj = new ucOrder();
+            fdfContainer.Controls.Add(obj.Instance);
+            obj.Instance.Dock = DockStyle.Fill;
+            obj.Instance.BringToFront();
         }
 
         private void fluentDesignFormContainer1_Click(object sender, EventArgs e)

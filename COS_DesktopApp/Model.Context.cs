@@ -16,7 +16,7 @@ namespace COS_DesktopApp
     public partial class CanteenOrderingSystemEntities : DbContext
     {
         public CanteenOrderingSystemEntities()
-            : base("name=CanteenOrderingSystemEntities")
+            : base("name=CanteenOrderingSystemEntities1")
         {
         }
     

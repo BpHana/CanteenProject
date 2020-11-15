@@ -293,10 +293,10 @@
           <Property Name="email" Type="String" MaxLength="60" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="birthday" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="birthday" Type="DateTime" Nullable="false" />
           <Property Name="phonenumber" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="id_role" Type="Int32" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="carts" Relationship="Self.FK__cart__id_user__0F624AF8" FromRole="account" ToRole="cart" />
           <NavigationProperty Name="orders" Relationship="Self.FK__order__id_user__0C85DE4D" FromRole="account" ToRole="order" />
           <NavigationProperty Name="account_role" Relationship="Self.FK__user__id_role__0B91BA14" FromRole="account" ToRole="account_role" />
@@ -307,7 +307,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="accounts" Relationship="Self.FK__user__id_role__0B91BA14" FromRole="account_role" ToRole="account" />
         </EntityType>
         <EntityType Name="cart">
@@ -318,8 +318,8 @@
           <Property Name="id_user" Type="Int32" Nullable="false" />
           <Property Name="id_products" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
-          <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="createdAt" Type="DateTime" Nullable="false" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="account" Relationship="Self.FK__cart__id_user__0F624AF8" FromRole="cart" ToRole="account" />
           <NavigationProperty Name="product" Relationship="Self.FK__cart__id_product__10566F31" FromRole="cart" ToRole="products" />
         </EntityType>
@@ -329,7 +329,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="products" Relationship="Self.FK__products__id_com__7D439ABD" FromRole="company" ToRole="products" />
         </EntityType>
         <EntityType Name="order">
@@ -339,8 +339,8 @@
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_user" Type="Int32" Nullable="false" />
           <Property Name="totalprice" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="createdAt" Type="DateTime" Nullable="false" />
+          <Property Name="deletedAt" Type="DateTime" />
           <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="account" Relationship="Self.FK__order__id_user__0C85DE4D" FromRole="order" ToRole="account" />
           <NavigationProperty Name="order_details" Relationship="Self.FK__order_det__id_or__0D7A0286" FromRole="order" ToRole="order_details" />
@@ -354,8 +354,8 @@
           <Property Name="id_products" Type="Int32" Nullable="false" />
           <Property Name="quantity" Type="Int32" Nullable="false" />
           <Property Name="price" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="createdAt" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="createdAt" Type="DateTime" Nullable="false" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="order" Relationship="Self.FK__order_det__id_or__0D7A0286" FromRole="order_details" ToRole="order" />
           <NavigationProperty Name="product" Relationship="Self.FK__order_det__id_pr__0E6E26BF" FromRole="order_details" ToRole="products" />
         </EntityType>
@@ -365,7 +365,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="products" Relationship="Self.FK__products__id_ori__7C4F7684" FromRole="origin" ToRole="products" />
         </EntityType>
         <EntityType Name="product">
@@ -381,7 +381,7 @@
           <Property Name="id_origin" Type="Int32" />
           <Property Name="id_sugarLevel" Type="Int32" />
           <Property Name="id_company" Type="Int32" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="carts" Relationship="Self.FK__cart__id_product__10566F31" FromRole="products" ToRole="cart" />
           <NavigationProperty Name="company" Relationship="Self.FK__products__id_com__7D439ABD" FromRole="products" ToRole="company" />
@@ -396,7 +396,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="products" Relationship="Self.FK__products__id_pro__7E37BEF6" FromRole="products_type" ToRole="products" />
         </EntityType>
         <EntityType Name="sugar_level">
@@ -405,7 +405,7 @@
           </Key>
           <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="deletedAt" Type="DateTime" Precision="3" />
+          <Property Name="deletedAt" Type="DateTime" />
           <NavigationProperty Name="products" Relationship="Self.FK__products__id_sug__7A672E12" FromRole="sugar_level" ToRole="products" />
         </EntityType>
         <Association Name="FK__cart__id_user__0F624AF8">

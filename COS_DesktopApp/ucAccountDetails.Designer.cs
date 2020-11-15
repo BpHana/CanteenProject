@@ -69,7 +69,7 @@
             // 
             // windowsUIButtonPanel1
             // 
-            this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(193)))), ((int)(((byte)(201)))));
+            this.windowsUIButtonPanel1.BackColor = System.Drawing.Color.White;
             windowsUIButtonImageOptions1.Image = global::COS_DesktopApp.Properties.Resources.add;
             windowsUIButtonImageOptions2.Image = global::COS_DesktopApp.Properties.Resources.trash;
             this.windowsUIButtonPanel1.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
