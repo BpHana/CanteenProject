@@ -174,6 +174,8 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.birthdayDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.birthdayDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
+            this.birthdayDateEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
             this.birthdayDateEdit.Size = new System.Drawing.Size(232, 20);
             this.birthdayDateEdit.StyleController = this.dataLayoutControl1;
             this.birthdayDateEdit.TabIndex = 8;
