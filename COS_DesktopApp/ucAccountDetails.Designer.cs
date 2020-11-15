@@ -175,6 +175,8 @@
             // colbirthday
             // 
             this.colbirthday.Caption = "Birthday";
+            this.colbirthday.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.colbirthday.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colbirthday.FieldName = "birthday";
             this.colbirthday.Name = "colbirthday";
             this.colbirthday.Visible = true;

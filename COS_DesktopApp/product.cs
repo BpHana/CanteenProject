@@ -11,8 +11,7 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    using System.Drawing;
-
+    
     public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,7 +31,7 @@ namespace COS_DesktopApp
         public Nullable<int> id_sugarLevel { get; set; }
         public Nullable<int> id_company { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
-        public string image { get; set; }
+        public byte[] image { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cart> carts { get; set; }

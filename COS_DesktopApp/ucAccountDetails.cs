@@ -89,6 +89,7 @@ namespace COS_DesktopApp
                     }
                     else
                     {
+                        gridView1.FocusedRowHandle = 0;
                         gridView1.DeleteSelectedRows();
                     }
                 }
@@ -103,7 +104,8 @@ namespace COS_DesktopApp
         {
             if (e.Button == windowsUIButtonPanel1.Buttons[0])
             {
-                AddUserForm addUserForm = new AddUserForm(gridView1, addNewStatus);
+                AddUserForm addUserForm = new AddUserForm(gridView1);
+                addNewStatus = 1;
                 addUserForm.Show();
             }
             else if (e.Button == windowsUIButtonPanel1.Buttons[1])

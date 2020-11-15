@@ -25,6 +25,7 @@ namespace COS_DesktopApp
         public decimal totalprice { get; set; }
         public System.DateTime createdAt { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
+        public string address { get; set; }
     
         public virtual account account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

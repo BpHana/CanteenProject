@@ -20,6 +20,7 @@ namespace COS_DesktopApp
             this.carts = new HashSet<cart>();
             this.orders = new HashSet<order>();
         }
+    
         public int id { get; set; }
         public string email { get; set; }
         public string password { get; set; }
@@ -29,10 +30,10 @@ namespace COS_DesktopApp
         public int id_role { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
     
-        public virtual account_role account_role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cart> carts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<order> orders { get; set; }
+        public virtual account_role account_role { get; set; }
     }
 }
