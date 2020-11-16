@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using COS_DesktopApp.Utils;
+using COS_WebApp.Models;
 
 namespace COS_WebApp.Controllers
 {
@@ -28,7 +29,7 @@ namespace COS_WebApp.Controllers
             if (ModelState.IsValid)
             {
                 System.Diagnostics.Debug.WriteLine(dob);
-                DateTime date = DateTime.ParseExact(dob, "yyyy/MM/dd", null); ;
+                DateTime date = DateTime.ParseExact(dob, "dd/MM/yyyy", null); ;
                 string pass = Utils.GetHash(password);
                 CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
                 

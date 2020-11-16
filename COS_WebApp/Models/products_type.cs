@@ -7,33 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class account
+    public partial class products_type
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public account()
+        public products_type()
         {
-            this.carts = new HashSet<cart>();
-            this.orders = new HashSet<order>();
+            this.products = new HashSet<product>();
         }
     
         public int id { get; set; }
-        public string email { get; set; }
-        public string password { get; set; }
-        public string fullname { get; set; }
-        public System.DateTime birthday { get; set; }
-        public string phonenumber { get; set; }
-        public int id_role { get; set; }
+        public string name { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
     
-        public virtual account_role account_role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<cart> carts { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order> orders { get; set; }
+        public virtual ICollection<product> products { get; set; }
     }
 }

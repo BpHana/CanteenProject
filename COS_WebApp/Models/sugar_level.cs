@@ -7,21 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class order_details
+    public partial class sugar_level
     {
-        public int id_order { get; set; }
-        public int id_products { get; set; }
-        public int quantity { get; set; }
-        public decimal price { get; set; }
-        public System.DateTime createdAt { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public sugar_level()
+        {
+            this.products = new HashSet<product>();
+        }
+    
+        public int id { get; set; }
+        public string name { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
     
-        public virtual order order { get; set; }
-        public virtual product product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<product> products { get; set; }
     }
 }

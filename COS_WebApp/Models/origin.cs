@@ -7,17 +7,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class account_role
+    public partial class origin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public account_role()
+        public origin()
         {
-            this.accounts = new HashSet<account>();
+            this.products = new HashSet<product>();
         }
     
         public int id { get; set; }
@@ -25,6 +25,6 @@ namespace COS_WebApp
         public Nullable<System.DateTime> deletedAt { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<account> accounts { get; set; }
+        public virtual ICollection<product> products { get; set; }
     }
 }
