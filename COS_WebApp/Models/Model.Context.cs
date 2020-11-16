@@ -24,7 +24,7 @@ namespace COS_WebApp.Models
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+        
         public virtual DbSet<account> accounts { get; set; }
         public virtual DbSet<account_role> account_role { get; set; }
         public virtual DbSet<cart> carts { get; set; }
