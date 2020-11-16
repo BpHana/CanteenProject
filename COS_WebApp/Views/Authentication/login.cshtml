@@ -30,7 +30,7 @@
                     <img src="~/Content/Login/images/img-02.png" alt="IMG">
                 </div>
 
-                <form class="login100-form validate-form" action="@Url.Action("Login","Authentication")>
+                <form class="login100-form validate-form" action="@Url.Action("Login","Authentication")" method="POST">
                     <span class="login100-form-title">
                         Member Login
                     </span>
@@ -50,7 +50,11 @@
                             <i class="fa fa-lock" aria-hidden="true"></i>
                         </span>
                     </div>
-                    
+                    @if (TempData["loginFail"] != null)
+                    {
+                        <p style="color:red">  @TempData["loginFail"]</p>
+                    }
+
                     <div class="container-login100-form-btn">
                         <button class="login100-form-btn">
                             Login
