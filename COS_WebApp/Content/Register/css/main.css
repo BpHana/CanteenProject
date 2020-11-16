@@ -159,7 +159,7 @@ h6 {
 }
 
 .card-3 .card-heading {
-    background: url("~/Content/Login/images/img-02.png") top left/cover no-repeat !important;
+    background: url("../../Login/images/img-02.png") top left/cover no-repeat !important;
     display: table-cell;
     width: 50%;
 }
@@ -191,7 +191,7 @@ h6 {
 }
 
 .p-t-180 {
-    padding-top: 180px;
+    padding-top: 120px!important;
 }
 
 .p-t-20 {
