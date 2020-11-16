@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Data.Entity;

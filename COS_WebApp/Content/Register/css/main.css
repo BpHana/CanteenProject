@@ -158,6 +158,12 @@ h6 {
   font-size: 13px;
 }
 
+.card-3 .card-heading {
+    background: url("../images/bg-heading-03.jpg") top left/cover no-repeat;
+    display: table-cell;
+    width: 50%;
+}
+
 /* ==========================================================================
    #BACKGROUND
    ========================================================================== */
