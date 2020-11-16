@@ -11,7 +11,9 @@ namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.Web.Mvc;
+
     public partial class account
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,10 +24,20 @@ namespace COS_WebApp.Models
         }
     
         public int id { get; set; }
+
+        [Required]
+        [DataType(DataType.EmailAddress)]
+        [Remote("checkEmail", "Authentication", HttpMethod = "POST", ErrorMessage = "Email already exists in database.")]
         public string email { get; set; }
+       
         public string password { get; set; }
+        [Required]
+        [RegularExpression(@"^([A-Za-z]+( [A-Za-z]+)+)$", ErrorMessage = "Full name must only in alphabets and  more than two words")]
         public string fullname { get; set; }
+        [Required]
         public System.DateTime birthday { get; set; }
+        [Required]
+        [RegularExpression(@"^0\d{9}$", ErrorMessage = "Phone number has 10 digits and start with 0")]
         public string phonenumber { get; set; }
         public int id_role { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }

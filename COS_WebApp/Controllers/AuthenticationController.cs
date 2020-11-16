@@ -10,7 +10,7 @@ namespace COS_WebApp.Controllers
 {
     public class AuthenticationController : Controller
     {
-
+        CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
         // GET: Authentication
         public ActionResult Login()
         {
@@ -24,18 +24,19 @@ namespace COS_WebApp.Controllers
         // GET: Authentication/Details/5
 
         [HttpPost]
-        public ActionResult Register(string email, string password, string fullname, string dob, string phone)
+        public ActionResult Register(account a)
         {
             if (ModelState.IsValid)
             {
-                System.Diagnostics.Debug.WriteLine(dob);
-                DateTime date = DateTime.ParseExact(dob, "dd/MM/yyyy", null); ;
-                string pass = Utils.GetHash(password);
-                CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
-                
+                //
 
-                    db.accounts.Add(new account() { email = email, password =pass , fullname = fullname, birthday = date, phonenumber = phone,id_role=4 });
-                    db.SaveChanges();
+            
+                a.id_role = 4;
+               a.password = Utils.GetHash(a.password);
+             
+
+                    db.accounts.Add(a);
+                db.SaveChanges();
                 
                 return RedirectToAction("Login", "Authentication");
             }
@@ -43,6 +44,23 @@ namespace COS_WebApp.Controllers
             
         }
             
+        public JsonResult checkEmail(string email)
+        {
+             
+           var query= from account in db.accounts
+            where account.email == email
+            select account;
+            bool status;
+            
+            if (query.FirstOrDefault() == null)
+            {
+               
+                status = true;
+            }
+            else status = false;
+            return Json(status, JsonRequestBehavior.AllowGet);
+
+        }
            
         
     
