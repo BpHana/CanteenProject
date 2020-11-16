@@ -24,7 +24,7 @@ namespace COS_DesktopApp
                 using (CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities())
                 {
                     var query = from account in db.accounts
-                                where account.email == txtEmail.Text && account.password == pass
+                                where account.email == txtEmail.Text && account.password == pass && account.id_role == 1
                                 select account;
 
                     if (query.SingleOrDefault() != null)
