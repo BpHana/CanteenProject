@@ -27,7 +27,7 @@ namespace COS_WebApp.Controllers
 
         }
 
-        List<ShoppingCart> listCart = new List<ShoppingCart>();
+        
         [HttpPost]
         public ActionResult AddToCart(product prod, int Id)
         {
