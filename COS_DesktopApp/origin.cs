@@ -11,7 +11,8 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class origin
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,6 +22,7 @@ namespace COS_DesktopApp
         }
     
         public int id { get; set; }
+        [Required]
         public string name { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
     

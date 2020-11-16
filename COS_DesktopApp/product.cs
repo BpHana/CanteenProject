@@ -11,7 +11,8 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,10 +23,14 @@ namespace COS_DesktopApp
         }
     
         public int id { get; set; }
+        [Required]
         public string name { get; set; }
+        [Required]
         public decimal price { get; set; }
         public Nullable<int> volume { get; set; }
+        [Required]
         public string ingredient { get; set; }
+        [Required]
         public int id_productsType { get; set; }
         public Nullable<int> id_origin { get; set; }
         public Nullable<int> id_sugarLevel { get; set; }
