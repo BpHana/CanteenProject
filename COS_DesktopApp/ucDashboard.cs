@@ -13,6 +13,20 @@ namespace COS_DesktopApp
 {
     public partial class ucDashboard : DevExpress.XtraEditors.XtraUserControl
     {
+        private ucDashboard _instance;
+        public ucDashboard Instance
+        {
+            get
+            {
+
+                if (_instance == null)
+                {
+                    _instance = new ucDashboard();
+
+                }
+                return _instance;
+            }
+        }
         public ucDashboard()
         {
             InitializeComponent();

@@ -111,6 +111,7 @@
             this.eDashboard.Name = "eDashboard";
             this.eDashboard.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.eDashboard.Text = "Dashboard";
+            this.eDashboard.Click += new System.EventHandler(this.eDashboard_Click);
             // 
             // eGroupAccountManagement
             // 
