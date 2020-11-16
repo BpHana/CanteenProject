@@ -28,42 +28,36 @@ namespace COS_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                //
-
-            
                 a.id_role = 4;
-               a.password = Utils.GetHash(a.password);
-             
-
-                    db.accounts.Add(a);
+                a.password = Utils.GetHash(a.password);
+                db.accounts.Add(a);
                 db.SaveChanges();
-                
                 return RedirectToAction("Login", "Authentication");
             }
             return RedirectToAction("Register", "Authentication");
-            
+
         }
-            
+
         public JsonResult checkEmail(string email)
         {
-             
-           var query= from account in db.accounts
-            where account.email == email
-            select account;
+
+            var query = from account in db.accounts
+                        where account.email == email
+                        select account;
             bool status;
-            
+
             if (query.FirstOrDefault() == null)
             {
-               
+
                 status = true;
             }
             else status = false;
             return Json(status, JsonRequestBehavior.AllowGet);
 
         }
-           
-        
-    
+
+
+
 
         // GET: Authentication/Create
         public ActionResult Create()
