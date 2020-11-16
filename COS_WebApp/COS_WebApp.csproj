@@ -48,10 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=3.6.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.3.6.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
@@ -188,53 +188,48 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Login\css\main.css" />
-    <Content Include="Content\Login\css\util.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Login\fonts\font-awesome-4.7.0\HELP-US-OUT.txt" />
-    <Content Include="Content\Login\fonts\montserrat\OFL.txt" />
-    <Content Include="Content\Login\images\icons\favicon.ico" />
-    <Content Include="Content\Login\images\img-01.png" />
-    <Content Include="Content\Login\js\main.js" />
-    <Content Include="Content\Login\vendor\animate\animate.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-grid.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap-reboot.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.css" />
-    <Content Include="Content\Login\vendor\bootstrap\css\bootstrap.min.css" />
-    <Content Include="Content\Login\vendor\bootstrap\js\bootstrap.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\bootstrap.min.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\popper.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\popper.min.js" />
-    <Content Include="Content\Login\vendor\bootstrap\js\tooltip.js" />
-    <Content Include="Content\Login\vendor\css-hamburgers\hamburgers.css" />
-    <Content Include="Content\Login\vendor\css-hamburgers\hamburgers.min.css" />
-    <Content Include="Content\Login\vendor\jquery\jquery-3.2.1.min.js" />
-    <Content Include="Content\Login\vendor\select2\select2.css" />
-    <Content Include="Content\Login\vendor\select2\select2.js" />
-    <Content Include="Content\Login\vendor\select2\select2.min.css" />
-    <Content Include="Content\Login\vendor\select2\select2.min.js" />
-    <Content Include="Content\Login\vendor\tilt\tilt.jquery.min.js" />
-    <Content Include="Content\Register\css\main.css" />
-    <Content Include="Content\Register\images\bg-heading-03.jpg" />
-    <Content Include="Content\Register\js\global.js" />
-    <Content Include="Content\Register\vendor\datepicker\daterangepicker.css" />
-    <Content Include="Content\Register\vendor\datepicker\daterangepicker.js" />
-    <Content Include="Content\Register\vendor\datepicker\moment.min.js" />
-    <Content Include="Content\Register\vendor\font-awesome-4.7\css\font-awesome.css" />
-    <Content Include="Content\Register\vendor\font-awesome-4.7\css\font-awesome.min.css" />
-    <Content Include="Content\Register\vendor\font-awesome-4.7\fonts\fontawesome-webfont.svg" />
-    <Content Include="Content\Register\vendor\font-awesome-4.7\HELP-US-OUT.txt" />
-    <Content Include="Content\Register\vendor\jquery\jquery.js" />
-    <Content Include="Content\Register\vendor\jquery\jquery.min.js" />
-    <Content Include="Content\Register\vendor\mdi-font\css\material-design-iconic-font.css" />
-    <Content Include="Content\Register\vendor\mdi-font\css\material-design-iconic-font.min.css" />
-    <Content Include="Content\Register\vendor\mdi-font\fonts\Material-Design-Iconic-Font.svg" />
-    <Content Include="Content\Register\vendor\select2\select2.min.css" />
-    <Content Include="Content\Register\vendor\select2\select2.min.js" />
+    <Content Include="Content\Main\css\bootstrap.min.css" />
+    <Content Include="Content\Main\css\font-awesome.min.css" />
+    <Content Include="Content\Main\css\owl.carousel.css" />
+    <Content Include="Content\Main\css\responsive.css" />
+    <Content Include="Content\Main\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\Main\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\Main\img\brand1.png" />
+    <Content Include="Content\Main\img\brand2.png" />
+    <Content Include="Content\Main\img\brand3.png" />
+    <Content Include="Content\Main\img\brand4.png" />
+    <Content Include="Content\Main\img\brand5.png" />
+    <Content Include="Content\Main\img\brand6.png" />
+    <Content Include="Content\Main\img\chef32.png" />
+    <Content Include="Content\Main\img\chef512.png" />
+    <Content Include="Content\Main\img\chef64.png" />
+    <Content Include="Content\Main\img\crossword.png" />
+    <Content Include="Content\Main\img\h4-slide.png" />
+    <Content Include="Content\Main\img\h4-slide2.png" />
+    <Content Include="Content\Main\img\h4-slide3.png" />
+    <Content Include="Content\Main\img\h4-slide4.png" />
+    <Content Include="Content\Main\img\h4-slide7.png" />
+    <Content Include="Content\Main\img\HuTieu.png" />
+    <Content Include="Content\Main\img\logo.png" />
+    <Content Include="Content\Main\img\product-1.jpg" />
+    <Content Include="Content\Main\img\product-2.jpg" />
+    <Content Include="Content\Main\img\product-3.jpg" />
+    <Content Include="Content\Main\img\product-4.jpg" />
+    <Content Include="Content\Main\img\product-5.jpg" />
+    <Content Include="Content\Main\img\product-6.jpg" />
+    <Content Include="Content\Main\img\product-thumb-1.jpg" />
+    <Content Include="Content\Main\img\product-thumb-2.jpg" />
+    <Content Include="Content\Main\img\product-thumb-3.jpg" />
+    <Content Include="Content\Main\img\product-thumb-4.jpg" />
+    <Content Include="Content\Main\js\bxslider.min.js" />
+    <Content Include="Content\Main\js\jquery.easing.1.3.min.js" />
+    <Content Include="Content\Main\js\jquery.sticky.js" />
+    <Content Include="Content\Main\js\main.js" />
+    <Content Include="Content\Main\js\owl.carousel.min.js" />
+    <Content Include="Content\Main\js\script.slider.js" />
+    <Content Include="Content\Main\style.css" />
+    <Content Include="Content\Main\ucommerce-screen.jpg" />
+    <Content Include="Content\Main\ustora.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Fonts\font-awesome-4.7.0\css\font-awesome.css" />
     <Content Include="Fonts\font-awesome-4.7.0\css\font-awesome.min.css" />
@@ -533,7 +528,6 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.js.flow" />
@@ -544,6 +538,7 @@
     <Content Include="Scripts\popper.js.map" />
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

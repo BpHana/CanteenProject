@@ -47,10 +47,10 @@ namespace COS_DesktopApp
                 // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
                 dbContext.products.LoadAsync().ContinueWith(loadTask =>
                 {
-                    
+
                     this.loadCompany();
-                    
-                   
+
+
                     // Bind data to control when loading complete
                     productsBindingSource.DataSource = dbContext.products.Local.ToBindingList();
 
