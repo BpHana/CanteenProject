@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class products_type
+    public partial class company
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public products_type()
+        public company()
         {
             this.products = new HashSet<product>();
         }

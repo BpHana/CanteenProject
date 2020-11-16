@@ -7,28 +7,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class order
+    public partial class account_role
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public order()
+        public account_role()
         {
-            this.order_details = new HashSet<order_details>();
+            this.accounts = new HashSet<account>();
         }
     
         public int id { get; set; }
-        public int id_user { get; set; }
-        public decimal totalprice { get; set; }
-        public System.DateTime createdAt { get; set; }
+        public string name { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
-        public string address { get; set; }
     
-        public virtual account account { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order_details> order_details { get; set; }
+        public virtual ICollection<account> accounts { get; set; }
     }
 }

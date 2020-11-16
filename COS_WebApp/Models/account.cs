@@ -7,39 +7,33 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class product
+    public partial class account
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public product()
+        public account()
         {
             this.carts = new HashSet<cart>();
-            this.order_details = new HashSet<order_details>();
+            this.orders = new HashSet<order>();
         }
     
         public int id { get; set; }
-        public string name { get; set; }
-        public decimal price { get; set; }
-        public Nullable<int> volume { get; set; }
-        public string ingredient { get; set; }
-        public int id_productsType { get; set; }
-        public Nullable<int> id_origin { get; set; }
-        public Nullable<int> id_sugarLevel { get; set; }
-        public Nullable<int> id_company { get; set; }
+        public string email { get; set; }
+        public string password { get; set; }
+        public string fullname { get; set; }
+        public System.DateTime birthday { get; set; }
+        public string phonenumber { get; set; }
+        public int id_role { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
-        public byte[] image { get; set; }
     
+        public virtual account_role account_role { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<cart> carts { get; set; }
-        public virtual company company { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<order_details> order_details { get; set; }
-        public virtual origin origin { get; set; }
-        public virtual products_type products_type { get; set; }
-        public virtual sugar_level sugar_level { get; set; }
+        public virtual ICollection<order> orders { get; set; }
     }
 }

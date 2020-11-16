@@ -7,20 +7,28 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace COS_WebApp
+namespace COS_WebApp.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class cart
+    public partial class order
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public order()
+        {
+            this.order_details = new HashSet<order_details>();
+        }
+    
+        public int id { get; set; }
         public int id_user { get; set; }
-        public int id_products { get; set; }
-        public int quantity { get; set; }
+        public decimal totalprice { get; set; }
         public System.DateTime createdAt { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
+        public string address { get; set; }
     
         public virtual account account { get; set; }
-        public virtual product product { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<order_details> order_details { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using COS_DesktopApp.Utils;
+using COS_WebApp.Models;
 
 namespace COS_WebApp.Controllers
 {
