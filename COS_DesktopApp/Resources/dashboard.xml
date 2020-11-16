@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard>
+  <Title Text="Management Dashboard" />
+  <DataSources>
+    <ExcelDataSource Name="Excel Data Source 1" FileName="|DataDirectory|\Data\Sales.xlsx" ComponentName="dashboardExcelDataSource1">
+      <Options Type="DevExpress.DataAccess.Excel.ExcelSourceOptions" SkipEmptyRows="true" UseFirstRowAsHeader="true" SkipHiddenColumns="true" SkipHiddenRows="true">
+        <ImportSettings Type="DevExpress.DataAccess.Excel.ExcelWorksheetSettings" WorksheetName="Sheet1" />
+      </Options>
+      <Schema>
+        <FieldInfo Name="Category" Type="System.String" Selected="true" />
+        <FieldInfo Name="Product" Type="System.String" Selected="true" />
+        <FieldInfo Name="State" Type="System.String" Selected="true" />
+        <FieldInfo Name="UnitsSoldYTD (Sum)" Type="System.Double" Selected="true" />
+        <FieldInfo Name="UnitsSoldYTDTarget (Sum)" Type="System.Double" Selected="true" />
+        <FieldInfo Name="RevenueQTD (Sum)" Type="System.Double" Selected="true" />
+        <FieldInfo Name="RevenueQTDTarget (Sum)" Type="System.Double" Selected="true" />
+        <FieldInfo Name="RevenueYTD (Sum)" Type="System.Double" Selected="true" />
+        <FieldInfo Name="RevenueYTDTarget (Sum)" Type="System.Double" Selected="true" />
+      </Schema>
+      <ResultSchema>
+        <View>
+          <Field Name="Category" Type="String" />
+          <Field Name="Product" Type="String" />
+          <Field Name="State" Type="String" />
+          <Field Name="UnitsSoldYTD (Sum)" Type="Double" />
+          <Field Name="UnitsSoldYTDTarget (Sum)" Type="Double" />
+          <Field Name="RevenueQTD (Sum)" Type="Double" />
+          <Field Name="RevenueQTDTarget (Sum)" Type="Double" />
+          <Field Name="RevenueYTD (Sum)" Type="Double" />
+          <Field Name="RevenueYTDTarget (Sum)" Type="Double" />
+        </View>
+      </ResultSchema>
+    </ExcelDataSource>
+    <SqlDataSource Name="SQL Data Source 1" ComponentName="dashboardSqlDataSource1">
+      <Connection Name="localhost_CanteenOrderingSystem_Connection" ProviderKey="MSSqlServer">
+        <Parameters>
+          <Parameter Name="server" Value="localhost" />
+          <Parameter Name="database" Value="CanteenOrderingSystem" />
+          <Parameter Name="useIntegratedSecurity" Value="True" />
+          <Parameter Name="read only" Value="1" />
+          <Parameter Name="generateConnectionHelper" Value="false" />
+          <Parameter Name="userid" Value="" />
+          <Parameter Name="password" Value="" />
+        </Parameters>
+      </Connection>
+      <Query Type="SelectQuery" Name="account">
+        <Tables>
+          <Table Name="account" X="30" Y="30" Width="125" Height="222" />
+          <Table Name="account_role" X="185" Y="30" Width="125" Height="122" />
+          <Relation Type="Inner" Parent="account" Nested="account_role">
+            <KeyColumn Parent="id_role" Nested="id" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="account" Name="id" />
+          <Column Table="account" Name="email" />
+          <Column Table="account" Name="password" />
+          <Column Table="account" Name="fullname" />
+          <Column Table="account" Name="birthday" />
+          <Column Table="account" Name="phonenumber" />
+          <Column Table="account" Name="id_role" />
+          <Column Table="account" Name="deletedAt" />
+          <Column Table="account_role" Name="id" Alias="account_role_id" />
+          <Column Table="account_role" Name="name" />
+          <Column Table="account_role" Name="deletedAt" Alias="account_role_deletedAt" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="products">
+        <Tables>
+          <Table Name="products" X="30" Y="30" Width="125" Height="282" />
+          <Table Name="products_type" X="185" Y="30" Width="125" Height="122" />
+          <Relation Type="Inner" Parent="products" Nested="products_type">
+            <KeyColumn Parent="id_productsType" Nested="id" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="products_type" Name="id" />
+          <Column Table="products_type" Name="name" />
+          <Column Table="products_type" Name="deletedAt" />
+          <Column Table="products" Name="id" Alias="products_id" />
+          <Column Table="products" Name="name" Alias="products_name" />
+          <Column Table="products" Name="price" />
+          <Column Table="products" Name="volume" />
+          <Column Table="products" Name="ingredient" />
+          <Column Table="products" Name="id_productsType" />
+          <Column Table="products" Name="id_origin" />
+          <Column Table="products" Name="id_sugarLevel" />
+          <Column Table="products" Name="id_company" />
+          <Column Table="products" Name="deletedAt" Alias="products_deletedAt" />
+          <Column Table="products" Name="image" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="products_1">
+        <Tables>
+          <Table Name="products" X="30" Y="30" Width="125" Height="282" />
+          <Table Name="products_type" X="185" Y="30" Width="125" Height="122" />
+          <Relation Type="Inner" Parent="products" Nested="products_type">
+            <KeyColumn Parent="id_productsType" Nested="id" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="products" Name="id" />
+          <Column Table="products" Name="name" />
+          <Column Table="products_type" Name="id" Alias="products_type_id" />
+          <Column Table="products_type" Name="name" Alias="products_type_name" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="order_details">
+        <Tables>
+          <Table Name="order_details" X="30" Y="30" Width="125" Height="182" />
+        </Tables>
+        <Columns>
+          <Column Table="order_details" Name="price" />
+          <Column Table="order_details" Name="createdAt" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="products_2">
+        <Tables>
+          <Table Name="products" X="30" Y="30" Width="125" Height="282" />
+          <Table Name="origin" X="185" Y="30" Width="125" Height="122" />
+          <Relation Type="Inner" Parent="products" Nested="origin">
+            <KeyColumn Parent="id_origin" Nested="id" />
+          </Relation>
+        </Tables>
+        <Columns>
+          <Column Table="products" Name="id" />
+          <Column Table="products" Name="name" />
+          <Column Table="products" Name="price" />
+          <Column Table="products" Name="volume" />
+          <Column Table="products" Name="ingredient" />
+          <Column Table="products" Name="id_productsType" />
+          <Column Table="products" Name="id_origin" />
+          <Column Table="products" Name="id_sugarLevel" />
+          <Column Table="products" Name="id_company" />
+          <Column Table="products" Name="deletedAt" />
+          <Column Table="products" Name="image" />
+          <Column Table="origin" Name="id" Alias="origin_id" />
+          <Column Table="origin" Name="name" Alias="origin_name" />
+          <Column Table="origin" Name="deletedAt" Alias="origin_deletedAt" />
+        </Columns>
+      </Query>
+      <ResultSchema>
+        <DataSet Name="SQL Data Source 1">
+          <View Name="account">
+            <Field Name="id" Type="Int32" />
+            <Field Name="email" Type="String" />
+            <Field Name="password" Type="String" />
+            <Field Name="fullname" Type="String" />
+            <Field Name="birthday" Type="DateTime" />
+            <Field Name="phonenumber" Type="String" />
+            <Field Name="id_role" Type="Int32" />
+            <Field Name="deletedAt" Type="DateTime" />
+            <Field Name="account_role_id" Type="Int32" />
+            <Field Name="name" Type="String" />
+            <Field Name="account_role_deletedAt" Type="DateTime" />
+          </View>
+          <View Name="products">
+            <Field Name="id" Type="Int32" />
+            <Field Name="name" Type="String" />
+            <Field Name="deletedAt" Type="DateTime" />
+            <Field Name="products_id" Type="Int32" />
+            <Field Name="products_name" Type="String" />
+            <Field Name="price" Type="Decimal" />
+            <Field Name="volume" Type="Int32" />
+            <Field Name="ingredient" Type="String" />
+            <Field Name="id_productsType" Type="Int32" />
+            <Field Name="id_origin" Type="Int32" />
+            <Field Name="id_sugarLevel" Type="Int32" />
+            <Field Name="id_company" Type="Int32" />
+            <Field Name="products_deletedAt" Type="DateTime" />
+            <Field Name="image" Type="ByteArray" />
+          </View>
+          <View Name="products_1">
+            <Field Name="id" Type="Int32" />
+            <Field Name="name" Type="String" />
+            <Field Name="products_type_id" Type="Int32" />
+            <Field Name="products_type_name" Type="String" />
+          </View>
+          <View Name="order_details">
+            <Field Name="price" Type="Decimal" />
+            <Field Name="createdAt" Type="DateTime" />
+          </View>
+          <View Name="products_2">
+            <Field Name="id" Type="Int32" />
+            <Field Name="name" Type="String" />
+            <Field Name="price" Type="Decimal" />
+            <Field Name="volume" Type="Int32" />
+            <Field Name="ingredient" Type="String" />
+            <Field Name="id_productsType" Type="Int32" />
+            <Field Name="id_origin" Type="Int32" />
+            <Field Name="id_sugarLevel" Type="Int32" />
+            <Field Name="id_company" Type="Int32" />
+            <Field Name="deletedAt" Type="DateTime" />
+            <Field Name="image" Type="ByteArray" />
+            <Field Name="origin_id" Type="Int32" />
+            <Field Name="origin_name" Type="String" />
+            <Field Name="origin_deletedAt" Type="DateTime" />
+          </View>
+        </DataSet>
+      </ResultSchema>
+      <ConnectionOptions CloseConnection="true" />
+    </SqlDataSource>
+  </DataSources>
+  <Items>
+    <Pie ComponentName="pieDashboardItem1" Name="Products" DataSource="dashboardSqlDataSource1" DataMember="products_1">
+      <DataItems>
+        <Dimension DataMember="products_type_name" DefaultId="DataItem2" />
+        <Measure DataMember="id" Name="Products" SummaryType="Count" DefaultId="DataItem1" />
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem2" />
+      </Arguments>
+      <ColorScheme>
+        <Entry DataSource="dashboardSqlDataSource1" DataMember="products_1" Color="-4521987">
+          <DimensionKeys>
+            <DimensionKey>
+              <Definition DataMember="products_type_name" />
+              <Value Type="System.String" Value="Coke" />
+            </DimensionKey>
+          </DimensionKeys>
+        </Entry>
+        <Entry DataSource="dashboardSqlDataSource1" DataMember="products_1" Color="-15878">
+          <DimensionKeys>
+            <DimensionKey>
+              <Definition DataMember="products_type_name" />
+              <Value Type="System.String" Value="Drink" />
+            </DimensionKey>
+          </DimensionKeys>
+        </Entry>
+      </ColorScheme>
+      <Values>
+        <Value DefaultId="DataItem1" />
+      </Values>
+    </Pie>
+    <Chart ComponentName="chartDashboardItem1" Name="Income" DataSource="dashboardSqlDataSource1" DataMember="order_details">
+      <ColoringOptions UseGlobalColors="false" />
+      <DataItems>
+        <Dimension DataMember="createdAt" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
+        <Measure DataMember="price" DefaultId="DataItem0">
+          <NumericFormat FormatType="Currency" CurrencyCultureName="vi-VN" CustomFormatString="" />
+        </Measure>
+      </DataItems>
+      <Arguments>
+        <Argument DefaultId="DataItem1" />
+      </Arguments>
+      <Panes>
+        <Pane Name="Pane 1">
+          <Series>
+            <Simple Name="Income(VND)">
+              <Value DefaultId="DataItem0" />
+            </Simple>
+          </Series>
+        </Pane>
+      </Panes>
+    </Chart>
+    <ChoroplethMap ComponentName="choroplethMapDashboardItem1" Name="Origin" DataSource="dashboardSqlDataSource1" DataMember="products_2" AttributeName="NAME">
+      <DataItems>
+        <Dimension DataMember="origin_name" DefaultId="DataItem0" />
+        <Measure DataMember="id" SummaryType="Count" DefaultId="DataItem1" />
+      </DataItems>
+      <ViewArea TopLatitude="72.221621654375525" BottomLatitude="-40.615143899067164" CenterPointLatitude="29.495621476453586" CenterPointLongitude="5.0271993483814814" CreateViewerPaddings="false" />
+      <MapLegend />
+      <WeightedLegend />
+      <AttributeDimension DefaultId="DataItem0" />
+      <Maps>
+        <ValueMap Name="Products" ValueName="Products">
+          <Value DefaultId="DataItem1" />
+          <UniformScale />
+        </ValueMap>
+      </Maps>
+    </ChoroplethMap>
+  </Items>
+  <LayoutTree>
+    <LayoutGroup Orientation="Vertical" Weight="100">
+      <LayoutItem DashboardItem="choroplethMapDashboardItem1" Weight="55.314009661835748" />
+      <LayoutGroup Weight="44.685990338164252">
+        <LayoutItem DashboardItem="pieDashboardItem1" Weight="44.2" />
+        <LayoutItem DashboardItem="chartDashboardItem1" Weight="55.8" />
+      </LayoutGroup>
+    </LayoutGroup>
+  </LayoutTree>
+</Dashboard>

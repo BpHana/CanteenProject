@@ -16,6 +16,11 @@ namespace COS_DesktopApp
         public ManagementForm()
         {
             InitializeComponent();
+            fdfContainer.Controls.Clear();
+            ucDashboard obj = new ucDashboard();
+            fdfContainer.Controls.Add(obj.Instance);
+            obj.Instance.Dock = DockStyle.Fill;
+            obj.Instance.BringToFront();
         }
 
         private void eOrderManagement_Click(object sender, EventArgs e)
@@ -91,6 +96,15 @@ namespace COS_DesktopApp
         {
             fdfContainer.Controls.Clear();
             ucSugarLevel obj = new ucSugarLevel();
+            fdfContainer.Controls.Add(obj.Instance);
+            obj.Instance.Dock = DockStyle.Fill;
+            obj.Instance.BringToFront();
+        }
+
+        private void eDashboard_Click(object sender, EventArgs e)
+        {
+            fdfContainer.Controls.Clear();
+            ucDashboard obj = new ucDashboard();
             fdfContainer.Controls.Add(obj.Instance);
             obj.Instance.Dock = DockStyle.Fill;
             obj.Instance.BringToFront();

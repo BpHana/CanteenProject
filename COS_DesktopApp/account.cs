@@ -11,7 +11,8 @@ namespace COS_DesktopApp
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class account
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -22,11 +23,17 @@ namespace COS_DesktopApp
         }
     
         public int id { get; set; }
+        [Required]
         public string email { get; set; }
+        [Required]
         public string password { get; set; }
+        [Required]
         public string fullname { get; set; }
+        [Required]
         public System.DateTime birthday { get; set; }
+        [Required]
         public string phonenumber { get; set; }
+        [Required]
         public int id_role { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
     
