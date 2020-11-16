@@ -28,7 +28,7 @@ namespace COS_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                a.id_role = 4;
+                a.id_role = 1;
                 a.password = Utils.GetHash(a.password);
                 db.accounts.Add(a);
                 db.SaveChanges();
