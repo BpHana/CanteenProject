@@ -28,7 +28,7 @@ namespace COS_WebApp.Controllers
             if (ModelState.IsValid)
             {
                 System.Diagnostics.Debug.WriteLine(dob);
-                DateTime date = DateTime.ParseExact(dob, "yyyy/MM/dd", null); ;
+                DateTime date = DateTime.ParseExact(dob, "dd/MM/yyyy", null); ;
                 string pass = Utils.GetHash(password);
                 CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities();
                 
