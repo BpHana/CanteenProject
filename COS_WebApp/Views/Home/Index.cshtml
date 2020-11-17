@@ -1,10 +1,11 @@
 ﻿@using COS_WebApp.Controllers
 @model dynamic
+@using COS_WebApp.Models;
 
 @*@{
-    ViewBag.Title = "View";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}*@
+        ViewBag.Title = "View";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }*@
 <!DOCTYPE html>
 <!--
     ustora by freshdesignweb.com
@@ -88,7 +89,7 @@
             <a class="navbar-brand" href="@Url.Action("Index", "Home")">
                 <img src="~/Content/Main/img/chef512.png" width="50" height="50">
             </a>
-            @Html.ActionLink("profile","ChangeInfor", "Authentication")
+            @Html.ActionLink("profile", "ChangeInfor", "Authentication")
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -133,7 +134,10 @@
                                         }
                                         <img src="@imgSrc" style="object-fit:contain;" alt="">
                                         <div class="product-hover">
-                                            <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            @{ 
+                                                int a = Convert.ToInt32(item.id);
+                                            }
+                                            <a href="@Url.Action("AddToCart", "Home", new {@id = a})" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>

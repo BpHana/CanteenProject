@@ -1,8 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Dynamic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using COS_WebApp.Models;
 
@@ -22,37 +20,57 @@ namespace COS_WebApp.Controllers
             return View(model);
         }
 
-        public ActionResult AddToCart(int Id)
+        public ActionResult AddToCart(string id)
         {
-            var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
 
-            if (Session["cart"] == null)
+
+            int accountid = (Session["User"] as account).id;
+            int pid = Convert.ToInt32(id);
+
+            var query = from cart in cos.carts
+                        where cart.id_user == accountid && cart.id_products == pid
+                        select cart;
+            if (query.SingleOrDefault() != null)
             {
-                List<ShoppingCart> cart = new List<ShoppingCart>();
-                ShoppingCart dto = new ShoppingCart(prod, 1);
-                cart.Add(dto);
-                Session["cart"] = cart;
+                cart existCart = query.FirstOrDefault();
+                existCart.quantity++;
             }
             else
             {
-                List<ShoppingCart> cart = (List<ShoppingCart>)Session["cart"];
-                foreach (var item in cart)
-                {
-                    if (item.Product == prod)
-                    {
-                        item.Quantity++;
-                        return View("Cart");
-                    }
-                }
-
-                ShoppingCart dto = new ShoppingCart(prod, 1);
-                cart.Add(dto);
-                Session["cart"] = cart;
+                var newcart = new cart { id_user = accountid, id_products = pid, quantity = 1, createdAt = DateTime.Now };
+                cos.carts.Add(newcart);
 
             }
 
+            cos.SaveChanges();
 
-            return View("Cart");
+            //if (Session["cart"] == null)
+            //{
+            //    List<ShoppingCart> cart = new List<ShoppingCart>();
+            //    ShoppingCart dto = new ShoppingCart(prod, 1);
+            //    cart.Add(dto);
+            //    Session["cart"] = cart;
+            //}
+            //else
+            //{
+            //    List<ShoppingCart> cart = (List<ShoppingCart>)Session["cart"];
+            //    foreach (var item in cart)
+            //    {
+            //        if (item.Product == prod)
+            //        {
+            //            item.Quantity++;
+            //            return View("Cart");
+            //        }
+            //    }
+
+            //    ShoppingCart dto = new ShoppingCart(prod, 1);
+            //    cart.Add(dto);
+            //    Session["cart"] = cart;
+
+            //}
+
+
+            return RedirectToAction("Index");
 
         }
 

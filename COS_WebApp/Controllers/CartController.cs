@@ -1,6 +1,7 @@
 ﻿using COS_WebApp.Models;
 using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -10,42 +11,57 @@ namespace COS_WebApp.Controllers
     public class CartController : Controller
     {
         CanteenOrderingSystemEntities cos = new CanteenOrderingSystemEntities();
+        List<ShoppingCart> shopCart;
         // GET: Cart
-        public ActionResult Cart()
+        public ActionResult ViewCart()
         {
-            return View();
+            int userid = (Session["User"] as account).id;
+            var cart = cos.carts;
+            foreach (var item in cart)
+            {
+                if (item.id_user == userid)
+                {
+                    var query = from product in cos.products
+                                where product.id == item.id_products
+                                select product;
+                    product prod = query.FirstOrDefault();
+                    ShoppingCart dto = new ShoppingCart(prod, item.quantity);
+                    if (shopCart == null)
+                    {
+                        shopCart = new List<ShoppingCart>();
+                    }
+                    shopCart.Add(dto);
+                }
+            }
+            
+            return View(shopCart);
         }
 
         
 
-        public ActionResult AddToCart(int Id)
+        public ActionResult AddToCart(string id)
         {
-            var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
-            if (Session["cart"] == null)
-            {
-                List<ShoppingCart> cart = new List<ShoppingCart>();
-                ShoppingCart dto = new ShoppingCart(prod, 1);
-                cart.Add(dto);
-                Session["cart"] = cart;
-            } else
-            {
-                List<ShoppingCart> cart = (List<ShoppingCart>)Session["cart"];
-                foreach (var item in cart)
-                {
-                    if (item.Product == prod)
-                    {
-                        item.Quantity++;
-                        return View("Cart");
-                    }
-                }
+            int accountid = (Session["User"] as account).id;
+            int pid = Convert.ToInt32(id);
 
-                ShoppingCart dto = new ShoppingCart(prod, 1);
-                cart.Add(dto);
-                Session["cart"] = cart;
+            var query = from cart in cos.carts
+                        where cart.id_user == accountid && cart.id_products == pid
+                        select cart;
+            if (query.SingleOrDefault() != null)
+            {
+                cart existCart = query.FirstOrDefault();
+                existCart.quantity++;
+            }
+            else
+            {
+                var newcart = new cart { id_user = accountid, id_products = pid, quantity = 1, createdAt = DateTime.Now };
+                cos.carts.Add(newcart);
 
             }
 
-           
+            cos.SaveChanges();
+
+
             return  View("Cart");
 
         }
