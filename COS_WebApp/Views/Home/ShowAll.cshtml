@@ -28,7 +28,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="~/Content/Main/css/owl.carousel.css">
     <link rel="stylesheet" href="~/Content/Main/style.css">
-    <link rel="stylesheet" href="~/Content/Main/css/responsive.css">n
+    <link rel="stylesheet" href="~/Content/Main/css/responsive.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -49,7 +49,7 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -66,35 +66,6 @@
             </div>
         </nav>
     </div>
-    <!--<div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                <img src="~/Content/Main/img/chef512.png" width="50" height="50">
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Category
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            @foreach (var type in Model.Product_Type)
-                            {
-
-                <a class="dropdown-item" href="#">@type.name</a>}
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>-->
-    <!-- End mainmenu area -->
 
 
     <div class="single-product-area">
