@@ -13,7 +13,7 @@ namespace COS_WebApp.Controllers
         CanteenOrderingSystemEntities cos = new CanteenOrderingSystemEntities();
         List<ShoppingCart> shopCart;
         // GET: Cart
-        public ActionResult ViewCart()
+        public ActionResult Cart()
         {
             int userid = (Session["User"] as account).id;
             var cart = cos.carts;
