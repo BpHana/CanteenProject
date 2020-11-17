@@ -175,12 +175,11 @@ h6 {
     background: #fa4251;
 }
 
-.bg-gra-01 {
-    background: -webkit-gradient(linear, left bottom, left top, from(#fbc2eb), to(#a18cd1));
-    background: -webkit-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: -moz-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: -o-linear-gradient(bottom, #fbc2eb 0%, #a18cd1 100%);
-    background: linear-gradient(to top, #fbc2eb 0%, #a18cd1 100%);
+.bg-gra-01 {    
+    background: -webkit-linear-gradient(49deg, rgba(255,171,158,1) 0%, rgba(255,157,170,1) 27%, rgba(255,114,157,1) 57%, rgba(255,204,239,1) 100%) !important;
+    background: -moz-linear-gradient(49deg, rgba(255,171,158,1) 0%, rgba(255,157,170,1) 27%, rgba(255,114,157,1) 57%, rgba(255,204,239,1) 100%) !important;
+    background: -o-linear-gradient(49deg, rgba(255,171,158,1) 0%, rgba(255,157,170,1) 27%, rgba(255,114,157,1) 57%, rgba(255,204,239,1) 100%) !important;
+    background: linear-gradient(49deg, rgba(255,171,158,1) 0%, rgba(255,157,170,1) 27%, rgba(255,114,157,1) 57%, rgba(255,204,239,1) 100%) !important;
 }
 
 /* ==========================================================================
@@ -259,12 +258,8 @@ h6 {
 }
 
 .btn--green {
-    background: #57b846;
+    background: linear-gradient(36deg, rgba(255,188,237,1) 0%, rgba(255,152,239,1) 31%, rgba(255,107,107,1) 100%) !important;
 }
-
-    .btn--green:hover {
-        background: #4dae3c;
-    }
 
 /* ==========================================================================
    #DATE PICKER
@@ -348,13 +343,13 @@ input {
 .input-group {
     position: relative;
     margin-bottom: 33px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgb(0 0 0);
 }
 
 .input--style-3 {
     padding: 5px 0;
     font-size: 16px;
-    color: #ccc;
+    color: #a75a70;
     background: transparent;
 }
 
@@ -473,7 +468,7 @@ input {
    ========================================================================== */
 .title {
     font-size: 24px;
-    color: #fff;
+    color: #000;
     font-weight: 400;
     margin-bottom: 36px;
 }
@@ -490,7 +485,7 @@ input {
 }
 
 .card-3 {
-    background: #000;
+    background: #fff;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
