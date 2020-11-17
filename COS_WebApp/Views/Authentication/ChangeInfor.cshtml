@@ -1,5 +1,5 @@
 ﻿@model COS_WebApp.Models.account
-
+@using COS_WebApp.Models
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,22 +37,16 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title"><b>Registration Info</b></h2>
-                    <form method="POST" action="@Url.Action("Register","Authentication")">
+                    <form method="POST" action="@Url.Action("ChangeInfor","Authentication")">
+                        <input type="hidden" name="id" id="id" value="@((Session["User"] as account).id)" />
                         <div class="input-group">
+                       
                             @*<input class="input--style-3" type="text" id="fullname" placeholder="Full Name" name="fullname" required>*@
 
-                            @Html.EditorFor(model => model.fullname, new { htmlAttributes = new { @class = "input--style-3", @name = "fullname", @id = "fullname", @placeholder = "Full Name" } })
+                            @Html.EditorFor(model => ((Session["User"] as account).fullname), new { htmlAttributes = new { @class = "input--style-3", @name = "fullname", @id = "fullname", @placeholder = "Full Name" } })
                             @Html.ValidationMessageFor(model => model.fullname, "", new { @style = "color: red" })
                         </div>
-
-                        <div class="input-group">
-                            @* <input class="input--style-3" type="email" placeholder="Email" name="email" id="email" required>*@
-
-                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "input--style-3", @name = "email", @id = "email", @placeholder = "Email" } })
-                            @Html.ValidationMessageFor(model => model.email, "", new { @style = "color: red" })
-                        </div>
-
-                        <div class="input-group">
+                        @*<div class="input-group">
                             <input class="input--style-3" type="password" id="password" placeholder="Password" name="password" required>
                            
                          
@@ -62,16 +56,19 @@
                             <input class="input--style-3" type="password" id="confirmPassword" placeholder="Confirm Password" required>
 
                             <p id="re-pass-status" style="color:red"></p>
-                        </div>
+                        </div>*@
                         <div class="input-group">
                             @*<input class="input--style-3 js-datepicker" type="d" placeholder="Birthdate" name="dob" autocomplete="off">*@
-                            @Html.EditorFor(model => model.birthday, new { htmlAttributes = new { @class = "input--style-3", @placeholder = "Birthday",@type="date" } })
+                            @{ 
+                                string dob = ((Session["User"] as account).birthday).ToString("yyyy-MM-dd");
+                            }
+                            @Html.EditorFor(model =>  dob, new { htmlAttributes = new { @class = "input--style-3",@name="birthday",@id="birthday", @placeholder = "Birthday",@type="date" } })
                             @Html.ValidationMessageFor(model => model.birthday, "", new { @style = "color: red" })
                             @*<i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>*@
                         </div>
                         <div class="input-group">
                             @*<input class="input--style-3" type="text" id="phone" placeholder="Phone Number" name="phone" required>*@
-                            @Html.EditorFor(model => model.phonenumber, new { htmlAttributes = new { @class = "input--style-3", @name = "phone", @type = "text", @id = "phone", @placeholder = "Phone number" } })
+                            @Html.EditorFor(model => ((Session["User"] as account).phonenumber), new { htmlAttributes = new { @class = "input--style-3", @name = "phone", @type = "text", @id = "phone", @placeholder = "Phone number" } })
                             @Html.ValidationMessageFor(model => model.phonenumber, "", new { @style = "color: red" })
                         </div>
                         <div class="p-t-10">
@@ -96,7 +93,7 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    <script>
+    @*<script>
         $(document).ready(function () {
             var check = false;
             $('#confirmPassword').keyup(function () {
@@ -144,7 +141,7 @@
                 }
 
             });
-        });
+        });*@
     </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 

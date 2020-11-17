@@ -181,6 +181,12 @@
     <Content Include="Content\bootstrap-reboot.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\ChangeInfor\css\style.css" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Content\ChangeInfor\images\bg-registration-form-1.jpg" />
+    <Content Include="Content\ChangeInfor\images\registration-form-1.jpg" />
     <Content Include="Content\Login\css\main.css" />
     <Content Include="Content\Login\css\util.css" />
     <Content Include="Content\Login\fonts\font-awesome-4.7.0\css\font-awesome.css" />
@@ -456,6 +462,14 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="Content\ChangeInfor\css\style.css.map" />
+    <Content Include="Content\ChangeInfor\css\style.scss" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Content\ChangeInfor\fonts\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Content\ChangeInfor\fonts\poppins\Poppins-Regular.ttf" />
+    <Content Include="Content\ChangeInfor\fonts\poppins\Poppins-SemiBold.ttf" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -571,6 +585,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Views\Authentication\login.cshtml" />
+    <Content Include="Views\Authentication\ChangeInfor.cshtml" />
     <None Include="Views\Authentication\Register.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />

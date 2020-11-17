@@ -24,17 +24,21 @@ namespace COS_WebApp.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-            System.Diagnostics.Debug.WriteLine("ahaahah");
+            
             string pass = Utils.GetHash(password);
             using (CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities())
             {
                 var query = from account in db.accounts
-                            where account.email == email && account.password == pass
+                            where account.email == email && account.password == pass &&account.deletedAt==null
                             select account;
+                account a = query.FirstOrDefault();
+
+
+
 
                 if (query.SingleOrDefault() != null)
                 {
-                    Session.Add("User", query);
+                    Session.Add("User",a);
                     return RedirectToAction("Index", "Home");
 
                 }
@@ -83,6 +87,33 @@ namespace COS_WebApp.Controllers
         }
 
 
+        // GET: Authentication/Create
+        public ActionResult ChangeInfor()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangeInfor(account acc)
+        {
+           
+            int idAccount = acc.id;
+            var query = from account in db.accounts
+                        where account.id==idAccount
+                        select account;
+            account a = query.FirstOrDefault();
+            a.phonenumber = acc.phonenumber;
+            a.fullname = acc.fullname;
+            a.birthday = acc.birthday;
+          
+            if (Session["User"]!=null)
+            {
+                Session["User"] = a;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Login", "Authentication");
+        }
 
 
         // GET: Authentication/Create
