@@ -119,12 +119,11 @@
                                     <div class="product-f-image">
                                         
                                         @{
-                                            var base64 = Convert.ToBase64String(@item.image);
-                                            var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+                                            var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
                                         }
-                                        <img src=@imgSrc  alt="">
+                                        <img src="@imgSrc"  alt="">
                                         <div class="product-hover">
-                                            <a href="@Url.Action("AddToCart", "Cart", new { @id = item.id, @name = item.name, @money = Convert.ToDouble(item.price), @img = imgSrc})" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="@Url.Action("AddToCart", "Cart", new { @id = item.id })" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
