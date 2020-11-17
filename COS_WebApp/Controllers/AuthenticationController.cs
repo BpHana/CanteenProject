@@ -58,7 +58,7 @@ namespace COS_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                a.id_role = 1;
+                a.id_role = 2;
                 a.password = Utils.GetHash(a.password);
                 db.accounts.Add(a);
                 db.SaveChanges();
@@ -94,7 +94,7 @@ namespace COS_WebApp.Controllers
         }
 
         [HttpPost]
-        public ActionResult ChangeInfor(account acc)
+        public ActionResult ChangeInfor(account acc,DateTime dob)
         {
            
             int idAccount = acc.id;
@@ -104,8 +104,8 @@ namespace COS_WebApp.Controllers
             account a = query.FirstOrDefault();
             a.phonenumber = acc.phonenumber;
             a.fullname = acc.fullname;
-            a.birthday = acc.birthday;
-          
+            a.birthday = dob;
+
             if (Session["User"]!=null)
             {
                 Session["User"] = a;
@@ -114,8 +114,30 @@ namespace COS_WebApp.Controllers
             }
             return RedirectToAction("Login", "Authentication");
         }
-
-
+        public ActionResult ChangePass()
+        {
+            return View();
+        }
+        
+       [HttpPost]
+        public ActionResult ChangePass(string password,string oldPassword,string id)
+        {
+            oldPassword = Utils.GetHash(oldPassword);
+            password= Utils.GetHash(password);
+            int idAcc = Convert.ToInt32(id);
+            if ((Session["User"] as account).password==oldPassword)
+            {
+                var query = from account in db.accounts
+                            where account.id == idAcc
+                            select account;
+                account a = query.FirstOrDefault();
+                a.password = password;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            TempData["oldPass"] = "Old password is wrong";
+            return View();
+        }
         // GET: Authentication/Create
         public ActionResult Create()
         {
