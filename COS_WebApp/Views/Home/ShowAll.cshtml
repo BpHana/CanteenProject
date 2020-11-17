@@ -114,11 +114,11 @@
                                                             <img width="195" height="243" src="@imgSrc" style="object-fit:contain;" alt="">     @* img src *@
                                                             <div class="product-hover">
                                                                 <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                                <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                                <a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <h2><a href="single-product.html">@item.name</a></h2>
+                                                    <h2><a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.id })">@item.name</a></h2>
 
                                                     <div class="product-carousel-price">
                                                         <ins>@price vnd</ins>

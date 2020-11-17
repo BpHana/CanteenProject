@@ -130,7 +130,7 @@
                                         <img src="@imgSrc" style="object-fit:contain;" alt="">
                                         <div class="product-hover">
                                             <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                            <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                            <a href="@Url.Action("SeeDetail", "ShowSingleProduct", new { @Id = item.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
 

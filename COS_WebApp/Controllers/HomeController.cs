@@ -44,5 +44,25 @@ namespace COS_WebApp.Controllers
 
             return View(model);
         }
+
+        //public ActionResult SeeDetail(int Id)
+        //{
+        //    var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
+        //    return SingleProduct(prod);
+        //}
+        //public ActionResult SingleProduct(COS_WebApp.Models.product prod)
+        //{
+        //    dynamic model = new ExpandoObject();
+        //    model.Product = cos.products;
+        //    model.Product_Type = cos.products_type;
+
+        //    return View(prod);
+        //}
+
+        public ActionResult ShowSingleProduct(int Id)
+        {
+            var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
+            return View(prod);
+        }
     }
 }
