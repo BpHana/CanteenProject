@@ -586,6 +586,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <None Include="Views\Authentication\login.cshtml" />
     <Content Include="Views\Authentication\ChangeInfor.cshtml" />
+    <Content Include="Views\Authentication\ChangePass.cshtml" />
     <None Include="Views\Authentication\Register.cshtml" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />

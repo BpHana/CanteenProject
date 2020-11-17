@@ -37,47 +37,31 @@
                 <div class="card-heading"></div>
                 <div class="card-body">
                     <h2 class="title"><b>Registration Info</b></h2>
-                    <form method="POST" action="@Url.Action("ChangeInfor","Authentication")">
-                        <input type="hidden" name="id" id="id" value="@((Session["User"] as account).id)" />
+                    <form method="POST" action="@Url.Action("ChangePass","Authentication")">
+
+                        <input type="hidden" name="id" value=@((Session["User"] as account).id) />
                         <div class="input-group">
-
-                            @*<input class="input--style-3" type="text" id="fullname" placeholder="Full Name" name="fullname" required>*@
-
-                            @Html.EditorFor(model => ((Session["User"] as account).fullname), new { htmlAttributes = new { @class = "input--style-3", @name = "fullname", @id = "fullname", @placeholder = "Full Name" } })
-                            @Html.ValidationMessageFor(model => model.fullname, "", new { @style = "color: red" })
-                        </div>
-                        @*<div class="input-group">
-            <input class="input--style-3" type="password" id="password" placeholder="Password" name="password" required>
-
-
-            <p id="pass-status" style="color:red"></p>
-        </div>
-        <div class="input-group">
-            <input class="input--style-3" type="password" id="confirmPassword" placeholder="Confirm Password" required>
-
-            <p id="re-pass-status" style="color:red"></p>
-        </div>*@
-                        <div class="input-group">
-
-                            @{
-                                string dob = ((Session["User"] as account).birthday).ToString("yyyy-MM-dd");
-
+                            <input class="input--style-3" type="password" id="oldPassword" placeholder="Old Password" name="oldPassword" required>
+                            @if (TempData["oldPass"] != null)
+                            {
+                                <p style="color:red">  @TempData["oldPass"]</p>
                             }
-                            <input class="input--style-3" type="date" placeholder="Birthdate" name="dob" value=@dob autocomplete="off">
-                            @*@Html.EditorFor(model =>model.birthday, new { htmlAttributes = new { @class = "input--style-3", @placeholder = "Birthday",@type="date" } })*@
-                            @*@Html.ValidationMessageFor(model => model.birthday, "", new { @style = "color: red" })*@
-                            @*<i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>*@
                         </div>
                         <div class="input-group">
-                            @*<input class="input--style-3" type="text" id="phone" placeholder="Phone Number" name="phone" required>*@
-                            @Html.EditorFor(model => ((Session["User"] as account).phonenumber), new { htmlAttributes = new { @class = "input--style-3", @name = "phone", @type = "text", @id = "phone", @placeholder = "Phone number" } })
-                            @Html.ValidationMessageFor(model => model.phonenumber, "", new { @style = "color: red" })
+                            <input class="input--style-3" type="password" id="password" placeholder="Password" name="password" required>
+
+
+                            <p id="pass-status" style="color:red"></p>
                         </div>
+                        <div class="input-group">
+                            <input class="input--style-3" type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+                            <p id="re-pass-status" style="color:red"></p>
+                        </div>
+
+
                         <div class="p-t-10">
                             <button id="button-sign" class="btn btn--pill btn--green" type="submit">Submit</button>
-                        </div>
-                        <div class="p-t-10">
-                            <button id="button-sign" class="btn btn--pill btn--green" >@Html.ActionLink("Change password","ChangePass", "Authentication")</button>
                         </div>
                     </form>
                 </div>
@@ -98,7 +82,7 @@
     <script src="~/Scripts/jquery-1.10.2.min.js"></script>
     <script src="~/Scripts/jquery.validate.min.js"></script>
     <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    @*<script>
+    <script>
         $(document).ready(function () {
             var check = false;
             $('#confirmPassword').keyup(function () {
@@ -146,7 +130,7 @@
                 }
 
             });
-        });*@
+        });
     </script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
