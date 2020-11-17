@@ -111,9 +111,10 @@ namespace COS_WebApp.Controllers
         //    return View(prod);
         //}
 
-        public ActionResult ShowSingleProduct(int Id)
+        public ActionResult ShowSingleProduct(string Id)
         {
-            var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
+            int idP = Convert.ToInt32(Id);
+            var prod = cos.products.Where(x => x.id == idP).SingleOrDefault();
             return View(prod);
         }
     }
