@@ -274,7 +274,7 @@
             this.id_roleTextEdit.Location = new System.Drawing.Point(117, 378);
             this.id_roleTextEdit.Name = "id_roleTextEdit";
             this.id_roleTextEdit.Properties.Appearance.Options.UseTextOptions = true;
-            this.id_roleTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
+            this.id_roleTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Near;
             this.id_roleTextEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.id_roleTextEdit.Properties.DataSource = this.account_roleBindingSource;
