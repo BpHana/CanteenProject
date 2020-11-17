@@ -124,63 +124,65 @@
                                     }
                                     @if (list != null)
                                     {
-                                        <tbody>
+                                <tbody>
 
-                                            @foreach (var item in @list)
-                                            {
-                                                <tr class="cart_item">
-                                                    <td class="product-remove">
-                                                        <a title="Remove this item" class="remove" href="#">×</a>
-                                                    </td>
-                                                    @{
-                                                        var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.Product.image));
-                                                    }
-                                                    <td class="product-thumbnail">
-                                                        <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
-                                                    </td>
+                                    @foreach (var item in @list)
+                                    {
+                                    <tr class="cart_item">
+                                        <td class="product-remove">
+                                            <a title="Remove this item" class="remove" href="@Url.Action("updateCart", "Cart", new { @id = item.Product.id })">×</a>
+                             
+                                        </td>
+                                        @{
+                                            var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.Product.image));
+                                        }
+                                        <td class="product-thumbnail">
+                                            <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
+                                        </td>
 
-                                                    <td class="product-name">
-                                                        <a href="single-product.html">@item.Product.name</a>
-                                                    </td>
-
-                                                    <td class="product-price">
-                                                        @{
-                                                            var price = String.Format("{0:0,0}", item.Product.price);
-                                                        }
-                                                        <span class="amount">@price</span>
-                                                    </td>
-
-                                                    <td class="product-quantity">
-                                                        <div class="quantity buttons_added">
-                                                            <input type="button" class="minus" value="-">
-                                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="@item.Quantity" min="0" step="1">
-                                                            <input type="button" class="plus" value="+">
-                                                        </div>
-                                                    </td>
-
-                                                    <td class="product-subtotal">
-                                                        @{
-                                                            var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
-                                                        }
-                                                        <span class="amount">@amount</span>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="actions" colspan="6">
-
-                                                        <input type="submit" value="Update Cart" name="update_cart" class="button">
-                                                        <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
-                                                    </td>
-                                                </tr>
+                                        <td class="product-name">
+                                            <a href="single-product.html">@item.Product.name</a>
+                                        </td>
+                                       
+                                        <td class="product-price">
+                                            @{
+                                                var price = String.Format("{0:0,0}", item.Product.price);
                                             }
-                                        </tbody>
+                                            <span class="amount">@price</span>
+                                        </td>
+
+                                        <td class="product-quantity">
+                                            <div class="quantity buttons_added">
+                                                <input type="button" class="minus" value="-">
+                                                <input type="number" size="4" class="input-text qty text" title="Qty" value="@item.Quantity" min="0" step="1">
+                                                <input type="button" class="plus" value="+">
+                                            </div>
+                                        </td>
+
+                                        <td class="product-subtotal">
+                                            @{
+                                                var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
+                                            }
+                                            <span class="amount">@amount</span>
+                                        </td>
+                                    </tr>
+
+                                    }
+                                    <tr>
+                                        <td class="actions" colspan="6">
+
+                                            <input type="submit" value="Update Cart" name="update_cart" class="button">
+                                            <input type="submit" value="Checkout" name="proceed" class="checkout-button button alt wc-forward">
+                                        </td>
+                                    </tr>
+                                </tbody>
                                     }
                                     else
                                     {
                                         <tbody><h3>Your cart is empty</h3> </tbody>
 
                                     }
-
+                                    
                                 </table>
                             </form>
 

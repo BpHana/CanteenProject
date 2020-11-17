@@ -68,7 +68,7 @@ namespace COS_WebApp.Controllers
             //    Session["cart"] = cart;
 
             //}
-
+            TempData["addCart"] = "Add to cart successfully";
 
             return RedirectToAction("Index");
 

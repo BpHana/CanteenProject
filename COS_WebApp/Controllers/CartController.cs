@@ -37,7 +37,24 @@ namespace COS_WebApp.Controllers
             return View(shopCart);
         }
 
-        
+        public ActionResult updateCart(string id)
+        {
+            int idCart = Convert.ToInt32(id);
+            int userid = (Session["User"] as account).id;
+
+            var query = from cart in cos.carts
+                        where cart.id_products ==idCart && cart.id_user==userid
+                        select cart;
+            if (query.SingleOrDefault()!=null)
+            {
+                cart obj = query.FirstOrDefault();
+                cos.carts.Remove(obj);
+                cos.SaveChanges();
+            }
+           
+
+            return RedirectToAction("Cart");
+        }
 
         public ActionResult AddToCart(string id)
         {
