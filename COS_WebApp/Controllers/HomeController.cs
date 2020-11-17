@@ -3,14 +3,14 @@ using System.Dynamic;
 using System.Linq;
 using System.Web.Mvc;
 using COS_WebApp.Models;
-
+using System.Collections.Generic;
 
 namespace COS_WebApp.Controllers
 {
     public class HomeController : Controller
     {
         CanteenOrderingSystemEntities cos = new CanteenOrderingSystemEntities();
-
+        
         public ActionResult Index()
         {
             dynamic model = new ExpandoObject();
@@ -97,25 +97,34 @@ namespace COS_WebApp.Controllers
             return View(model);
         }
 
-        //public ActionResult SeeDetail(int Id)
-        //{
-        //    var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
-        //    return SingleProduct(prod);
-        //}
-        //public ActionResult SingleProduct(COS_WebApp.Models.product prod)
-        //{
-        //    dynamic model = new ExpandoObject();
-        //    model.Product = cos.products;
-        //    model.Product_Type = cos.products_type;
-
-        //    return View(prod);
-        //}
-
         public ActionResult ShowSingleProduct(string Id)
         {
             int idP = Convert.ToInt32(Id);
             var prod = cos.products.Where(x => x.id == idP).SingleOrDefault();
             return View(prod);
+        }
+
+        List<Categories> listCategories;
+        public ActionResult Categories(string type)
+        {
+            foreach ( var item in cos.products)
+            {
+                string proType = Convert.ToString(item.products_type);
+                if ( proType.Equals(type))
+                {
+                    var query = from product in cos.products
+                                where product.products_type == item.products_type
+                                select product;
+                    product prod = query.FirstOrDefault();
+                    Categories dto = new Categories(prod);
+                    if ( listCategories == null)
+                    {
+                        listCategories = new List<Categories>();
+                    }
+                    listCategories.Add(dto);
+                }
+            }
+            return View(listCategories);
         }
     }
 }

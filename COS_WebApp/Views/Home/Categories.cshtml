@@ -1,6 +1,5 @@
-﻿@using COS_WebApp.Controllers
-@model dynamic
-
+﻿@using COS_WebApp.Models
+@model List<COS_WebApp.Models.Categories>
 
 <!DOCTYPE html>
 <!--
@@ -49,18 +48,18 @@
             <div class="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul class="navbar-nav">
                     <li class="nav-item active">
-                        <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Category
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            @foreach (var type in Model.Product_Type)
-                            {
+                            @*@foreach (var type in Model.Product_Type)
+                                            {
 
-                <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @Categories = type.name })">@type.name</a>}
-                        </div>
+                                <a class="dropdown-item" href="#">@type.name</a>}
+                                        </div>*@
                     </li>
                 </ul>
             </div>
@@ -71,32 +70,38 @@
     <div class="single-product-area">
         <div class="zigzag-bottom">
             <div class="container">
+                @{ var list = Model; }
                 <div class="row">
-                    @foreach (var item in Model.Product)
-                    {<!-- Add/Show a product -->
-                                        <div class="col-md-3 col-sm-6">
-                                            <div class="single-shop-product">
-                                                <div class="single-product">
-                                                    <div class="product-upper">
-                                                        <div class="product-f-image">
-                                                            @* img class *@
-                                                            @{ var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
-                                                                var price = String.Format("{0:0,0}", item.price); }
-                                                            <img width="195" height="243" src="@imgSrc" style="object-fit:contain;" alt="">     @* img src *@
-                                                            <div class="product-hover">
-                                                                <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                                <a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <h2><a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.id })">@item.name</a></h2>
-
-                                                    <div class="product-carousel-price">
-                                                        <ins>@price vnd</ins>
+                    @if (list != null)
+                    {
+                        foreach (var item in list)
+        {<!-- Add/Show a product -->
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="single-shop-product">
+                                        <div class="single-product">
+                                            <div class="product-upper">
+                                                <div class="product-f-image">
+                                                    @* img class *@
+                                                    @{ var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.Product.image));
+                                                        var price = String.Format("{0:0,0}", item.Product.price); }
+                                                    <img width="195" height="243" src="@imgSrc" style="object-fit:contain;" alt="">     @* img src *@
+                                                    <div class="product-hover">
+                                                        <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.Product.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                        <a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.Product.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div> <!-- End Add/Show a product -->}
+                                            <h2><a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.Product.id })">@item.Product.name</a></h2>
+
+                                            <div class="product-carousel-price">
+                                                <ins>@price vnd</ins>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <!-- End Add/Show a product -->} }
+    else
+    {
+<tbody><h3>Your cart is empty</h3> </tbody>}
                 </div>
             </div>
         </div>
