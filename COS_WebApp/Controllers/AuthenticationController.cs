@@ -14,7 +14,33 @@ namespace COS_WebApp.Controllers
         // GET: Authentication
         public ActionResult Login()
         {
-            return View();
+            if (Session["User"]==null)
+            {
+                return View();
+           }
+            return RedirectToAction("Index", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult Login(string email, string password)
+        {
+            System.Diagnostics.Debug.WriteLine("ahaahah");
+            string pass = Utils.GetHash(password);
+            using (CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities())
+            {
+                var query = from account in db.accounts
+                            where account.email == email && account.password == pass
+                            select account;
+
+                if (query.SingleOrDefault() != null)
+                {
+                    Session.Add("User", query);
+                    return RedirectToAction("Index", "Home");
+
+                }
+               TempData["loginFail"] = "User or password is wrong";
+                return RedirectToAction("Login", "Authentication");
+            }
         }
 
         public ActionResult Register()
@@ -28,16 +54,10 @@ namespace COS_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                //
-
-
-                a.id_role = 4;
+                a.id_role = 1;
                 a.password = Utils.GetHash(a.password);
-
-
                 db.accounts.Add(a);
                 db.SaveChanges();
-
                 return RedirectToAction("Login", "Authentication");
             }
             return RedirectToAction("Register", "Authentication");
