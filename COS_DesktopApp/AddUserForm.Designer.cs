@@ -131,44 +131,44 @@
             this.dataLayoutControl1.Name = "dataLayoutControl1";
             this.dataLayoutControl1.OptionsCustomizationForm.DesignTimeCustomizationFormPositionAndSize = new System.Drawing.Rectangle(855, 344, 650, 400);
             this.dataLayoutControl1.Root = this.layoutControlGroup1;
-            this.dataLayoutControl1.Size = new System.Drawing.Size(355, 418);
+            this.dataLayoutControl1.Size = new System.Drawing.Size(414, 515);
             this.dataLayoutControl1.TabIndex = 0;
             this.dataLayoutControl1.Text = "dataLayoutControl1";
             // 
             // emailTextEdit
             // 
-            this.emailTextEdit.Location = new System.Drawing.Point(98, 25);
+            this.emailTextEdit.Location = new System.Drawing.Point(117, 30);
             this.emailTextEdit.Name = "emailTextEdit";
             this.emailTextEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.False;
             this.emailTextEdit.Properties.Mask.EditMask = "\\w+([-+.\']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
             this.emailTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.emailTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.emailTextEdit.Size = new System.Drawing.Size(268, 22);
             this.emailTextEdit.StyleController = this.dataLayoutControl1;
             this.emailTextEdit.TabIndex = 5;
             // 
             // passwordTextEdit
             // 
-            this.passwordTextEdit.Location = new System.Drawing.Point(98, 75);
+            this.passwordTextEdit.Location = new System.Drawing.Point(117, 88);
             this.passwordTextEdit.Name = "passwordTextEdit";
             this.passwordTextEdit.Properties.UseSystemPasswordChar = true;
-            this.passwordTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.passwordTextEdit.Size = new System.Drawing.Size(268, 22);
             this.passwordTextEdit.StyleController = this.dataLayoutControl1;
             this.passwordTextEdit.TabIndex = 6;
             // 
             // fullnameTextEdit
             // 
-            this.fullnameTextEdit.Location = new System.Drawing.Point(98, 175);
+            this.fullnameTextEdit.Location = new System.Drawing.Point(117, 204);
             this.fullnameTextEdit.Name = "fullnameTextEdit";
             this.fullnameTextEdit.Properties.Mask.EditMask = "[A-Za-z]{2,}(\\s[A-Za-z]{2,})+";
             this.fullnameTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.fullnameTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.fullnameTextEdit.Size = new System.Drawing.Size(268, 22);
             this.fullnameTextEdit.StyleController = this.dataLayoutControl1;
             this.fullnameTextEdit.TabIndex = 7;
             // 
             // birthdayDateEdit
             // 
             this.birthdayDateEdit.EditValue = null;
-            this.birthdayDateEdit.Location = new System.Drawing.Point(98, 225);
+            this.birthdayDateEdit.Location = new System.Drawing.Point(117, 262);
             this.birthdayDateEdit.Name = "birthdayDateEdit";
             this.birthdayDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -176,18 +176,18 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.birthdayDateEdit.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.birthdayDateEdit.Properties.Mask.UseMaskAsDisplayFormat = true;
-            this.birthdayDateEdit.Size = new System.Drawing.Size(232, 20);
+            this.birthdayDateEdit.Size = new System.Drawing.Size(268, 22);
             this.birthdayDateEdit.StyleController = this.dataLayoutControl1;
             this.birthdayDateEdit.TabIndex = 8;
             // 
             // phonenumberTextEdit
             // 
-            this.phonenumberTextEdit.Location = new System.Drawing.Point(98, 275);
+            this.phonenumberTextEdit.Location = new System.Drawing.Point(117, 320);
             this.phonenumberTextEdit.Name = "phonenumberTextEdit";
             this.phonenumberTextEdit.Properties.Mask.AutoComplete = DevExpress.XtraEditors.Mask.AutoCompleteType.None;
             this.phonenumberTextEdit.Properties.Mask.EditMask = "((\\+84)|(0))[1-9][0-9]{8}";
             this.phonenumberTextEdit.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.RegEx;
-            this.phonenumberTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.phonenumberTextEdit.Size = new System.Drawing.Size(268, 22);
             this.phonenumberTextEdit.StyleController = this.dataLayoutControl1;
             this.phonenumberTextEdit.TabIndex = 9;
             // 
@@ -195,14 +195,14 @@
             // 
             this.deletedAtDateEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.account_roleBindingSource, "deletedAt", true));
             this.deletedAtDateEdit.EditValue = null;
-            this.deletedAtDateEdit.Location = new System.Drawing.Point(90, 180);
+            this.deletedAtDateEdit.Location = new System.Drawing.Point(105, 221);
             this.deletedAtDateEdit.Name = "deletedAtDateEdit";
             this.deletedAtDateEdit.Properties.AllowNullInput = DevExpress.Utils.DefaultBoolean.True;
             this.deletedAtDateEdit.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.deletedAtDateEdit.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.deletedAtDateEdit.Size = new System.Drawing.Size(463, 20);
+            this.deletedAtDateEdit.Size = new System.Drawing.Size(540, 22);
             this.deletedAtDateEdit.StyleController = this.dataLayoutControl1;
             this.deletedAtDateEdit.TabIndex = 11;
             // 
@@ -213,9 +213,9 @@
             // account_roleTextEdit
             // 
             this.account_roleTextEdit.DataBindings.Add(new System.Windows.Forms.Binding("EditValue", this.accountsBindingSource, "account_role", true));
-            this.account_roleTextEdit.Location = new System.Drawing.Point(90, 204);
+            this.account_roleTextEdit.Location = new System.Drawing.Point(105, 251);
             this.account_roleTextEdit.Name = "account_roleTextEdit";
-            this.account_roleTextEdit.Size = new System.Drawing.Size(463, 20);
+            this.account_roleTextEdit.Size = new System.Drawing.Size(540, 22);
             this.account_roleTextEdit.StyleController = this.dataLayoutControl1;
             this.account_roleTextEdit.TabIndex = 12;
             // 
@@ -226,40 +226,44 @@
             // cartsGridControl
             // 
             this.cartsGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.accountsBindingSource, "carts", true));
-            this.cartsGridControl.Location = new System.Drawing.Point(12, 228);
+            this.cartsGridControl.Location = new System.Drawing.Point(14, 280);
             this.cartsGridControl.MainView = this.gridView1;
             this.cartsGridControl.Name = "cartsGridControl";
-            this.cartsGridControl.Size = new System.Drawing.Size(541, 166);
+            this.cartsGridControl.Size = new System.Drawing.Size(632, 205);
             this.cartsGridControl.TabIndex = 13;
             this.cartsGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
             // gridView1
             // 
+            this.gridView1.DetailHeight = 431;
+            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.cartsGridControl;
             this.gridView1.Name = "gridView1";
             // 
             // ordersGridControl
             // 
             this.ordersGridControl.DataBindings.Add(new System.Windows.Forms.Binding("DataSource", this.accountsBindingSource, "orders", true));
-            this.ordersGridControl.Location = new System.Drawing.Point(12, 398);
+            this.ordersGridControl.Location = new System.Drawing.Point(14, 490);
             this.ordersGridControl.MainView = this.gridView2;
             this.ordersGridControl.Name = "ordersGridControl";
-            this.ordersGridControl.Size = new System.Drawing.Size(541, 167);
+            this.ordersGridControl.Size = new System.Drawing.Size(632, 205);
             this.ordersGridControl.TabIndex = 14;
             this.ordersGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
             // 
             // gridView2
             // 
+            this.gridView2.DetailHeight = 431;
+            this.gridView2.FixedLineWidth = 3;
             this.gridView2.GridControl = this.ordersGridControl;
             this.gridView2.Name = "gridView2";
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(133, 373);
+            this.simpleButton1.Location = new System.Drawing.Point(155, 449);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(88, 22);
+            this.simpleButton1.Size = new System.Drawing.Size(103, 22);
             this.simpleButton1.StyleController = this.dataLayoutControl1;
             this.simpleButton1.TabIndex = 15;
             this.simpleButton1.Text = "Add";
@@ -267,7 +271,7 @@
             // 
             // id_roleTextEdit
             // 
-            this.id_roleTextEdit.Location = new System.Drawing.Point(98, 325);
+            this.id_roleTextEdit.Location = new System.Drawing.Point(117, 378);
             this.id_roleTextEdit.Name = "id_roleTextEdit";
             this.id_roleTextEdit.Properties.Appearance.Options.UseTextOptions = true;
             this.id_roleTextEdit.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
@@ -278,7 +282,7 @@
             this.id_roleTextEdit.Properties.NullText = "";
             this.id_roleTextEdit.Properties.PopupView = this.gridLookUpEdit1View;
             this.id_roleTextEdit.Properties.ValueMember = "id";
-            this.id_roleTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.id_roleTextEdit.Size = new System.Drawing.Size(268, 22);
             this.id_roleTextEdit.StyleController = this.dataLayoutControl1;
             this.id_roleTextEdit.TabIndex = 10;
             // 
@@ -289,6 +293,8 @@
             this.colID,
             this.colRole,
             this.colDeleteAt});
+            this.gridLookUpEdit1View.DetailHeight = 431;
+            this.gridLookUpEdit1View.FixedLineWidth = 3;
             this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
             this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -299,30 +305,36 @@
             // 
             this.colID.Caption = "ID";
             this.colID.FieldName = "id";
+            this.colID.MinWidth = 23;
             this.colID.Name = "colID";
             this.colID.Visible = true;
             this.colID.VisibleIndex = 0;
+            this.colID.Width = 87;
             // 
             // colRole
             // 
             this.colRole.Caption = "Role";
             this.colRole.FieldName = "name";
+            this.colRole.MinWidth = 23;
             this.colRole.Name = "colRole";
             this.colRole.Visible = true;
             this.colRole.VisibleIndex = 1;
+            this.colRole.Width = 87;
             // 
             // colDeleteAt
             // 
             this.colDeleteAt.Caption = "DeleteAt";
             this.colDeleteAt.FieldName = "deletedAt";
+            this.colDeleteAt.MinWidth = 23;
             this.colDeleteAt.Name = "colDeleteAt";
+            this.colDeleteAt.Width = 87;
             // 
             // repassTextEdit
             // 
-            this.repassTextEdit.Location = new System.Drawing.Point(98, 125);
+            this.repassTextEdit.Location = new System.Drawing.Point(117, 146);
             this.repassTextEdit.Name = "repassTextEdit";
             this.repassTextEdit.Properties.UseSystemPasswordChar = true;
-            this.repassTextEdit.Size = new System.Drawing.Size(232, 20);
+            this.repassTextEdit.Size = new System.Drawing.Size(268, 22);
             this.repassTextEdit.StyleController = this.dataLayoutControl1;
             this.repassTextEdit.TabIndex = 16;
             // 
@@ -333,7 +345,7 @@
             this.ItemFordeletedAt.Name = "ItemFordeletedAt";
             this.ItemFordeletedAt.Size = new System.Drawing.Size(545, 24);
             this.ItemFordeletedAt.Text = "deleted At";
-            this.ItemFordeletedAt.TextSize = new System.Drawing.Size(50, 20);
+            this.ItemFordeletedAt.TextSize = new System.Drawing.Size(58, 25);
             // 
             // ItemForaccount_role
             // 
@@ -342,7 +354,7 @@
             this.ItemForaccount_role.Name = "ItemForaccount_role";
             this.ItemForaccount_role.Size = new System.Drawing.Size(545, 48);
             this.ItemForaccount_role.Text = "account_role";
-            this.ItemForaccount_role.TextSize = new System.Drawing.Size(50, 20);
+            this.ItemForaccount_role.TextSize = new System.Drawing.Size(58, 25);
             // 
             // ItemForcarts
             // 
@@ -373,7 +385,7 @@
             this.layoutControlGroup1.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
             this.layoutControlGroup2});
             this.layoutControlGroup1.Name = "Root";
-            this.layoutControlGroup1.Size = new System.Drawing.Size(355, 418);
+            this.layoutControlGroup1.Size = new System.Drawing.Size(414, 515);
             this.layoutControlGroup1.TextVisible = false;
             // 
             // layoutControlGroup2
@@ -393,78 +405,78 @@
             this.layoutControlItem2});
             this.layoutControlGroup2.Location = new System.Drawing.Point(0, 0);
             this.layoutControlGroup2.Name = "autoGeneratedGroup0";
-            this.layoutControlGroup2.Size = new System.Drawing.Size(335, 398);
+            this.layoutControlGroup2.Size = new System.Drawing.Size(390, 491);
             // 
             // ItemForemail
             // 
             this.ItemForemail.Control = this.emailTextEdit;
             this.ItemForemail.Location = new System.Drawing.Point(0, 0);
             this.ItemForemail.Name = "ItemForemail";
-            this.ItemForemail.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForemail.Size = new System.Drawing.Size(335, 50);
+            this.ItemForemail.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForemail.Size = new System.Drawing.Size(390, 58);
             this.ItemForemail.Text = "Email";
-            this.ItemForemail.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForemail.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemForpassword
             // 
             this.ItemForpassword.Control = this.passwordTextEdit;
-            this.ItemForpassword.Location = new System.Drawing.Point(0, 50);
+            this.ItemForpassword.Location = new System.Drawing.Point(0, 58);
             this.ItemForpassword.Name = "ItemForpassword";
-            this.ItemForpassword.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForpassword.Size = new System.Drawing.Size(335, 50);
+            this.ItemForpassword.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForpassword.Size = new System.Drawing.Size(390, 58);
             this.ItemForpassword.Text = "Password";
-            this.ItemForpassword.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForpassword.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemForfullname
             // 
             this.ItemForfullname.Control = this.fullnameTextEdit;
-            this.ItemForfullname.Location = new System.Drawing.Point(0, 150);
+            this.ItemForfullname.Location = new System.Drawing.Point(0, 174);
             this.ItemForfullname.Name = "ItemForfullname";
-            this.ItemForfullname.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForfullname.Size = new System.Drawing.Size(335, 50);
+            this.ItemForfullname.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForfullname.Size = new System.Drawing.Size(390, 58);
             this.ItemForfullname.Text = "Fullname";
-            this.ItemForfullname.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForfullname.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemForbirthday
             // 
             this.ItemForbirthday.Control = this.birthdayDateEdit;
-            this.ItemForbirthday.Location = new System.Drawing.Point(0, 200);
+            this.ItemForbirthday.Location = new System.Drawing.Point(0, 232);
             this.ItemForbirthday.Name = "ItemForbirthday";
-            this.ItemForbirthday.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForbirthday.Size = new System.Drawing.Size(335, 50);
+            this.ItemForbirthday.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForbirthday.Size = new System.Drawing.Size(390, 58);
             this.ItemForbirthday.Text = "Birthday";
-            this.ItemForbirthday.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForbirthday.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemForphonenumber
             // 
             this.ItemForphonenumber.Control = this.phonenumberTextEdit;
-            this.ItemForphonenumber.Location = new System.Drawing.Point(0, 250);
+            this.ItemForphonenumber.Location = new System.Drawing.Point(0, 290);
             this.ItemForphonenumber.Name = "ItemForphonenumber";
-            this.ItemForphonenumber.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForphonenumber.Size = new System.Drawing.Size(335, 50);
+            this.ItemForphonenumber.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForphonenumber.Size = new System.Drawing.Size(390, 58);
             this.ItemForphonenumber.Text = "Phone Number";
-            this.ItemForphonenumber.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForphonenumber.TextSize = new System.Drawing.Size(84, 16);
             // 
             // ItemForid_role
             // 
             this.ItemForid_role.Control = this.id_roleTextEdit;
-            this.ItemForid_role.Location = new System.Drawing.Point(0, 300);
+            this.ItemForid_role.Location = new System.Drawing.Point(0, 348);
             this.ItemForid_role.Name = "ItemForid_role";
-            this.ItemForid_role.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.ItemForid_role.Size = new System.Drawing.Size(335, 50);
+            this.ItemForid_role.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.ItemForid_role.Size = new System.Drawing.Size(390, 58);
             this.ItemForid_role.Text = "Role";
-            this.ItemForid_role.TextSize = new System.Drawing.Size(70, 13);
+            this.ItemForid_role.TextSize = new System.Drawing.Size(84, 16);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.ContentHorzAlignment = DevExpress.Utils.HorzAlignment.Center;
             this.layoutControlItem1.ContentVertAlignment = DevExpress.Utils.VertAlignment.Center;
             this.layoutControlItem1.Control = this.simpleButton1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(121, 350);
-            this.layoutControlItem1.MaxSize = new System.Drawing.Size(92, 26);
-            this.layoutControlItem1.MinSize = new System.Drawing.Size(92, 26);
+            this.layoutControlItem1.Location = new System.Drawing.Point(141, 406);
+            this.layoutControlItem1.MaxSize = new System.Drawing.Size(107, 32);
+            this.layoutControlItem1.MinSize = new System.Drawing.Size(107, 32);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(92, 48);
+            this.layoutControlItem1.Size = new System.Drawing.Size(107, 85);
             this.layoutControlItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
@@ -472,34 +484,34 @@
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 350);
-            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(121, 0);
-            this.emptySpaceItem1.MinSize = new System.Drawing.Size(121, 24);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 406);
+            this.emptySpaceItem1.MaxSize = new System.Drawing.Size(141, 0);
+            this.emptySpaceItem1.MinSize = new System.Drawing.Size(141, 30);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(121, 48);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(141, 85);
             this.emptySpaceItem1.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(213, 350);
-            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(122, 0);
-            this.emptySpaceItem2.MinSize = new System.Drawing.Size(122, 10);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(248, 406);
+            this.emptySpaceItem2.MaxSize = new System.Drawing.Size(142, 0);
+            this.emptySpaceItem2.MinSize = new System.Drawing.Size(142, 12);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(122, 48);
+            this.emptySpaceItem2.Size = new System.Drawing.Size(142, 85);
             this.emptySpaceItem2.SizeConstraintsType = DevExpress.XtraLayout.SizeConstraintsType.Custom;
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.repassTextEdit;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 100);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 116);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(15, 15, 15, 15);
-            this.layoutControlItem2.Size = new System.Drawing.Size(335, 50);
+            this.layoutControlItem2.Padding = new DevExpress.XtraLayout.Utils.Padding(17, 17, 18, 18);
+            this.layoutControlItem2.Size = new System.Drawing.Size(390, 58);
             this.layoutControlItem2.Text = "Re-Password";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(70, 13);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(84, 16);
             // 
             // accountroleBindingSource
             // 
@@ -507,10 +519,11 @@
             // 
             // AddUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(355, 418);
+            this.ClientSize = new System.Drawing.Size(414, 515);
             this.Controls.Add(this.dataLayoutControl1);
+            this.Font = new System.Drawing.Font("Tahoma", 9.75F);
             this.IconOptions.Image = global::COS_DesktopApp.Properties.Resources.chef16;
             this.Name = "AddUserForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
