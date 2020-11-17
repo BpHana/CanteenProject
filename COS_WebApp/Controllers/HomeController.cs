@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Dynamic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -14,11 +15,11 @@ namespace COS_WebApp.Controllers
 
         public ActionResult Index()
         {
-            var listpro = cos.products.OrderByDescending(x => x.id).ToList();
+            dynamic model = new ExpandoObject();
+            model.Product = cos.products;
+            model.Product_Type = cos.products_type;
 
-            listpro.Take(5);
-
-            return View(listpro);
+            return View(model);
         }
 
         public ActionResult About()
