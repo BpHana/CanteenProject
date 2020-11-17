@@ -35,5 +35,14 @@ namespace COS_WebApp.Controllers
 
             return View();
         }
+
+        public ActionResult ShowAll()
+        {
+            dynamic model = new ExpandoObject();
+            model.Product = cos.products;
+            model.Product_Type = cos.products_type;
+
+            return View(model);
+        }
     }
 }
