@@ -29,7 +29,7 @@ namespace COS_WebApp.Controllers
             using (CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities())
             {
                 var query = from account in db.accounts
-                            where account.email == email && account.password == pass
+                            where account.email == email && account.password == pass &&account.deletedAt==null
                             select account;
                 account a = query.FirstOrDefault();
 
@@ -91,6 +91,28 @@ namespace COS_WebApp.Controllers
         public ActionResult ChangeInfor()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult ChangeInfor(account acc)
+        {
+           
+            int idAccount = acc.id;
+            var query = from account in db.accounts
+                        where account.id==idAccount
+                        select account;
+            account a = query.FirstOrDefault();
+            a.phonenumber = acc.phonenumber;
+            a.fullname = acc.fullname;
+            a.birthday = acc.birthday;
+          
+            if (Session["User"]!=null)
+            {
+                Session["User"] = a;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Login", "Authentication");
         }
 
 
