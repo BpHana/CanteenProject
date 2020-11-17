@@ -50,10 +50,19 @@
             a:hover {
                 color: indianred;
             }
+
+        .product-hover a {
+            background: none repeat scroll 0 0 #ffffff;
+            color: #000;
+            border: 1px solid #000000;
+        }
+            .product-hover a:hover {
+                background: #fa8072;
+            }
     </style>
 </head>
 <body>
-    <div style="padding-left: 1%; padding-right:1%">
+    <div class="container-fluid">
         <header class="page-header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-weight-bolder" style="
         padding-left: 3%;
@@ -109,49 +118,17 @@
             @*<img src="/Image/landing.jpg" style="" alt="Landing" />*@
         </header>
 
-     
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
-                    <img src="~/Content/Main/img/chef512.png" width="50" height="50">
-                </a>
-                @Html.ActionLink("profile", "ChangeInfor", "Authentication")
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Category
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                @foreach (var type in Model.Product_Type)
-                                {
-
-                                    <a class="dropdown-item" href="#">@type.name</a>
-                                }
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </div> <!-- End mainmenu area -->
-
         <div class="maincontent-area">
             <div class="zigzag-bottom"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12 text-center m-3">
                         <div class="latest-product">
                             <h2 class="section-title">Products</h2>
                             <div class="product-carousel">
                                 @foreach (var item in Model.Product)
                                 {
-                                    <div class="single-product">
+                                    <div class="single-product text-center">
                                         <div class="product-f-image">
 
                                             @{
@@ -180,6 +157,8 @@
                                 }
                             </div>
                         </div>
+
+                        <a href="#" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
                     </div>
                 </div>
             </div> <!-- End main content area -->
