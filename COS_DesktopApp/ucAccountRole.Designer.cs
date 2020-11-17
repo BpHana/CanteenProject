@@ -58,8 +58,8 @@
             this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.Black;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 0);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(558, 63);
+            this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(651, 77);
             this.windowsUIButtonPanel1.TabIndex = 0;
             this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
             // 
@@ -67,10 +67,10 @@
             // 
             this.gridControl1.DataSource = this.account_roleBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 63);
+            this.gridControl1.Location = new System.Drawing.Point(0, 77);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(558, 385);
+            this.gridControl1.Size = new System.Drawing.Size(651, 475);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -87,6 +87,8 @@
             this.colname,
             this.coldeletedAt,
             this.colaccounts});
+            this.gridView1.DetailHeight = 431;
+            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowFilterPanelMode = DevExpress.XtraGrid.Views.Base.ShowFilterPanelMode.Never;
@@ -96,38 +98,46 @@
             // 
             this.colid.Caption = "Role ID";
             this.colid.FieldName = "id";
+            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
+            this.colid.Width = 87;
             // 
             // colname
             // 
             this.colname.Caption = "Name";
             this.colname.FieldName = "name";
+            this.colname.MinWidth = 23;
             this.colname.Name = "colname";
             this.colname.Visible = true;
             this.colname.VisibleIndex = 1;
+            this.colname.Width = 87;
             // 
             // coldeletedAt
             // 
             this.coldeletedAt.FieldName = "deletedAt";
+            this.coldeletedAt.MinWidth = 23;
             this.coldeletedAt.Name = "coldeletedAt";
+            this.coldeletedAt.Width = 87;
             // 
             // colaccounts
             // 
             this.colaccounts.FieldName = "accounts";
+            this.colaccounts.MinWidth = 23;
             this.colaccounts.Name = "colaccounts";
+            this.colaccounts.Width = 87;
             // 
             // ucAccountRole
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.windowsUIButtonPanel1);
             this.Name = "ucAccountRole";
-            this.Size = new System.Drawing.Size(558, 448);
+            this.Size = new System.Drawing.Size(651, 552);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.account_roleBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

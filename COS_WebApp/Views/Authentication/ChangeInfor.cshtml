@@ -12,8 +12,8 @@
     <meta name="keywords" content="Colorlib Templates">
 
     <!-- Title Page-->
-    <title>Register</title>
-
+    <title>Canteen Ordering System</title>
+    <link rel="icon" type="image/png" href="~/Content/Main/img/chef512.png" />
     <!-- Icons font CSS-->
     <link href="~/Content/Register/vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
 
@@ -36,34 +36,36 @@
             <div class="card card-3">
                 <div class="card-heading"></div>
                 <div class="card-body">
-                    <h2 class="title"><b>Registration Info</b></h2>
+                    <h2 class="title"><b>Change information</b></h2>
                     <form method="POST" action="@Url.Action("ChangeInfor","Authentication")">
                         <input type="hidden" name="id" id="id" value="@((Session["User"] as account).id)" />
                         <div class="input-group">
-                       
+
                             @*<input class="input--style-3" type="text" id="fullname" placeholder="Full Name" name="fullname" required>*@
 
                             @Html.EditorFor(model => ((Session["User"] as account).fullname), new { htmlAttributes = new { @class = "input--style-3", @name = "fullname", @id = "fullname", @placeholder = "Full Name" } })
                             @Html.ValidationMessageFor(model => model.fullname, "", new { @style = "color: red" })
                         </div>
                         @*<div class="input-group">
-                            <input class="input--style-3" type="password" id="password" placeholder="Password" name="password" required>
-                           
-                         
-                            <p id="pass-status" style="color:red"></p>
-                        </div>
-                        <div class="input-group">
-                            <input class="input--style-3" type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <input class="input--style-3" type="password" id="password" placeholder="Password" name="password" required>
 
-                            <p id="re-pass-status" style="color:red"></p>
-                        </div>*@
+
+            <p id="pass-status" style="color:red"></p>
+        </div>
+        <div class="input-group">
+            <input class="input--style-3" type="password" id="confirmPassword" placeholder="Confirm Password" required>
+
+            <p id="re-pass-status" style="color:red"></p>
+        </div>*@
                         <div class="input-group">
-                            @*<input class="input--style-3 js-datepicker" type="d" placeholder="Birthdate" name="dob" autocomplete="off">*@
-                            @{ 
+
+                            @{
                                 string dob = ((Session["User"] as account).birthday).ToString("yyyy-MM-dd");
+
                             }
-                            @Html.EditorFor(model =>  dob, new { htmlAttributes = new { @class = "input--style-3",@name="birthday",@id="birthday", @placeholder = "Birthday",@type="date" } })
-                            @Html.ValidationMessageFor(model => model.birthday, "", new { @style = "color: red" })
+                            <input class="input--style-3" type="date" placeholder="Birthdate" name="dob" value=@dob autocomplete="off">
+                            @*@Html.EditorFor(model =>model.birthday, new { htmlAttributes = new { @class = "input--style-3", @placeholder = "Birthday",@type="date" } })*@
+                            @*@Html.ValidationMessageFor(model => model.birthday, "", new { @style = "color: red" })*@
                             @*<i class="zmdi zmdi-calendar-note input-icon js-btn-calendar"></i>*@
                         </div>
                         <div class="input-group">
@@ -73,6 +75,9 @@
                         </div>
                         <div class="p-t-10">
                             <button id="button-sign" class="btn btn--pill btn--green" type="submit">Submit</button>
+                        </div>
+                        <div class="p-t-10">
+                            <button id="button-sign" class="btn btn--pill btn--green" >@Html.ActionLink("Change password","ChangePass", "Authentication")</button>
                         </div>
                     </form>
                 </div>
