@@ -122,8 +122,9 @@
                                             var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
                                         }
                                         <img src="@imgSrc"  alt="">
+                                        
                                         <div class="product-hover">
-                                            <a href="@Url.Action("AddToCart", "Cart", new { @id = item.id })" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                            <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link" ><i class="fa fa-shopping-cart"></i> Add to cart</a>
                                             <a href="single-product.html" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                         </div>
                                     </div>
