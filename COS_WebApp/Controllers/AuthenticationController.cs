@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -24,17 +24,21 @@ namespace COS_WebApp.Controllers
         [HttpPost]
         public ActionResult Login(string email, string password)
         {
-            System.Diagnostics.Debug.WriteLine("ahaahah");
+            
             string pass = Utils.GetHash(password);
             using (CanteenOrderingSystemEntities db = new CanteenOrderingSystemEntities())
             {
                 var query = from account in db.accounts
-                            where account.email == email && account.password == pass
+                            where account.email == email && account.password == pass &&account.deletedAt==null
                             select account;
+                account a = query.FirstOrDefault();
+
+
+
 
                 if (query.SingleOrDefault() != null)
                 {
-                    Session.Add("User", query);
+                    Session.Add("User",a);
                     return RedirectToAction("Index", "Home");
 
                 }
@@ -54,7 +58,7 @@ namespace COS_WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                a.id_role = 1;
+                a.id_role = 2;
                 a.password = Utils.GetHash(a.password);
                 db.accounts.Add(a);
                 db.SaveChanges();
@@ -83,8 +87,57 @@ namespace COS_WebApp.Controllers
         }
 
 
+        // GET: Authentication/Create
+        public ActionResult ChangeInfor()
+        {
+            return View();
+        }
 
+        [HttpPost]
+        public ActionResult ChangeInfor(account acc,DateTime dob)
+        {
+           
+            int idAccount = acc.id;
+            var query = from account in db.accounts
+                        where account.id==idAccount
+                        select account;
+            account a = query.FirstOrDefault();
+            a.phonenumber = acc.phonenumber;
+            a.fullname = acc.fullname;
+            a.birthday = dob;
 
+            if (Session["User"]!=null)
+            {
+                Session["User"] = a;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            return RedirectToAction("Login", "Authentication");
+        }
+        public ActionResult ChangePass()
+        {
+            return View();
+        }
+        
+       [HttpPost]
+        public ActionResult ChangePass(string password,string oldPassword,string id)
+        {
+            oldPassword = Utils.GetHash(oldPassword);
+            password= Utils.GetHash(password);
+            int idAcc = Convert.ToInt32(id);
+            if ((Session["User"] as account).password==oldPassword)
+            {
+                var query = from account in db.accounts
+                            where account.id == idAcc
+                            select account;
+                account a = query.FirstOrDefault();
+                a.password = password;
+                db.SaveChanges();
+                return RedirectToAction("Index", "Home");
+            }
+            TempData["oldPass"] = "Old password is wrong";
+            return View();
+        }
         // GET: Authentication/Create
         public ActionResult Create()
         {

@@ -55,34 +55,34 @@
             // fdfContainer
             // 
             this.fdfContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fdfContainer.Location = new System.Drawing.Point(232, 30);
+            this.fdfContainer.Location = new System.Drawing.Point(238, 30);
             this.fdfContainer.Name = "fdfContainer";
-            this.fdfContainer.Size = new System.Drawing.Size(916, 614);
+            this.fdfContainer.Size = new System.Drawing.Size(1101, 762);
             this.fdfContainer.TabIndex = 0;
             this.fdfContainer.Click += new System.EventHandler(this.fluentDesignFormContainer1_Click);
             // 
             // accordionControl1
             // 
-            this.accordionControl1.Appearance.AccordionControl.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.AccordionControl.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.AccordionControl.Options.UseFont = true;
             this.accordionControl1.Appearance.AccordionControl.Options.UseImage = true;
             this.accordionControl1.Appearance.Group.Hovered.ForeColor = System.Drawing.Color.Black;
             this.accordionControl1.Appearance.Group.Hovered.Options.UseForeColor = true;
-            this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Group.Normal.ForeColor = System.Drawing.Color.Black;
             this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
             this.accordionControl1.Appearance.Group.Normal.Options.UseForeColor = true;
-            this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Group.Pressed.ForeColor = System.Drawing.Color.Black;
             this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
             this.accordionControl1.Appearance.Group.Pressed.Options.UseForeColor = true;
-            this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
-            this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Item.Normal.Options.UseFont = true;
-            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.Item.Pressed.Options.UseFont = true;
-            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.accordionControl1.Appearance.ItemWithContainer.Hovered.Options.UseFont = true;
             this.accordionControl1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -94,10 +94,10 @@
             this.accordionControl1.Location = new System.Drawing.Point(0, 30);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.OptionsMinimizing.AllowMinimizeMode = DevExpress.Utils.DefaultBoolean.False;
-            this.accordionControl1.Padding = new System.Windows.Forms.Padding(5, 10, 5, 5);
+            this.accordionControl1.Padding = new System.Windows.Forms.Padding(6, 13, 6, 6);
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
             this.accordionControl1.ShowFilterControl = DevExpress.XtraBars.Navigation.ShowFilterControl.Always;
-            this.accordionControl1.Size = new System.Drawing.Size(232, 614);
+            this.accordionControl1.Size = new System.Drawing.Size(238, 762);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -105,7 +105,7 @@
             // 
             this.eDashboard.Appearance.Disabled.Options.UseTextOptions = true;
             this.eDashboard.Appearance.Disabled.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Far;
-            this.eDashboard.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eDashboard.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eDashboard.Appearance.Normal.Options.UseFont = true;
             this.eDashboard.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.dashboard16;
             this.eDashboard.Name = "eDashboard";
@@ -222,7 +222,7 @@
             // 
             // eOrderManagement
             // 
-            this.eOrderManagement.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.eOrderManagement.Appearance.Normal.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.eOrderManagement.Appearance.Normal.Options.UseFont = true;
             this.eOrderManagement.Expanded = true;
             this.eOrderManagement.ImageOptions.Image = global::COS_DesktopApp.Properties.Resources.list;
@@ -265,15 +265,15 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1148, 30);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1339, 30);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             // 
             // ManagementForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1148, 644);
+            this.ClientSize = new System.Drawing.Size(1339, 792);
             this.ControlContainer = this.fdfContainer;
             this.Controls.Add(this.fdfContainer);
             this.Controls.Add(this.accordionControl1);

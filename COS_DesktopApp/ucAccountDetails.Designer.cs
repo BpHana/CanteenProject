@@ -80,8 +80,8 @@
             this.windowsUIButtonPanel1.ForeColor = System.Drawing.Color.Black;
             this.windowsUIButtonPanel1.Location = new System.Drawing.Point(0, 0);
             this.windowsUIButtonPanel1.Name = "windowsUIButtonPanel1";
-            this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(588, 63);
+            this.windowsUIButtonPanel1.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.windowsUIButtonPanel1.Size = new System.Drawing.Size(686, 77);
             this.windowsUIButtonPanel1.TabIndex = 0;
             this.windowsUIButtonPanel1.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
             // 
@@ -89,14 +89,14 @@
             // 
             this.gridControl1.DataSource = this.accountsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 63);
+            this.gridControl1.Location = new System.Drawing.Point(0, 77);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemGridLookUpEdit1,
             this.ritEmail,
             this.ritPhone});
-            this.gridControl1.Size = new System.Drawing.Size(588, 406);
+            this.gridControl1.Size = new System.Drawing.Size(686, 500);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -120,6 +120,8 @@
             this.colaccount_role,
             this.colcarts,
             this.colorders});
+            this.gridView1.DetailHeight = 431;
+            this.gridView1.FixedLineWidth = 3;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
@@ -132,22 +134,24 @@
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
+            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 62;
+            this.colid.Width = 72;
             // 
             // colemail
             // 
             this.colemail.Caption = "Email";
             this.colemail.ColumnEdit = this.ritEmail;
             this.colemail.FieldName = "email";
+            this.colemail.MinWidth = 23;
             this.colemail.Name = "colemail";
             this.colemail.Visible = true;
             this.colemail.VisibleIndex = 1;
-            this.colemail.Width = 62;
+            this.colemail.Width = 72;
             // 
             // ritEmail
             // 
@@ -161,18 +165,20 @@
             // 
             this.colpassword.Caption = "Password";
             this.colpassword.FieldName = "password";
+            this.colpassword.MinWidth = 23;
             this.colpassword.Name = "colpassword";
             this.colpassword.OptionsEditForm.Visible = DevExpress.Utils.DefaultBoolean.False;
-            this.colpassword.Width = 62;
+            this.colpassword.Width = 72;
             // 
             // colfullname
             // 
             this.colfullname.Caption = "Fullname";
             this.colfullname.FieldName = "fullname";
+            this.colfullname.MinWidth = 23;
             this.colfullname.Name = "colfullname";
             this.colfullname.Visible = true;
             this.colfullname.VisibleIndex = 2;
-            this.colfullname.Width = 62;
+            this.colfullname.Width = 72;
             // 
             // colbirthday
             // 
@@ -180,20 +186,22 @@
             this.colbirthday.DisplayFormat.FormatString = "dd/MM/yyyy";
             this.colbirthday.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.colbirthday.FieldName = "birthday";
+            this.colbirthday.MinWidth = 23;
             this.colbirthday.Name = "colbirthday";
             this.colbirthday.Visible = true;
             this.colbirthday.VisibleIndex = 3;
-            this.colbirthday.Width = 62;
+            this.colbirthday.Width = 72;
             // 
             // colphonenumber
             // 
             this.colphonenumber.Caption = "Phonenumber";
             this.colphonenumber.ColumnEdit = this.ritPhone;
             this.colphonenumber.FieldName = "phonenumber";
+            this.colphonenumber.MinWidth = 23;
             this.colphonenumber.Name = "colphonenumber";
             this.colphonenumber.Visible = true;
             this.colphonenumber.VisibleIndex = 4;
-            this.colphonenumber.Width = 62;
+            this.colphonenumber.Width = 72;
             // 
             // ritPhone
             // 
@@ -208,10 +216,11 @@
             this.colid_role.Caption = "Role";
             this.colid_role.ColumnEdit = this.repositoryItemGridLookUpEdit1;
             this.colid_role.FieldName = "id_role";
+            this.colid_role.MinWidth = 23;
             this.colid_role.Name = "colid_role";
             this.colid_role.Visible = true;
             this.colid_role.VisibleIndex = 5;
-            this.colid_role.Width = 63;
+            this.colid_role.Width = 73;
             // 
             // repositoryItemGridLookUpEdit1
             // 
@@ -236,6 +245,8 @@
             this.colRoleId,
             this.colRoleName,
             this.colRoleDeletedAt});
+            this.repositoryItemGridLookUpEdit1View.DetailHeight = 431;
+            this.repositoryItemGridLookUpEdit1View.FixedLineWidth = 3;
             this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -246,45 +257,56 @@
             // 
             this.colRoleId.Caption = "Role ID";
             this.colRoleId.FieldName = "id";
+            this.colRoleId.MinWidth = 23;
             this.colRoleId.Name = "colRoleId";
             this.colRoleId.Visible = true;
             this.colRoleId.VisibleIndex = 0;
+            this.colRoleId.Width = 87;
             // 
             // colRoleName
             // 
             this.colRoleName.Caption = "Role Name";
             this.colRoleName.FieldName = "name";
+            this.colRoleName.MinWidth = 23;
             this.colRoleName.Name = "colRoleName";
             this.colRoleName.Visible = true;
             this.colRoleName.VisibleIndex = 1;
+            this.colRoleName.Width = 87;
             // 
             // colRoleDeletedAt
             // 
             this.colRoleDeletedAt.Caption = "Deleted At";
             this.colRoleDeletedAt.FieldName = "deletedAt";
+            this.colRoleDeletedAt.MinWidth = 23;
             this.colRoleDeletedAt.Name = "colRoleDeletedAt";
+            this.colRoleDeletedAt.Width = 87;
             // 
             // coldeletedAt
             // 
             this.coldeletedAt.FieldName = "deletedAt";
+            this.coldeletedAt.MinWidth = 23;
             this.coldeletedAt.Name = "coldeletedAt";
+            this.coldeletedAt.Width = 87;
             // 
             // colaccount_role
             // 
             this.colaccount_role.FieldName = "account_role";
+            this.colaccount_role.MinWidth = 23;
             this.colaccount_role.Name = "colaccount_role";
+            this.colaccount_role.Width = 87;
             // 
             // colcarts
             // 
             this.colcarts.FieldName = "carts";
+            this.colcarts.MinWidth = 23;
             this.colcarts.Name = "colcarts";
-            this.colcarts.Width = 61;
+            this.colcarts.Width = 71;
             // 
             // colorders
             // 
             this.colorders.FieldName = "orders";
+            this.colorders.MinWidth = 23;
             this.colorders.Name = "colorders";
-            this.colorders.Width = 65;
             // 
             // accountroleBindingSource
             // 
@@ -300,12 +322,12 @@
             // 
             // ucAccountDetails
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.windowsUIButtonPanel1);
             this.Name = "ucAccountDetails";
-            this.Size = new System.Drawing.Size(588, 469);
+            this.Size = new System.Drawing.Size(686, 577);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.accountsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
