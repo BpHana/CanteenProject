@@ -66,7 +66,12 @@ namespace COS_WebApp.Controllers
 
         }
 
-        
+        public ActionResult Order()
+        {
+            return View();
+        }
+
+
         [HttpPost]
         public ActionResult AddToCart(product prod, int Id)
         {
