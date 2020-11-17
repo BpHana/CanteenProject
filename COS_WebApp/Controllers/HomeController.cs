@@ -22,6 +22,40 @@ namespace COS_WebApp.Controllers
             return View(model);
         }
 
+        public ActionResult AddToCart(int Id)
+        {
+            var prod = cos.products.Where(x => x.id == Id).SingleOrDefault();
+
+            if (Session["cart"] == null)
+            {
+                List<ShoppingCart> cart = new List<ShoppingCart>();
+                ShoppingCart dto = new ShoppingCart(prod, 1);
+                cart.Add(dto);
+                Session["cart"] = cart;
+            }
+            else
+            {
+                List<ShoppingCart> cart = (List<ShoppingCart>)Session["cart"];
+                foreach (var item in cart)
+                {
+                    if (item.Product == prod)
+                    {
+                        item.Quantity++;
+                        return View("Cart");
+                    }
+                }
+
+                ShoppingCart dto = new ShoppingCart(prod, 1);
+                cart.Add(dto);
+                Session["cart"] = cart;
+
+            }
+
+
+            return View("Cart");
+
+        }
+
         public ActionResult About()
         {
             ViewBag.Message = "Your application description page.";
