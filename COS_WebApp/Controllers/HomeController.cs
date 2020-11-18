@@ -117,7 +117,7 @@ namespace COS_WebApp.Controllers
 
             dynamic model = new ExpandoObject();
             model.Product = query.ToList();
-           
+            model.Product_Type = cos.products_type;
 
 
             return View(model);
