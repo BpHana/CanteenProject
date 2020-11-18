@@ -139,6 +139,32 @@
           <Column Table="origin" Name="deletedAt" Alias="origin_deletedAt" />
         </Columns>
       </Query>
+      <Query Type="SelectQuery" Name="order_details_1">
+        <Tables>
+          <Table Name="order_details" X="30" Y="30" Width="125" Height="182" />
+        </Tables>
+        <Columns>
+          <Column Table="order_details" Name="id_order" />
+          <Column Table="order_details" Name="id_products" />
+          <Column Table="order_details" Name="quantity" />
+          <Column Table="order_details" Name="price" />
+          <Column Table="order_details" Name="createdAt" />
+          <Column Table="order_details" Name="deletedAt" />
+        </Columns>
+      </Query>
+      <Query Type="SelectQuery" Name="order">
+        <Tables>
+          <Table Name="order" X="30" Y="30" Width="125" Height="182" />
+        </Tables>
+        <Columns>
+          <Column Table="order" Name="id" />
+          <Column Table="order" Name="id_user" />
+          <Column Table="order" Name="totalprice" />
+          <Column Table="order" Name="createdAt" />
+          <Column Table="order" Name="deletedAt" />
+          <Column Table="order" Name="address" />
+        </Columns>
+      </Query>
       <ResultSchema>
         <DataSet Name="SQL Data Source 1">
           <View Name="account">
@@ -196,6 +222,22 @@
             <Field Name="origin_name" Type="String" />
             <Field Name="origin_deletedAt" Type="DateTime" />
           </View>
+          <View Name="order_details_1">
+            <Field Name="id_order" Type="Int32" />
+            <Field Name="id_products" Type="Int32" />
+            <Field Name="quantity" Type="Int32" />
+            <Field Name="price" Type="Decimal" />
+            <Field Name="createdAt" Type="DateTime" />
+            <Field Name="deletedAt" Type="DateTime" />
+          </View>
+          <View Name="order">
+            <Field Name="id" Type="Int32" />
+            <Field Name="id_user" Type="Int32" />
+            <Field Name="totalprice" Type="Decimal" />
+            <Field Name="createdAt" Type="DateTime" />
+            <Field Name="deletedAt" Type="DateTime" />
+            <Field Name="address" Type="String" />
+          </View>
         </DataSet>
       </ResultSchema>
       <ConnectionOptions CloseConnection="true" />
@@ -232,13 +274,13 @@
         <Value DefaultId="DataItem1" />
       </Values>
     </Pie>
-    <Chart ComponentName="chartDashboardItem1" Name="Income" DataSource="dashboardSqlDataSource1" DataMember="order_details">
+    <Chart ComponentName="chartDashboardItem1" Name="Income" DataSource="dashboardSqlDataSource1" DataMember="order">
       <ColoringOptions UseGlobalColors="false" />
       <DataItems>
-        <Dimension DataMember="createdAt" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
-        <Measure DataMember="price" DefaultId="DataItem0">
+        <Measure DataMember="totalprice" DefaultId="DataItem0">
           <NumericFormat FormatType="Currency" CurrencyCultureName="vi-VN" CustomFormatString="" />
         </Measure>
+        <Dimension DataMember="createdAt" SortOrder="Descending" DateTimeGroupInterval="Month" DefaultId="DataItem1" />
       </DataItems>
       <Arguments>
         <Argument DefaultId="DataItem1" />
@@ -246,7 +288,7 @@
       <Panes>
         <Pane Name="Pane 1">
           <Series>
-            <Simple Name="Income(VND)">
+            <Simple>
               <Value DefaultId="DataItem0" />
             </Simple>
           </Series>
@@ -258,7 +300,7 @@
         <Dimension DataMember="origin_name" DefaultId="DataItem0" />
         <Measure DataMember="id" SummaryType="Count" DefaultId="DataItem1" />
       </DataItems>
-      <ViewArea TopLatitude="72.221621654375525" BottomLatitude="-40.615143899067164" CenterPointLatitude="29.495621476453586" CenterPointLongitude="5.0271993483814814" CreateViewerPaddings="false" />
+      <ViewArea TopLatitude="73.463652973367246" BottomLatitude="-34.204945709934925" CenterPointLatitude="34.698761268316346" CenterPointLongitude="41.602193893240226" CreateViewerPaddings="false" />
       <MapLegend />
       <WeightedLegend />
       <AttributeDimension DefaultId="DataItem0" />
