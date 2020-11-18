@@ -56,6 +56,7 @@
             color: #000;
             border: 1px solid #000000;
         }
+
             .product-hover a:hover {
                 background: #fa8072;
             }
@@ -79,7 +80,7 @@
                     <div class="">
                         <ul class="navbar-nav">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="@Url.Action("Index", "Home")">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -89,7 +90,8 @@
                                     @foreach (var type in Model.Product_Type)
                                     {
 
-                                <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @type = type.name })">@type.name</a>}
+                                        <a class="dropdown-item" href="@Url.Action("ShowCate", "Home", new { @id = type.id})">@type.name</a>
+                                    }
                                 </div>
                             </li>
                         </ul>
@@ -140,10 +142,10 @@
                                                     int a = Convert.ToInt32(item.id);
                                                 }
                                                 <a href="@Url.Action("AddToCart", "Home", new { @id = a })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                <a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                <a href="@Url.Action("ViewDetails", "Home", new { @id = a })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
                                             </div>
 
-                                            <h2><a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.id })">@item.name</a></h2>
+                                            <h2><a href="single-product.html">@item.name</a></h2>
 
                                             <div class="product-carousel-price">
                                                 <ins>@price vnd</ins>
@@ -157,10 +159,11 @@
                             </div>
                         </div>
 
-                        <a href="@Url.Action("ShowAll","Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
+                        <a  href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
                     </div>
                 </div>
             </div> <!-- End main content area -->
+        </div>
 
 
 
@@ -168,38 +171,37 @@
 
 
 
-            <footer class="page-footer bg-dark text-light font-weight-bolder" style="padding-left: 3%; background: linear-gradient(55deg, rgba(255,195,186,1) 0%, rgba(255,97,136,1) 63%, rgba(255,190,218,1) 100%);
+        <footer class="page-footer bg-dark text-light font-weight-bolder" style="padding-left: 3%; background: linear-gradient(55deg, rgba(255,195,186,1) 0%, rgba(255,97,136,1) 63%, rgba(255,190,218,1) 100%);
 ">
-                <div class="">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <div class="copyright">
-                                <p>&copy; 2020 Group 03. All Rights Reserved. <a href="#" target="_blank"></a></p>
-                            </div>
+            <div class="">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="copyright">
+                            <p>&copy; 2020 Group 03. All Rights Reserved. <a href="#" target="_blank"></a></p>
                         </div>
                     </div>
                 </div>
-            </footer> <!-- End footer bottom area -->
-        </div>
-        </>
-        <!-- Latest jQuery form server -->
-        <script src="https://code.jquery.com/jquery.min.js"></script>
+            </div>
+        </footer> <!-- End footer bottom area -->
+    </div>
+    <!-- Latest jQuery form server -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
 
-        <!-- Bootstrap JS form CDN -->
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap JS form CDN -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-        <!-- jQuery sticky menu -->
-        <script src="~/Content/Main/js/owl.carousel.min.js"></script>
-        <script src="~/Content/Main/js/jquery.sticky.js"></script>
+    <!-- jQuery sticky menu -->
+    <script src="~/Content/Main/js/owl.carousel.min.js"></script>
+    <script src="~/Content/Main/js/jquery.sticky.js"></script>
 
-        <!-- jQuery easing -->
-        <script src="~/Content/Main/js/jquery.easing.1.3.min.js"></script>
+    <!-- jQuery easing -->
+    <script src="~/Content/Main/js/jquery.easing.1.3.min.js"></script>
 
-        <!-- Main Script -->
-        <script src="~/Content/Main/js/main.js"></script>
+    <!-- Main Script -->
+    <script src="~/Content/Main/js/main.js"></script>
 
-        <!-- Slider -->
-        <script type="text/javascript" src="~/Content/Main/js/bxslider.min.js"></script>
-        <script type="text/javascript" src="~/Content/Main/js/script.slider.js"></script>
+    <!-- Slider -->
+    <script type="text/javascript" src="~/Content/Main/js/bxslider.min.js"></script>
+    <script type="text/javascript" src="~/Content/Main/js/script.slider.js"></script>
 </body>
 </html>

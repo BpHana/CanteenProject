@@ -3,7 +3,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Web.Mvc;
 using COS_WebApp.Models;
-using System.Collections.Generic;
+
 
 namespace COS_WebApp.Controllers
 {
@@ -97,28 +97,31 @@ namespace COS_WebApp.Controllers
             return View(model);
         }
 
-        public ActionResult ShowSingleProduct(string Id)
+        public ActionResult ShowCate(String id)
         {
-            int idP = Convert.ToInt32(Id);
-            var prod = cos.products.Where(x => x.id == idP).SingleOrDefault();
-            return View(prod);
+            int ID = Convert.ToInt32(id);
+            dynamic model = new ExpandoObject();
+            var foundproduct = from p in cos.products
+                               where p.id_productsType == ID && p.deletedAt == null 
+                               select p;
+            var typename = from p in cos.products_type
+                               where p.id == ID && p.deletedAt == null
+                               select p.name;
+            model.Product = foundproduct.ToList();
+            model.Name = typename.FirstOrDefault();
+            model.Product_Type = cos.products_type;
+            
+            return View(model);
         }
 
-        List<product> listCategories;
-        public ActionResult Categories(string type)
+        public ActionResult ViewDetails(int id)
         {
-          
-
-
-            var query = from product in cos.products
-                        where product.products_type.name == type
-                        select product;
-            listCategories = query.ToList();
-
+            var foundproduct = from p in cos.products
+                               where p.id == id && p.deletedAt == null
+                               select p;
             dynamic model = new ExpandoObject();
-            model.Product = query.ToList();
+            model.Product = foundproduct.FirstOrDefault();
             model.Product_Type = cos.products_type;
-
 
             return View(model);
         }

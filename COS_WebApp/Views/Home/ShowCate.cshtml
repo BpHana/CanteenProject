@@ -108,39 +108,47 @@
 
 
 
-        <h2 class="section-title" style="font-family: Pacifico; margin-top: 2%;">All Products</h2>
-        <div class="row">
-            @foreach (var item in Model.Product)
+        <h2 class="m-5" style="font-family: Pacifico; font-size:60px;">@Model.Name</h2>
+        <div class="row text-center">
+            @if (Model.Product != null)
             {
-                <div class="col-md-2 p-4">
-                    <div class="single-product text-center">
-                        <div class="product-f-image">
+                foreach (var item in Model.Product)
+                {
+                    <div class="col-md-2 p-4">
+                        <div class="single-product text-center">
+                            <div class="product-f-image">
 
-                            @{
-                                var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
-                                var price = String.Format("{0:0,0}", item.price);
-                            }
-                            <img src="@imgSrc" style="object-fit:contain;" alt="">
-                            <div class="product-hover">
                                 @{
-                                    int a = Convert.ToInt32(item.id);
+                                    var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
+                                    var price = String.Format("{0:0,0}", item.price);
                                 }
-                                <a href="@Url.Action("AddToCart", "Home", new { @id = a })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                <a href="@Url.Action("ViewDetails", "Home", new { @id = a })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                            </div>
+                                <img src="@imgSrc" style="object-fit:contain;" alt="">
+                                <div class="product-hover">
+                                    @{
+                                        int a = Convert.ToInt32(item.id);
+                                    }
+                                    <a href="@Url.Action("AddToCart", "Home", new { @id = a })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    <a href="@Url.Action("ViewDetails", "Home", new { @id = a })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                </div>
 
-                            <h2><a href="single-product.html">@item.name</a></h2>
+                                <h2><a href="single-product.html">@item.name</a></h2>
 
-                            <div class="product-carousel-price">
-                                <ins>@price vnd</ins>
+                                <div class="product-carousel-price">
+                                    <ins>@price vnd</ins>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                }
             }
-
+            else
+            {
+                <h2 class="section-title" style="font-family: Pacifico; margin-top: 2%;">There is no products in this category.</h2>
+            }
         </div>
-
+        <div class="text-center m-4">
+            <a href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
+        </div>
         <footer class="page-footer bg-dark text-light font-weight-bolder" style="padding-left: 3%; background: linear-gradient(55deg, rgba(255,195,186,1) 0%, rgba(255,97,136,1) 63%, rgba(255,190,218,1) 100%);
 ">
             <div class="">
