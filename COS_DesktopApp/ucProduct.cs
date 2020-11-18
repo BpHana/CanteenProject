@@ -12,7 +12,7 @@ using System.Data.Entity;
 using DevExpress.XtraEditors.Repository;
 using DevExpress.XtraGrid.Views.Grid;
 using DevExpress.XtraGrid.Columns;
-
+using System.Threading;
 namespace COS_DesktopApp
 {
     public partial class ucProduct : DevExpress.XtraEditors.XtraUserControl
@@ -49,7 +49,7 @@ namespace COS_DesktopApp
                 {
 
                     this.loadCompany();
-
+                    Thread.Sleep(100);
 
                     // Bind data to control when loading complete
                     productsBindingSource.DataSource = dbContext.products.Local.ToBindingList();
@@ -71,6 +71,7 @@ namespace COS_DesktopApp
             dbContext.companies.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadType();
+                Thread.Sleep(100);
                 // Bind data to control when loading complete
                 companiesBindingSource.DataSource = dbContext.companies.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -81,6 +82,7 @@ namespace COS_DesktopApp
             dbContext.products_type.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadOrigin();
+                Thread.Sleep(100);
                 // Bind data to control when loading complete
                 products_typeBindingSource.DataSource = dbContext.products_type.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -91,6 +93,7 @@ namespace COS_DesktopApp
             dbContext.origins.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadSugar();
+                Thread.Sleep(100);
                 // Bind data to control when loading complete
                 originsBindingSource.DataSource = dbContext.origins.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace COS_DesktopApp
 {
@@ -40,6 +41,8 @@ namespace COS_DesktopApp
             dbContext.orders.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadOrderDetails();
+                Thread.Sleep(100);
+
                 // Bind data to control when loading complete
                 ordersBindingSource.DataSource = dbContext.orders.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -51,6 +54,8 @@ namespace COS_DesktopApp
             dbContext.order_details.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadAccount();
+                Thread.Sleep(100);
+
                 // Bind data to control when loading complete
                 order_detailsBindingSource.DataSource = dbContext.order_details.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
@@ -62,6 +67,8 @@ namespace COS_DesktopApp
             dbContext.accounts.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadProducts();
+                Thread.Sleep(100);
+
                 // Bind data to control when loading complete
                 accountsBindingSource.DataSource = dbContext.accounts.Local.ToBindingList();
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
