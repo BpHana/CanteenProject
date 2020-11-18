@@ -56,8 +56,14 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             @foreach (var type in Model.Product_Type)
                             {
-                        <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @type = type.name })">@type.name</a>}
+                <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @type = type.name })">@type.name</a>}
                         </div>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("ShowAll","Home")">Show all @*<span class="sr-only"></span>*@</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="@Url.Action("Cart", "Cart")">Cart @*<span class="sr-only"></span>*@</a>
                     </li>
                 </ul>
             </div>
