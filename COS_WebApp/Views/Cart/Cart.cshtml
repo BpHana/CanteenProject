@@ -91,7 +91,7 @@
                 <div class="col-md-12">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <form method="post" action="#">
+                            <form action="@Url.Action("action","Cart")" medthod="GET">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
                                         <tr>
@@ -108,46 +108,50 @@
                                     }
                                     @if (list != null)
                                     {
-                                <tbody>
-                                    <form action="" method="POST">
-                                    @foreach (var item in @list)
-                                    {
-                                    <tr class="cart_item">
-                                        <td class="product-remove">
-                                            <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("deleteCart", "Cart", new { @id = item.Product.id })">×</a>
-                             
-                                        </td>
-                                        @{
-                                            var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.Product.image));
-                                        }
-                                        <td class="product-thumbnail">
-                                            <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
-                                        </td>
+                                        <tbody>
 
-                                        <td class="product-name">
-                                            <a href="single-product.html">@item.Product.name</a>
-                                        </td>
-                                       
-                                        <td class="product-price">
-                                            @{
-                                                var price = String.Format("{0:0,0}", item.Product.price);
-                                            }
-                                            <span class="amount">@price</span>
-                                        </td>
+                                            @foreach (var item in @list)
+                                            {
 
-                                        <td class="product-quantity">
-                                            <div class="quantity buttons_added">
-                                         
-                                                <input type="number" size="4" class="input-text qty text" title="Qty" name="quantity" value="@item.Quantity" min="1" step="1">
-                                    
-                                            </div>
-                                        </td>
+                                                <tr class="cart_item">
+                                                    <td class="product-remove">
+                                                        <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("deleteCart", "Cart", new { @id = item.Product.id })">×</a>
+                                                    </td>
+                                                    @{
+                                                        var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.Product.image));
+                                                    }
+                                                    <td class="product-thumbnail">
+                                                        <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
+                                                    </td>
+                                                    <input type="hidden" name="id" value="@item.Product.id" />
+                                                    <td class="product-name">
+                                                        <a href="single-product.html">@item.Product.name</a>
+                                                    </td>
 
-                                        <td class="product-subtotal">
-                                            @{
-                                                var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
+                                                    <td class="product-price">
+                                                        @{
+                                                            var price = String.Format("{0:0,0}", item.Product.price);
+                                                        }
+                                                        <span class="amount">@price VND</span>
+                                                    </td>
+
+                                                    <td class="product-quantity">
+                                                        <div class="quantity buttons_added">
+                                                            <input type="number" size="4" class="input-text qty text" name="quantity" title="Qty" value="@item.Quantity" min="0" step="1">
+                                                        </div>
+                                                    </td>
+
+                                                    <td class="product-subtotal">
+                                                        @{
+                                                            var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
+                                                        }
+                                                        <span class="amount">@amount VND</span>
+                                                    </td>
+                                                </tr>
+
                                             }
                                         </tbody>
+
                                     }
                                     else
                                     {
@@ -157,19 +161,11 @@
                                     <tr>
                                         <td class="actions" colspan="6">
 
-                                            <input type="submit" value="Update Cart" name="action" class="btn font-weight-bold">
-                                            <input type="submit" value="Checkout" name="action" class="btn font-weight-bold">
+                                            <input type="submit" value="Update Cart" name="btnAction" class="btn font-weight-bold">
+                                            <input type="submit" value="Checkout" name="btnAction" class="btn font-weight-bold">
                                         </td>
                                     </tr>
-                                    </form>
-                                </tbody>
-                                    }
-                                    else
-                                    {
-                                        <tbody><h3>Your cart is empty</h3> </tbody>
 
-                                    }
-                                    
                                 </table>
                             </form>
 
@@ -238,5 +234,18 @@
     <!-- Slider -->
     <script type="text/javascript" src="~/Content/Main/js/bxslider.min.js"></script>
     <script type="text/javascript" src="~/Content/Main/js/script.slider.js"></script>
+    <script>
+        function getQuantity() {
+            var quantity = document.getElementsByName('quantity');
+            return quantity
+           
+        }
+        function getId() {
+            var id = document.getElementsByName('id');
+            return id;
+
+        }
+
+    </script>
 </body>
 </html>

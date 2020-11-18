@@ -55,27 +55,44 @@ namespace COS_WebApp.Controllers
 
             return RedirectToAction("Cart");
         }
-        public ActionResult orderOrUpdate(string action,string )
+        public ActionResult action()
         {
-            switch (action)
-            {
-                case "Update Cart": updateCart()
-            }
+            return RedirectToAction("Cart");
+           
         }
 
-        public ActionResult updateCart(string id)
+        [HttpGet]
+        public ActionResult action(string[] id,string[] quantity,string btnAction)
         {
-            int idCart = Convert.ToInt32(id);
-            int userid = (Session["User"] as account).id;
-
-            var query = from cart in cos.carts
-                        where cart.id_products == idCart && cart.id_user == userid
-                        select cart;
-            if (query.SingleOrDefault() != null)
+            switch (btnAction)
             {
-                cart obj = query.FirstOrDefault();
-                cos.carts.Remove(obj);
-                cos.SaveChanges();
+                case "Update Cart":
+                    updateCart(id, quantity);
+                    break;
+            }
+            return RedirectToAction("Cart");
+        }
+
+        [HttpGet]
+        public ActionResult updateCart(string[] id, string[] quantity)
+        {
+    
+           
+            int userid = (Session["User"] as account).id;
+            for (int i = 0; i < id.Length; i++)
+            {
+                int idCart = Convert.ToInt32(id[i]);
+                int quantityP = Convert.ToInt32(quantity[i]);
+                var query = from cart in cos.carts
+                            where cart.id_products == idCart && cart.id_user == userid
+                            select cart;
+             
+                    cart obj = query.FirstOrDefault();
+                obj.quantity = quantityP;
+                   
+                    cos.SaveChanges();
+               
+
             }
 
 
