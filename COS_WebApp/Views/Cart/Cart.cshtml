@@ -147,9 +147,11 @@
                                             @{
                                                 var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
                                             }
-                                            <span class="amount">@amount</span>
-                                        </td>
-                                    </tr>
+                                        </tbody>
+                                    }
+                                    else
+                                    {
+                                        <tbody style="font-size: 20px;">Your cart is empty</tbody>
 
                                     }
                                     <tr>

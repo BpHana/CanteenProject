@@ -1,54 +1,9 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>@Page.Title</title>
-    @RenderSection("head", required: false)
    
 </head>
 <body>
-    <div class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <div class="user-menu">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user"></i> My Account</a></li>
-
-                            <li><a href="cart.html"><i class="fa fa-user"></i> My Cart</a></li>
-
-                            <li><a href="#"><i class="fa fa-user"></i> Login</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="header-right">
-                        <ul class="list-unstyled list-inline">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End header area -->
-
-    <div class="site-branding-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="logo">
-
-                        <h1><a href="@Url.Action("Index", "Home")"><img src="~/Content/Main/img/chef128.png" width="5%" height="70%"></a></h1>
-                    </div>
-                </div>
-
-                <div class="col-sm-6">
-                    <div class="shopping-item">
-                        <a href=" @Url.Action("ViewCart", "Cart")">Cart - <span class="cart-amunt">tien</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">number</span></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End site branding area -->
 
     
     @RenderBody()
