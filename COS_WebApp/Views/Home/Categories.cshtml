@@ -1,6 +1,5 @@
-﻿@using COS_WebApp.Models
-@model List<COS_WebApp.Models.Categories>
-
+﻿@using COS_WebApp.Controllers
+@model dynamic
 <!DOCTYPE html>
 <!--
     ustora by freshdesignweb.com
@@ -74,34 +73,35 @@
                 <div class="row">
                     @if (list != null)
                     {
-                        foreach (var item in list)
-        {<!-- Add/Show a product -->
-                                <div class="col-md-3 col-sm-6">
-                                    <div class="single-shop-product">
-                                        <div class="single-product">
-                                            <div class="product-upper">
-                                                <div class="product-f-image">
-                                                    @* img class *@
-                                                    @{ var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.Product.image));
-                                                        var price = String.Format("{0:0,0}", item.Product.price); }
-                                                    <img width="195" height="243" src="@imgSrc" style="object-fit:contain;" alt="">     @* img src *@
-                                                    <div class="product-hover">
-                                                        <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.Product.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                        <a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.Product.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <h2><a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.Product.id })">@item.Product.name</a></h2>
+                        foreach (var item in Model.Product)
+                        {<!-- Add/Show a product -->
+                                                <div class="col-md-3 col-sm-6">
+                                                    <div class="single-shop-product">
+                                                        <div class="single-product">
+                                                            <div class="product-upper">
+                                                                <div class="product-f-image">
 
-                                            <div class="product-carousel-price">
-                                                <ins>@price vnd</ins>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <!-- End Add/Show a product -->} }
-    else
-    {
-<tbody><h3>Your cart is empty</h3> </tbody>}
+                                                                    @{ var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
+                                                                        var price = String.Format("{0:0,0}", item.price); }
+                                                                    <img width="195" height="243" src="@imgSrc" style="object-fit:contain;" alt="">
+                                                                    <div class="product-hover">
+                                                                        <a href="@Url.Action("AddToCart", "Cart", new { @Id = item.id })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                                                        <a href="@Url.Action("ShowSingleProduct", "Home", new { @Id = item.id })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <h2><a href="@Url.Action("ShowSingleProduct", "SingleProduct", new { @Id = item.id })">@item.name</a></h2>
+
+                                                            <div class="product-carousel-price">
+                                                                <ins>@price vnd</ins>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> <!-- End Add/Show a product -->}
+                                        }
+                                        else
+                                        {
+                            <tbody><h3>Your cart is empty</h3> </tbody>}
                 </div>
             </div>
         </div>

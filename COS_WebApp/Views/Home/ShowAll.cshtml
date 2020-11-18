@@ -59,7 +59,7 @@
                             @foreach (var type in Model.Product_Type)
                             {
 
-                <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @Categories = type.name })">@type.name</a>}
+                <a class="dropdown-item" href="@Url.Action("Categories", "Home", new { @type = type.name })">@type.name</a>}
                         </div>
                     </li>
                 </ul>

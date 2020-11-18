@@ -18,6 +18,7 @@ namespace COS_WebApp.Models
         public CanteenOrderingSystemEntities()
             : base("name=CanteenOrderingSystemEntities")
         {
+            
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

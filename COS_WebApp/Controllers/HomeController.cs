@@ -10,7 +10,7 @@ namespace COS_WebApp.Controllers
     public class HomeController : Controller
     {
         CanteenOrderingSystemEntities cos = new CanteenOrderingSystemEntities();
-        
+
         public ActionResult Index()
         {
             dynamic model = new ExpandoObject();
@@ -104,27 +104,23 @@ namespace COS_WebApp.Controllers
             return View(prod);
         }
 
-        List<Categories> listCategories;
+        List<product> listCategories;
         public ActionResult Categories(string type)
         {
-            foreach ( var item in cos.products)
-            {
-                string proType = Convert.ToString(item.products_type);
-                if ( proType.Equals(type))
-                {
-                    var query = from product in cos.products
-                                where product.products_type == item.products_type
-                                select product;
-                    product prod = query.FirstOrDefault();
-                    Categories dto = new Categories(prod);
-                    if ( listCategories == null)
-                    {
-                        listCategories = new List<Categories>();
-                    }
-                    listCategories.Add(dto);
-                }
-            }
-            return View(listCategories);
+          
+
+
+            var query = from product in cos.products
+                        where product.products_type.name == type
+                        select product;
+            listCategories = query.ToList();
+
+            dynamic model = new ExpandoObject();
+            model.Product = query.ToList();
+           
+
+
+            return View(model);
         }
     }
 }
