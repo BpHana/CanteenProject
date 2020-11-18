@@ -37,7 +37,7 @@ namespace COS_WebApp.Models
         [Required]
         public System.DateTime birthday { get; set; }
         [Required]
-        [RegularExpression(@"^0\d{9}$", ErrorMessage = "Phone number has 10 digits and start with 0")]
+        [RegularExpression(@"^0[1-9]\d{8}$", ErrorMessage = "Phone number has 10 digits and start with 0")]
         public string phonenumber { get; set; }
         public int id_role { get; set; }
         public Nullable<System.DateTime> deletedAt { get; set; }
