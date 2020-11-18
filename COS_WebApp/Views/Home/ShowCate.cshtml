@@ -63,16 +63,6 @@
     </style>
 </head>
 <body>
-    @if (TempData["addCart"] != null)
-    {
-        <script type="text/javascript">
-
-            window.onload = function () {
-                alert("@TempData["addCart"]");
-            };
-        </script>
-
-    }
     <div class="container-fluid">
         <header class="page-header">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark font-weight-bolder" style="
@@ -112,75 +102,53 @@
                     <a href="@Url.Action("Cart", "Cart")" class="btn font-weight-bold" style="background: white;"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart</a>
                 </div>
             </nav> <!-- End mainmenu area -->
-
-            <div class="text-center" style="background-image: url(../../Image/landing.jpg);
-                        height: 93vh;
-                        width: 100%;
-                        object-fit: cover;
-                        padding:17%;
-                        font-family: Pacifico;
-                        font-size: 150px;">
-                <p style="color: white;
-                          ">
-                    Canteen
-                </p>
-
-            </div>
-            @*<img src="/Image/landing.jpg" style="" alt="Landing" />*@
         </header>
 
-        <div class="maincontent-area">
-            <div class="zigzag-bottom"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12 text-center m-3">
-                        <div class="latest-product">
-                            <h2 class="section-title" style="font-family: Pacifico;">Products</h2>
-                            <div class="product-carousel">
-                                @foreach (var item in Model.Product)
-                                {
-                                    <div class="single-product text-center">
-                                        <div class="product-f-image">
-
-                                            @{
-                                                var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
-                                                var price = String.Format("{0:0,0}", item.price);
-                                            }
-                                            <img src="@imgSrc" style="object-fit:contain;" alt="">
-                                            <div class="product-hover">
-                                                @{
-                                                    int a = Convert.ToInt32(item.id);
-                                                }
-                                                <a href="@Url.Action("AddToCart", "Home", new { @id = a })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
-                                                <a href="@Url.Action("ViewDetails", "Home", new { @id = a })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
-                                            </div>
-
-                                            <h2><a href="single-product.html">@item.name</a></h2>
-
-                                            <div class="product-carousel-price">
-                                                <ins>@price vnd</ins>
-                                            </div>
-                                        </div>
 
 
 
-                                    </div>
+
+        <h2 class="m-5" style="font-family: Pacifico; font-size:60px;">@Model.Name</h2>
+        <div class="row text-center">
+            @if (Model.Product != null)
+            {
+                foreach (var item in Model.Product)
+                {
+                    <div class="col-md-2 p-4">
+                        <div class="single-product text-center">
+                            <div class="product-f-image">
+
+                                @{
+                                    var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(@item.image));
+                                    var price = String.Format("{0:0,0}", item.price);
                                 }
+                                <img src="@imgSrc" style="object-fit:contain;" alt="">
+                                <div class="product-hover">
+                                    @{
+                                        int a = Convert.ToInt32(item.id);
+                                    }
+                                    <a href="@Url.Action("AddToCart", "Home", new { @id = a })" class="add-to-cart-link"><i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                    <a href="@Url.Action("ViewDetails", "Home", new { @id = a })" class="view-details-link"><i class="fa fa-link"></i> See details</a>
+                                </div>
+
+                                <h2><a href="single-product.html">@item.name</a></h2>
+
+                                <div class="product-carousel-price">
+                                    <ins>@price vnd</ins>
+                                </div>
                             </div>
                         </div>
-
-                        <a  href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
                     </div>
-                </div>
-            </div> <!-- End main content area -->
+                }
+            }
+            else
+            {
+                <h2 class="section-title" style="font-family: Pacifico; margin-top: 2%;">There is no products in this category.</h2>
+            }
         </div>
-
-
-
-
-
-
-
+        <div class="text-center m-4">
+            <a href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
+        </div>
         <footer class="page-footer bg-dark text-light font-weight-bolder" style="padding-left: 3%; background: linear-gradient(55deg, rgba(255,195,186,1) 0%, rgba(255,97,136,1) 63%, rgba(255,190,218,1) 100%);
 ">
             <div class="">
@@ -193,7 +161,7 @@
                 </div>
             </div>
         </footer> <!-- End footer bottom area -->
-    </div>
+    </div> <!-- End main content area -->
     <!-- Latest jQuery form server -->
     <script src="https://code.jquery.com/jquery.min.js"></script>
 
@@ -215,4 +183,3 @@
     <script type="text/javascript" src="~/Content/Main/js/script.slider.js"></script>
 </body>
 </html>
- 

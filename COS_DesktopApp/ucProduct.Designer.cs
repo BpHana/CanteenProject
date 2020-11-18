@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions2 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions3 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.btn = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -98,16 +99,19 @@
             this.btn.BackColor = System.Drawing.Color.White;
             windowsUIButtonImageOptions1.Image = global::COS_DesktopApp.Properties.Resources.add;
             windowsUIButtonImageOptions2.Image = global::COS_DesktopApp.Properties.Resources.trash;
+            windowsUIButtonImageOptions3.Image = global::COS_DesktopApp.Properties.Resources.export;
             this.btn.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
             new DevExpress.XtraBars.Docking2010.WindowsUIButton("Add", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
-            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Delete", true, windowsUIButtonImageOptions2, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false),
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Export", true, windowsUIButtonImageOptions3, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
             this.btn.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn.ForeColor = System.Drawing.Color.Black;
             this.btn.Location = new System.Drawing.Point(0, 0);
+            this.btn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btn.Name = "btn";
-            this.btn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btn.Size = new System.Drawing.Size(754, 63);
+            this.btn.Padding = new System.Windows.Forms.Padding(29, 0, 0, 0);
+            this.btn.Size = new System.Drawing.Size(880, 78);
             this.btn.TabIndex = 0;
             this.btn.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.btn_ButtonClick);
             // 
@@ -115,8 +119,10 @@
             // 
             this.gridControl1.DataSource = this.productsBindingSource;
             this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(0, 63);
+            this.gridControl1.EmbeddedNavigator.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.gridControl1.Location = new System.Drawing.Point(0, 78);
             this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemPictureEdit1,
@@ -126,7 +132,7 @@
             this.riglueOrigin,
             this.riglueSugarLevel,
             this.riglueCompany});
-            this.gridControl1.Size = new System.Drawing.Size(754, 468);
+            this.gridControl1.Size = new System.Drawing.Size(880, 576);
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -149,38 +155,46 @@
             this.colid_company,
             this.coldeletedAt,
             this.colimage});
+            this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.EditingMode = DevExpress.XtraGrid.Views.Grid.GridEditingMode.EditFormInplace;
-            this.gridView1.RowHeight = 100;
+            this.gridView1.OptionsPrint.AutoWidth = false;
+            this.gridView1.RowHeight = 123;
             this.gridView1.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridView1_RowUpdated);
             // 
             // colid
             // 
             this.colid.Caption = "ID";
             this.colid.FieldName = "id";
+            this.colid.MinWidth = 23;
             this.colid.Name = "colid";
             this.colid.OptionsColumn.AllowEdit = false;
             this.colid.OptionsColumn.ReadOnly = true;
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
+            this.colid.Width = 87;
             // 
             // colname
             // 
             this.colname.Caption = "Name";
             this.colname.FieldName = "name";
+            this.colname.MinWidth = 23;
             this.colname.Name = "colname";
             this.colname.Visible = true;
             this.colname.VisibleIndex = 1;
+            this.colname.Width = 87;
             // 
             // colprice
             // 
             this.colprice.Caption = "Price";
             this.colprice.ColumnEdit = this.ritePrice;
             this.colprice.FieldName = "price";
+            this.colprice.MinWidth = 23;
             this.colprice.Name = "colprice";
             this.colprice.Visible = true;
             this.colprice.VisibleIndex = 2;
+            this.colprice.Width = 87;
             // 
             // ritePrice
             // 
@@ -194,9 +208,11 @@
             this.colvolume.Caption = "Volume";
             this.colvolume.ColumnEdit = this.riteVolume;
             this.colvolume.FieldName = "volume";
+            this.colvolume.MinWidth = 23;
             this.colvolume.Name = "colvolume";
             this.colvolume.Visible = true;
             this.colvolume.VisibleIndex = 3;
+            this.colvolume.Width = 87;
             // 
             // riteVolume
             // 
@@ -209,18 +225,22 @@
             // 
             this.colingredient.Caption = "Ingredient";
             this.colingredient.FieldName = "ingredient";
+            this.colingredient.MinWidth = 23;
             this.colingredient.Name = "colingredient";
             this.colingredient.Visible = true;
             this.colingredient.VisibleIndex = 4;
+            this.colingredient.Width = 87;
             // 
             // colid_productsType
             // 
             this.colid_productsType.Caption = "Products Type";
             this.colid_productsType.ColumnEdit = this.riglueProductsType;
             this.colid_productsType.FieldName = "id_productsType";
+            this.colid_productsType.MinWidth = 23;
             this.colid_productsType.Name = "colid_productsType";
             this.colid_productsType.Visible = true;
             this.colid_productsType.VisibleIndex = 5;
+            this.colid_productsType.Width = 87;
             // 
             // riglueProductsType
             // 
@@ -244,6 +264,7 @@
             this.coltypeId,
             this.colTypeName,
             this.colTypedeletedAt});
+            this.repositoryItemGridLookUpEdit1View.DetailHeight = 431;
             this.repositoryItemGridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit1View.Name = "repositoryItemGridLookUpEdit1View";
             this.repositoryItemGridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -254,31 +275,39 @@
             // 
             this.coltypeId.Caption = "Type ID";
             this.coltypeId.FieldName = "id";
+            this.coltypeId.MinWidth = 23;
             this.coltypeId.Name = "coltypeId";
             this.coltypeId.Visible = true;
             this.coltypeId.VisibleIndex = 0;
+            this.coltypeId.Width = 87;
             // 
             // colTypeName
             // 
             this.colTypeName.Caption = "Type Name";
             this.colTypeName.FieldName = "name";
+            this.colTypeName.MinWidth = 23;
             this.colTypeName.Name = "colTypeName";
             this.colTypeName.Visible = true;
             this.colTypeName.VisibleIndex = 1;
+            this.colTypeName.Width = 87;
             // 
             // colTypedeletedAt
             // 
             this.colTypedeletedAt.FieldName = "deletedAt";
+            this.colTypedeletedAt.MinWidth = 23;
             this.colTypedeletedAt.Name = "colTypedeletedAt";
+            this.colTypedeletedAt.Width = 87;
             // 
             // colid_origin
             // 
             this.colid_origin.Caption = "Origin";
             this.colid_origin.ColumnEdit = this.riglueOrigin;
             this.colid_origin.FieldName = "id_origin";
+            this.colid_origin.MinWidth = 23;
             this.colid_origin.Name = "colid_origin";
             this.colid_origin.Visible = true;
             this.colid_origin.VisibleIndex = 6;
+            this.colid_origin.Width = 87;
             // 
             // riglueOrigin
             // 
@@ -302,6 +331,7 @@
             this.colOriginID,
             this.colOriginName,
             this.colOriginDeleteAt});
+            this.repositoryItemGridLookUpEdit2View.DetailHeight = 431;
             this.repositoryItemGridLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit2View.Name = "repositoryItemGridLookUpEdit2View";
             this.repositoryItemGridLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -312,31 +342,39 @@
             // 
             this.colOriginID.Caption = "Origin ID";
             this.colOriginID.FieldName = "id";
+            this.colOriginID.MinWidth = 23;
             this.colOriginID.Name = "colOriginID";
             this.colOriginID.Visible = true;
             this.colOriginID.VisibleIndex = 0;
+            this.colOriginID.Width = 87;
             // 
             // colOriginName
             // 
             this.colOriginName.Caption = "Origin Name";
             this.colOriginName.FieldName = "name";
+            this.colOriginName.MinWidth = 23;
             this.colOriginName.Name = "colOriginName";
             this.colOriginName.Visible = true;
             this.colOriginName.VisibleIndex = 1;
+            this.colOriginName.Width = 87;
             // 
             // colOriginDeleteAt
             // 
             this.colOriginDeleteAt.FieldName = "deletedAt";
+            this.colOriginDeleteAt.MinWidth = 23;
             this.colOriginDeleteAt.Name = "colOriginDeleteAt";
+            this.colOriginDeleteAt.Width = 87;
             // 
             // colid_sugarLevel
             // 
             this.colid_sugarLevel.Caption = "Sugar Level";
             this.colid_sugarLevel.ColumnEdit = this.riglueSugarLevel;
             this.colid_sugarLevel.FieldName = "id_sugarLevel";
+            this.colid_sugarLevel.MinWidth = 23;
             this.colid_sugarLevel.Name = "colid_sugarLevel";
             this.colid_sugarLevel.Visible = true;
             this.colid_sugarLevel.VisibleIndex = 7;
+            this.colid_sugarLevel.Width = 87;
             // 
             // riglueSugarLevel
             // 
@@ -360,6 +398,7 @@
             this.colSugarId,
             this.colSugarName,
             this.colSugarDeletedAt});
+            this.repositoryItemGridLookUpEdit3View.DetailHeight = 431;
             this.repositoryItemGridLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit3View.Name = "repositoryItemGridLookUpEdit3View";
             this.repositoryItemGridLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -370,31 +409,39 @@
             // 
             this.colSugarId.Caption = "Sugar Level ID";
             this.colSugarId.FieldName = "id";
+            this.colSugarId.MinWidth = 23;
             this.colSugarId.Name = "colSugarId";
             this.colSugarId.Visible = true;
             this.colSugarId.VisibleIndex = 0;
+            this.colSugarId.Width = 87;
             // 
             // colSugarName
             // 
             this.colSugarName.Caption = "Sugar Level Name";
             this.colSugarName.FieldName = "name";
+            this.colSugarName.MinWidth = 23;
             this.colSugarName.Name = "colSugarName";
             this.colSugarName.Visible = true;
             this.colSugarName.VisibleIndex = 1;
+            this.colSugarName.Width = 87;
             // 
             // colSugarDeletedAt
             // 
             this.colSugarDeletedAt.FieldName = "deletedAt";
+            this.colSugarDeletedAt.MinWidth = 23;
             this.colSugarDeletedAt.Name = "colSugarDeletedAt";
+            this.colSugarDeletedAt.Width = 87;
             // 
             // colid_company
             // 
             this.colid_company.Caption = "Company";
             this.colid_company.ColumnEdit = this.riglueCompany;
             this.colid_company.FieldName = "id_company";
+            this.colid_company.MinWidth = 23;
             this.colid_company.Name = "colid_company";
             this.colid_company.Visible = true;
             this.colid_company.VisibleIndex = 8;
+            this.colid_company.Width = 87;
             // 
             // riglueCompany
             // 
@@ -418,6 +465,7 @@
             this.colCompID,
             this.colCompName,
             this.coldCompDeletedAt});
+            this.repositoryItemGridLookUpEdit4View.DetailHeight = 431;
             this.repositoryItemGridLookUpEdit4View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
             this.repositoryItemGridLookUpEdit4View.Name = "repositoryItemGridLookUpEdit4View";
             this.repositoryItemGridLookUpEdit4View.OptionsSelection.EnableAppearanceFocusedCell = false;
@@ -428,36 +476,46 @@
             // 
             this.colCompID.Caption = "Company ID";
             this.colCompID.FieldName = "id";
+            this.colCompID.MinWidth = 23;
             this.colCompID.Name = "colCompID";
             this.colCompID.Visible = true;
             this.colCompID.VisibleIndex = 0;
+            this.colCompID.Width = 87;
             // 
             // colCompName
             // 
             this.colCompName.Caption = "Company Name";
             this.colCompName.FieldName = "name";
+            this.colCompName.MinWidth = 23;
             this.colCompName.Name = "colCompName";
             this.colCompName.Visible = true;
             this.colCompName.VisibleIndex = 1;
+            this.colCompName.Width = 87;
             // 
             // coldCompDeletedAt
             // 
             this.coldCompDeletedAt.FieldName = "deletedAt";
+            this.coldCompDeletedAt.MinWidth = 23;
             this.coldCompDeletedAt.Name = "coldCompDeletedAt";
+            this.coldCompDeletedAt.Width = 87;
             // 
             // coldeletedAt
             // 
             this.coldeletedAt.FieldName = "deletedAt";
+            this.coldeletedAt.MinWidth = 23;
             this.coldeletedAt.Name = "coldeletedAt";
+            this.coldeletedAt.Width = 87;
             // 
             // colimage
             // 
             this.colimage.Caption = "Image";
             this.colimage.ColumnEdit = this.repositoryItemPictureEdit1;
             this.colimage.FieldName = "image";
+            this.colimage.MinWidth = 23;
             this.colimage.Name = "colimage";
             this.colimage.Visible = true;
             this.colimage.VisibleIndex = 9;
+            this.colimage.Width = 87;
             // 
             // repositoryItemPictureEdit1
             // 
@@ -468,12 +526,13 @@
             // 
             // ucProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gridControl1);
             this.Controls.Add(this.btn);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucProduct";
-            this.Size = new System.Drawing.Size(754, 531);
+            this.Size = new System.Drawing.Size(880, 654);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.productsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();

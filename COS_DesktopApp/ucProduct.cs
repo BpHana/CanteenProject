@@ -132,6 +132,19 @@ namespace COS_DesktopApp
                 {
                 }
             }
+            else if (e.Button == btn.Buttons[2])
+            {
+                var dialog = new SaveFileDialog();
+                dialog.Title = "Export";
+                dialog.Filter = @"Microsoft Excel|*.xlsx";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    DevExpress.Export.ExportSettings.DefaultExportType = DevExpress.Export.ExportType.WYSIWYG;
+                    gridControl1.ExportToXlsx(dialog.FileName);
+                    XtraMessageBox.Show("Success");
+                }
+
+            }
         }
 
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)

@@ -91,7 +91,7 @@
                 <div class="col-md-12">
                     <div class="product-content-right">
                         <div class="woocommerce">
-                            <form method="post" action="#">
+                            <form action="@Url.Action("action","Cart")" medthod="GET">
                                 <table cellspacing="0" class="shop_table cart">
                                     <thead>
                                         <tr>
@@ -112,9 +112,10 @@
 
                                             @foreach (var item in @list)
                                             {
+
                                                 <tr class="cart_item">
                                                     <td class="product-remove">
-                                                        <a title="Remove this item" class="remove font-weight-bold" href="#" style="color:black; font-size:22px;">x</a>
+                                                        <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("deleteCart", "Cart", new { @id = item.Product.id })">×</a>
                                                     </td>
                                                     @{
                                                         var imgSrc = String.Format("data:image/gif;base64,{0}", Convert.ToBase64String(item.Product.image));
@@ -122,7 +123,7 @@
                                                     <td class="product-thumbnail">
                                                         <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
                                                     </td>
-
+                                                    <input type="hidden" name="id" value="@item.Product.id" />
                                                     <td class="product-name">
                                                         <a href="single-product.html">@item.Product.name</a>
                                                     </td>
@@ -136,7 +137,7 @@
 
                                                     <td class="product-quantity">
                                                         <div class="quantity buttons_added">
-                                                            <input type="number" size="4" class="input-text qty text" title="Qty" value="@item.Quantity" min="0" step="1">
+                                                            <input type="number" size="4" class="input-text qty text" name="quantity" title="Qty" value="@item.Quantity" min="0" step="1">
                                                         </div>
                                                     </td>
 
@@ -157,10 +158,11 @@
                                                 </td>
                                             </tr>
                                         </tbody>
+
                                     }
                                     else
                                     {
-                                        <tbody><h3>Your cart is empty</h3> </tbody>
+                                        <tbody style="font-size: 20px;">Your cart is empty</tbody>
 
                                     }
 
@@ -233,5 +235,18 @@
     <!-- Slider -->
     <script type="text/javascript" src="~/Content/Main/js/bxslider.min.js"></script>
     <script type="text/javascript" src="~/Content/Main/js/script.slider.js"></script>
+    <script>
+        function getQuantity() {
+            var quantity = document.getElementsByName('quantity');
+            return quantity
+
+        }
+        function getId() {
+            var id = document.getElementsByName('id');
+            return id;
+
+        }
+
+    </script>
 </body>
 </html>

@@ -37,8 +37,67 @@ namespace COS_WebApp.Controllers
             return View(shopCart);
         }
 
-        
+        public ActionResult deleteCart(string id)
+        {
+            int idCart = Convert.ToInt32(id);
+            int userid = (Session["User"] as account).id;
 
+            var query = from cart in cos.carts
+                        where cart.id_products ==idCart && cart.id_user==userid
+                        select cart;
+            if (query.SingleOrDefault()!=null)
+            {
+                cart obj = query.FirstOrDefault();
+                cos.carts.Remove(obj);
+                cos.SaveChanges();
+            }
+           
+
+            return RedirectToAction("Cart");
+        }
+        public ActionResult action()
+        {
+            return RedirectToAction("Cart");
+           
+        }
+
+        [HttpGet]
+        public ActionResult action(string[] id,string[] quantity,string btnAction)
+        {
+            switch (btnAction)
+            {
+                case "Update Cart":
+                    updateCart(id, quantity);
+                    break;
+            }
+            return RedirectToAction("Cart");
+        }
+
+        [HttpGet]
+        public ActionResult updateCart(string[] id, string[] quantity)
+        {
+    
+           
+            int userid = (Session["User"] as account).id;
+            for (int i = 0; i < id.Length; i++)
+            {
+                int idCart = Convert.ToInt32(id[i]);
+                int quantityP = Convert.ToInt32(quantity[i]);
+                var query = from cart in cos.carts
+                            where cart.id_products == idCart && cart.id_user == userid
+                            select cart;
+             
+                    cart obj = query.FirstOrDefault();
+                obj.quantity = quantityP;
+                   
+                    cos.SaveChanges();
+               
+
+            }
+
+
+            return RedirectToAction("Cart");
+        }
         public ActionResult AddToCart(string id)
         {
             int accountid = (Session["User"] as account).id;
