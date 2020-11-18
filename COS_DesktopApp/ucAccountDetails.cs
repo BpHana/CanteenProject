@@ -41,7 +41,7 @@ namespace COS_DesktopApp
             dbContext.accounts.LoadAsync().ContinueWith(loadTask =>
             {
                 this.loadRole();
-                Thread.Sleep(100);
+                    
 
                 // Bind data to control when loading complete
                 accountsBindingSource.DataSource = dbContext.accounts.Local.ToBindingList();

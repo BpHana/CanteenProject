@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace COS_DesktopApp
 {
@@ -40,6 +41,7 @@ namespace COS_DesktopApp
             {
                 // Bind data to control when loading complete
                 companiesBindingSource.DataSource = dbContext.companies.Local.ToBindingList();
+                Thread.Sleep(100);
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 

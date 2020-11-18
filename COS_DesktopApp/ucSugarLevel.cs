@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
+using System.Threading;
 
 namespace COS_DesktopApp
 {
@@ -39,8 +40,9 @@ namespace COS_DesktopApp
             // Call the LoadAsync method to asynchronously get the data for the given DbSet from the database.
             dbContext.sugar_level.LoadAsync().ContinueWith(loadTask =>
             {
-    // Bind data to control when loading complete
-    sugar_levelBindingSource.DataSource = dbContext.sugar_level.Local.ToBindingList();
+                // Bind data to control when loading complete
+                sugar_levelBindingSource.DataSource = dbContext.sugar_level.Local.ToBindingList();
+                Thread.Sleep(100);
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 

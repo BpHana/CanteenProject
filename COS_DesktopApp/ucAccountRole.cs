@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.Entity;
 using DevExpress.XtraGrid.Columns;
+using System.Threading;
 
 namespace COS_DesktopApp
 {
@@ -44,6 +45,7 @@ namespace COS_DesktopApp
             {
                 // Bind data to control when loading complete
                 account_roleBindingSource.DataSource = dbContext.account_role.Local.ToBindingList();
+                Thread.Sleep(100);
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
