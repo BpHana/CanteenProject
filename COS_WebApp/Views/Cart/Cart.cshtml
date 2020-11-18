@@ -150,6 +150,14 @@
                                                 </tr>
 
                                             }
+                                            <tr>
+                                                <td class="actions" colspan="6">
+
+                                                    <input type="submit" value="Update Cart" name="btnAction" class="btn font-weight-bold">
+                                                    
+                                                    <input type="submit" value="Order" name="btnAction" class="btn font-weight-bold">
+</td>
+                                            </tr>
                                         </tbody>
 
                                     }
@@ -158,13 +166,7 @@
                                         <tbody style="font-size: 20px;">Your cart is empty</tbody>
 
                                     }
-                                    <tr>
-                                        <td class="actions" colspan="6">
 
-                                            <input type="submit" value="Update Cart" name="btnAction" class="btn font-weight-bold">
-                                            <input type="submit" value="Checkout" name="btnAction" class="btn font-weight-bold">
-                                        </td>
-                                    </tr>
 
                                 </table>
                             </form>
@@ -238,7 +240,7 @@
         function getQuantity() {
             var quantity = document.getElementsByName('quantity');
             return quantity
-           
+
         }
         function getId() {
             var id = document.getElementsByName('id');
