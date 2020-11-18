@@ -83,5 +83,26 @@ namespace COS_DesktopApp
             }, System.Threading.Tasks.TaskScheduler.FromCurrentSynchronizationContext());
         }
 
+        private void windowsUIButtonPanel1_ButtonClick(object sender, DevExpress.XtraBars.Docking2010.ButtonEventArgs e)
+        {
+            if (e.Button == btn.Buttons[0])
+            {
+                var dialog = new SaveFileDialog();
+                dialog.Title = "Export";
+                dialog.Filter = @"Microsoft Excel|*.xlsx";
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    DevExpress.Export.ExportSettings.DefaultExportType = DevExpress.Export.ExportType.WYSIWYG;
+                    gridControl1.ExportToXlsx(dialog.FileName);
+                    XtraMessageBox.Show("Success");
+                }
+
+            }
+        }
+
+        private void gridControl1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

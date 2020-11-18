@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions windowsUIButtonImageOptions1 = new DevExpress.XtraBars.Docking2010.WindowsUIButtonImageOptions();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.order_detailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -50,6 +51,7 @@
             this.ordersBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.accountsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.productsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btn = new DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.order_detailsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -77,6 +79,7 @@
             this.gridControl1.TabIndex = 1;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+            this.gridControl1.Click += new System.EventHandler(this.gridControl1_Click);
             // 
             // order_detailsBindingSource
             // 
@@ -103,6 +106,7 @@
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsCustomization.AllowGroup = false;
+            this.gridView1.OptionsPrint.AutoWidth = false;
             this.gridView1.RowHeight = 123;
             this.gridView1.SortInfo.AddRange(new DevExpress.XtraGrid.Columns.GridColumnSortInfo[] {
             new DevExpress.XtraGrid.Columns.GridMergedColumnSortInfo(new DevExpress.XtraGrid.Columns.GridColumn[] {
@@ -265,10 +269,27 @@
             // 
             this.productsBindingSource.DataSource = typeof(COS_DesktopApp.product);
             // 
+            // btn
+            // 
+            this.btn.BackColor = System.Drawing.Color.White;
+            windowsUIButtonImageOptions1.Image = global::COS_DesktopApp.Properties.Resources.export;
+            this.btn.Buttons.AddRange(new DevExpress.XtraEditors.ButtonPanel.IBaseButton[] {
+            new DevExpress.XtraBars.Docking2010.WindowsUIButton("Export", true, windowsUIButtonImageOptions1, DevExpress.XtraBars.Docking2010.ButtonStyle.PushButton, "", -1, true, null, true, false, true, null, -1, false)});
+            this.btn.ContentAlignment = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.btn.Location = new System.Drawing.Point(0, 530);
+            this.btn.Name = "btn";
+            this.btn.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btn.Size = new System.Drawing.Size(730, 78);
+            this.btn.TabIndex = 2;
+            this.btn.Text = "windowsUIButtonPanel1";
+            this.btn.ButtonClick += new DevExpress.XtraBars.Docking2010.ButtonEventHandler(this.windowsUIButtonPanel1_ButtonClick);
+            // 
             // ucOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn);
             this.Controls.Add(this.gridControl1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ucOrder";
@@ -308,5 +329,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colTotalPrice;
         private DevExpress.XtraGrid.Columns.GridColumn colImage;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit1;
+        private DevExpress.XtraBars.Docking2010.WindowsUIButtonPanel btn;
     }
 }
