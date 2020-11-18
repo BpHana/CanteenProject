@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Pacifico">
 
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="~/Content/Main/css/bootstrap.min.css">
+
     <script src="~/Scripts/jquery-3.5.1.min.js"></script>
     <script src="~/Scripts/bootstrap.min.js"></script>
 
@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="~/Content/Main/css/owl.carousel.css">
     <link rel="stylesheet" href="~/Content/Main/style.css">
     <link rel="stylesheet" href="~/Content/Main/css/responsive.css">
-
+    <link rel="stylesheet" href="~/Content/Main/css/bootstrap.min.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,7 +76,6 @@
             <img src="~/Content/Main/img/chef512.png" width="50" height="50">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <div class="text-center">
@@ -94,139 +93,133 @@
 
     <div class="single-product-area">
         <div class="zigzag-bottom"></div>
-        <div class="container">
+        <div class="">
             <div class="row">
-
-
-                <div class="col-md-12">
+                <div class="">
                     <div class="product-content-right">
                         <div class="woocommerce">
+                            <form enctype="multipart/form-data" action="@Url.Action("AddOrder","Cart")" class="checkout" method="get">
+                                <div class="col-md-4" style="padding-left: 8%;">
+                                    <div id="customer_details" class="col2-set">
+                                        <div class="col-1">
+                                            <div class="woocommerce-billing-fields">
+                                                <p style="color: #ff7c96; font-family: Pacifico; font-size: 40px;">Billing Details</p>
+
+
+                                                <p id="billing_first_name_field" class="form-row form-row-first validate-required">
+                                                    <label class="" for="billing_first_name">
+                                                        Full Name <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value="@((Session["User"] as account).fullname)" placeholder="" id="billing_first_name" name="billing_first_name" class="input-text " readonly>
+                                                </p>
+
+                                                <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
+                                                    <label class="" for="billing_address_1">
+                                                        Address <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value="" placeholder="Address" id="billing_address_1" name="address" class="input-text ">
+                                                </p>
 
 
 
+                                                <div class="clear"></div>
 
+                                                <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
+                                                    <label class="" for="billing_email">
+                                                        Email Address <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value="@((Session["User"] as account).email)" placeholder="" id="billing_email" name="billing_email" class="input-text " readonly>
+                                                </p>
 
+                                                <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
+                                                    <label class="" for="billing_phone">
+                                                        Phone <abbr title="required" class="required">*</abbr>
+                                                    </label>
+                                                    <input type="text" value="@((Session["User"] as account).phonenumber)" placeholder="" id="billing_phone" name="billing_phone" class="input-text " readonly>
+                                                </p>
+                                                <div class="clear"></div>
 
-                            <form enctype="multipart/form-data" action="@Url.Action("AddOrder","Cart")" class="checkout" method="get" >
-
-                                <div id="customer_details" class="col2-set">
-                                    <div class="col-1">
-                                        <div class="woocommerce-billing-fields">
-                                            <h3>Billing Details</h3>
-
-
-                                            <p id="billing_first_name_field" class="form-row form-row-first validate-required">
-                                                <label class="" for="billing_first_name">
-                                                    Full Name <abbr title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="text" value="@((Session["User"] as account).fullname)" placeholder="" id="billing_first_name" name="billing_first_name" class="input-text " readonly>
-                                            </p>
-
-                                            <p id="billing_address_1_field" class="form-row form-row-wide address-field validate-required">
-                                                <label class="" for="billing_address_1">
-                                                    Address <abbr title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="text" value="" placeholder="Address" id="billing_address_1" name="address" class="input-text ">
-                                            </p>
-
-                                            
-
-                                            <div class="clear"></div>
-
-                                            <p id="billing_email_field" class="form-row form-row-first validate-required validate-email">
-                                                <label class="" for="billing_email">
-                                                    Email Address <abbr title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="text" value="@((Session["User"] as account).email)" placeholder="" id="billing_email" name="billing_email" class="input-text " readonly>
-                                            </p>
-
-                                            <p id="billing_phone_field" class="form-row form-row-last validate-required validate-phone">
-                                                <label class="" for="billing_phone">
-                                                    Phone <abbr title="required" class="required">*</abbr>
-                                                </label>
-                                                <input type="text" value="@((Session["User"] as account).phonenumber)" placeholder="" id="billing_phone" name="billing_phone" class="input-text " readonly>
-                                            </p>
-                                            <div class="clear"></div>
-
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-8">
+                                    <p id="order_review_heading" style="color: #ff7c96; font-family: Pacifico; font-size: 40px;">Your order</p>
 
-                                <h3 id="order_review_heading">Your order</h3>
+                                    <div id="order_review" style="position: relative;">
+                                        <table class="shop_table">
+                                            <thead>
+                                                <tr>
+                                                    <th class="product-name">Product</th>
+                                                    <th class="product-total">Total</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @{
+                                                    double totalPrice = 0;
+                                                }
+                                                @foreach (var item in Model)
+                                                {
+                                                    <tr class="cart_item">
+                                                        <td class="product-name">
+                                                            @item.Product.name <strong class="product-quantity"> * @item.Quantity</strong>
+                                                        </td>
+                                                        <td class="product-total">
+                                                            @{
+                                                                var amount = String.Format("{0:0,0}", item.Quantity * item.Product.price);
+                                                            }
+                                                            <span class="amount">@amount VND</span>
+                                                        </td>
+                                                    </tr>
+                                                    totalPrice = totalPrice + Convert.ToDouble(amount);
 
-                                <div id="order_review" style="position: relative;">
-                                    <table class="shop_table">
-                                        <thead>
-                                            <tr>
-                                                <th class="product-name">Product</th>
-                                                <th class="product-total">Total</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @{
-                                                double totalPrice = 0;
-                                            }
-                                            @foreach (var item in Model)
-                                            {
-                                                <tr class="cart_item">
-                                                    <td class="product-name">
-                                                        @item.Product.name <strong class="product-quantity"> * @item.Quantity</strong>
-                                                    </td>
-                                                    <td class="product-total">
-                                                        @{
-                                                            var amount = String.Format("{0:0,0}", item.Quantity * item.Product.price);
-                                                        }
-                                                        <span class="amount">@amount VND</span>
+                                                }
+                                            </tbody>
+                                            <tfoot>
+
+                                                <tr class="cart-subtotal">
+                                                    <th>Cart Subtotal</th>
+                                                    <td>
+                                                        <span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span>
                                                     </td>
                                                 </tr>
-                                                totalPrice = totalPrice + Convert.ToDouble(amount);
-                                                
-}
-                                        </tbody>
-                                        <tfoot>
 
-                                            <tr class="cart-subtotal">
-                                                <th>Cart Subtotal</th>
-                                                <td>
-                                                    <span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span>
-                                                </td>
-                                            </tr>
+                                                <tr class="shipping">
+                                                    <th>Shipping and Handling</th>
+                                                    <td>
 
-                                            <tr class="shipping">
-                                                <th>Shipping and Handling</th>
-                                                <td>
-
-                                                    Free Shipping
-                                                    <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
-                                                </td>
-                                            </tr>
+                                                        Free Shipping
+                                                        <input type="hidden" class="shipping_method" value="free_shipping" id="shipping_method_0" data-index="0" name="shipping_method[0]">
+                                                    </td>
+                                                </tr>
 
 
-                                            <tr class="order-total">
-                                                <th>Order Total</th>
-                                                <td><strong><span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span></strong> </td>
-                                            </tr>
+                                                <tr class="order-total">
+                                                    <th>Order Total</th>
+                                                    <td><strong><span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span></strong> </td>
+                                                </tr>
 
-                                        </tfoot>
-                                    </table>
-
-
-                                    <div id="payment">
+                                            </tfoot>
+                                        </table>
 
 
-                                        <div class="form-row place-order">
+                                        <div id="payment">
 
-                                            <input type="submit" data-value="Place order" value="Order" id="place_order" name="btAction" class="button alt">
 
+                                            <div class="form-row place-order">
+
+                                                <input type="submit" data-value="Place order" value="Order" id="place_order" name="btAction" class="button alt">
+
+
+                                            </div>
+
+                                            <div class="clear"></div>
 
                                         </div>
-
-                                        <div class="clear"></div>
-
                                     </div>
+
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>

@@ -123,8 +123,9 @@
                                                     }
                                                     <td class="product-thumbnail">
                                                         <a href="single-product.html"><img width="145" height="145" alt="poster_1_up" class="shop_thumbnail" src="@imgSrc"></a>
+                                                        <input type="hidden" name="id" value="@item.Product.id" />
                                                     </td>
-                                                    <input type="hidden" name="id" value="@item.Product.id" />
+                                                    
                                                     <td class="product-name">
                                                         <a href="single-product.html">@item.Product.name</a>
                                                     </td>
@@ -147,7 +148,7 @@
                                                             var amount = String.Format("{0:0,0}", item.Product.price * item.Quantity);
                                                             totalPrice += Convert.ToDouble(amount);
                                                         }
-                                                        
+
                                                         <span class="amount">@amount VND</span>
                                                     </td>
                                                 </tr>
@@ -157,9 +158,9 @@
                                                 <td class="actions" colspan="6">
 
                                                     <input type="submit" value="Update Cart" name="btnAction" class="btn font-weight-bold">
-                                                    
+
                                                     <input type="submit" value="Order" name="btnAction" class="btn font-weight-bold">
-</td>
+                                                </td>
                                             </tr>
                                         </tbody>
 
