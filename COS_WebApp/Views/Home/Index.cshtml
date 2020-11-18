@@ -72,6 +72,15 @@
             };
         </script>
 
+    } @if (TempData["order"] != null)
+    {
+        <script type="text/javascript">
+
+            window.onload = function () {
+                alert("@TempData["order"]");
+            };
+        </script>
+
     }
     <div class="container-fluid">
         <header class="page-header">
@@ -169,7 +178,7 @@
                             </div>
                         </div>
 
-                        <a  href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
+                        <a href="@Url.Action("ShowAll", "Home")" style="color: black; font-family: Pacifico; font-size: 20px;">Show All Product</a>
                     </div>
                 </div>
             </div> <!-- End main content area -->

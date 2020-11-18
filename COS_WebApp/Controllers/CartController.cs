@@ -197,6 +197,7 @@ namespace COS_WebApp.Controllers
                 cos.carts.RemoveRange(cos.carts.Where(x => x.id_user == userid));
                 cos.SaveChanges();
             }
+            TempData["order"] = "Order successfully";
             return RedirectToAction("Index", "Home");
 
         }
