@@ -100,8 +100,10 @@ namespace COS_WebApp.Controllers
         public ActionResult ShowCate(String id)
         {
             dynamic model = new ExpandoObject();
-            var foundproduct = cos.products.Where(p => p.id.Equals(id));
-            model.Product = foundproduct;
+            var foundproduct = from p in cos.products
+                               where p.name == id && p.deletedAt == null 
+                               select p;
+            model.Product = foundproduct.ToList();
             model.Product_Type = cos.products_type;
             
             return View(model);
