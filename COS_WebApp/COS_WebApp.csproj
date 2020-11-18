@@ -620,6 +620,7 @@
     <Content Include="Views\Home\ShowAll.cshtml" />
     <Content Include="Views\Home\ShowCate.cshtml" />
     <Content Include="Views\Home\ViewDetails.cshtml" />
+    <Content Include="Views\Cart\Order.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
