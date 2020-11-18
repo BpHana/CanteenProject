@@ -302,6 +302,7 @@
       <DependentUpon>Model.edmx</DependentUpon>
       <LastGenOutput>Model.cs</LastGenOutput>
     </Content>
+    <None Include="Resources\export.png" />
     <Content Include="Resources\Screenshot 2020-11-07 143737.png" />
   </ItemGroup>
   <ItemGroup />
