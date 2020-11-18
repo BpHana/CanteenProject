@@ -68,6 +68,8 @@ namespace COS_WebApp.Controllers
 
         public ActionResult Order()
         {
+            int accountid = (Session["User"] as account).id;
+
             return View();
         }
 
