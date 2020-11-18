@@ -90,7 +90,7 @@
                                     @foreach (var type in Model.Product_Type)
                                     {
 
-                                        <a class="dropdown-item" href="#">@type.name</a>
+                                        <a class="dropdown-item" href="@Url.Action("ShowCate", "Home", new { @id = type.id})">@type.name</a>
                                     }
                                 </div>
                             </li>
@@ -106,11 +106,13 @@
 
 
 
+
+
+        <h2 class="section-title" style="font-family: Pacifico; margin-top: 2%;">All Products</h2>
         <div class="row">
-            <div class="col-md-12 text-center m-3">
-                <h2 class="section-title" style="font-family: Pacifico;">All Products</h2>
-                @foreach (var item in Model.Product)
-                {
+            @foreach (var item in Model.Product)
+            {
+                <div class="col-md-2 p-4">
                     <div class="single-product text-center">
                         <div class="product-f-image">
 
@@ -134,8 +136,9 @@
                             </div>
                         </div>
                     </div>
-                }
-            </div>
+                </div>
+            }
+
         </div>
 
         <footer class="page-footer bg-dark text-light font-weight-bolder" style="padding-left: 3%; background: linear-gradient(55deg, rgba(255,195,186,1) 0%, rgba(255,97,136,1) 63%, rgba(255,190,218,1) 100%);

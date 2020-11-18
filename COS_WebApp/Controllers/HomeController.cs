@@ -96,5 +96,15 @@ namespace COS_WebApp.Controllers
 
             return View(model);
         }
+
+        public ActionResult ShowCate(String id)
+        {
+            dynamic model = new ExpandoObject();
+            var foundproduct = cos.products.Where(p => p.id.Equals(id));
+            model.Product = foundproduct;
+            model.Product_Type = cos.products_type;
+            
+            return View(model);
+        }
     }
 }
