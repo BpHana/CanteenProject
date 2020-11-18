@@ -176,7 +176,7 @@
                                                         @{
                                                             var amount = String.Format("{0:0,0}", item.Quantity * item.Product.price);
                                                         }
-                                                        <span class="amount">@amount</span>
+                                                        <span class="amount">@amount VND</span>
                                                     </td>
                                                 </tr>
                                                 totalPrice = totalPrice + Convert.ToDouble(amount);
@@ -188,7 +188,7 @@
                                             <tr class="cart-subtotal">
                                                 <th>Cart Subtotal</th>
                                                 <td>
-                                                    <span class="amount">@String.Format("{0:0,0}", totalPrice)</span>
+                                                    <span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span>
                                                 </td>
                                             </tr>
 
@@ -204,7 +204,7 @@
 
                                             <tr class="order-total">
                                                 <th>Order Total</th>
-                                                <td><strong><span class="amount">@String.Format("{0:0,0}", totalPrice)</span></strong> </td>
+                                                <td><strong><span class="amount">@String.Format("{0:0,0}", totalPrice) VND</span></strong> </td>
                                             </tr>
 
                                         </tfoot>

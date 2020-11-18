@@ -190,7 +190,7 @@ namespace COS_WebApp.Controllers
             order or = query1.FirstOrDefault();
             foreach (var item in shopCart)
             {
-                order_details detail = new order_details { id_order = or.id, id_products = item.Product.id, quantity = item.Quantity, createdAt = or.createdAt };
+                order_details detail = new order_details { id_order = or.id, id_products = item.Product.id, price = item.Product.price, quantity = item.Quantity, createdAt = or.createdAt };
                 cos.order_details.Add(detail);
                
 
