@@ -109,12 +109,12 @@
                                     @if (list != null)
                                     {
                                 <tbody>
-
+                                    <form action="" method="POST">
                                     @foreach (var item in @list)
                                     {
                                     <tr class="cart_item">
                                         <td class="product-remove">
-                                            <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("updateCart", "Cart", new { @id = item.Product.id })">×</a>
+                                            <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("deleteCart", "Cart", new { @id = item.Product.id })">×</a>
                              
                                         </td>
                                         @{
@@ -155,10 +155,11 @@
                                     <tr>
                                         <td class="actions" colspan="6">
 
-                                            <input type="submit" value="Update Cart" name="update_cart" class="btn font-weight-bold">
-                                            <input type="submit" value="Checkout" name="proceed" class="btn font-weight-bold">
+                                            <input type="submit" value="Update Cart" name="action" class="btn font-weight-bold">
+                                            <input type="submit" value="Checkout" name="action" class="btn font-weight-bold">
                                         </td>
                                     </tr>
+                                    </form>
                                 </tbody>
                                     }
                                     else
