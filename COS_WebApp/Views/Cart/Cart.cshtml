@@ -114,7 +114,7 @@
                                     {
                                     <tr class="cart_item">
                                         <td class="product-remove">
-                                            <a title="Remove this item" class="remove" href="@Url.Action("updateCart", "Cart", new { @id = item.Product.id })">×</a>
+                                            <a title="Remove this item" class="remove" style="color:black; font-size:22px;" href="@Url.Action("updateCart", "Cart", new { @id = item.Product.id })">×</a>
                              
                                         </td>
                                         @{
@@ -137,9 +137,9 @@
 
                                         <td class="product-quantity">
                                             <div class="quantity buttons_added">
-                                                <input type="button" class="minus" value="-">
-                                                <input type="number" size="4" class="input-text qty text" title="Qty" value="@item.Quantity" min="0" step="1">
-                                                <input type="button" class="plus" value="+">
+                                         
+                                                <input type="number" size="4" class="input-text qty text" title="Qty" name="quantity" value="@item.Quantity" min="1" step="1">
+                                    
                                             </div>
                                         </td>
 
